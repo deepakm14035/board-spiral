@@ -1,0 +1,84 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace MenuManagement
+{
+    public class MenuManager : MonoBehaviour
+    {
+        [SerializeField]
+        private GameObject _winMenu;
+        [SerializeField]
+        private GameObject _loseMenu;
+        [SerializeField]
+        private GameObject _mainMenu;
+        [SerializeField]
+        private GameObject _gameMenu;
+        [SerializeField]
+        private GameObject _pauseMenu;
+
+
+        private static MenuManager _instance;
+        private Stack<Menu> menuStack;
+
+        public static MenuManager Instance { get => _instance; set => _instance = value; }
+
+        protected virtual void Awake()
+        {
+            //Debug.Log(gameObject.name);
+            if (_instance != null)
+                Destroy(gameObject);
+            else
+                _instance = this;
+        }
+        protected virtual void OnDestroy()
+        {
+            _instance = null;
+        }
+
+        private void Start()
+        {
+            DontDestroyOnLoad(gameObject);
+            menuStack = new Stack<Menu>();
+            GameObject menu1 = Instantiate(_mainMenu, transform.forward,Quaternion.identity);
+            GameObject menu2 = Instantiate(_loseMenu, transform.forward, Quaternion.identity);
+            GameObject menu3 = Instantiate(_winMenu, transform.forward, Quaternion.identity);
+            GameObject menu4 = Instantiate(_gameMenu, transform.forward, Quaternion.identity);
+            GameObject menu5 = Instantiate(_pauseMenu, transform.forward, Quaternion.identity);
+
+            menu2.SetActive(false);
+            menu3.SetActive(false);
+            menu4.SetActive(false);
+            menu5.SetActive(false);
+
+            menuStack.Push(menu1.GetComponent<Menu>());
+        }
+
+        public void loadMenu(Menu menu) {
+            menuStack.Peek().gameObject.SetActive(false);
+            menuStack.Push(menu);
+            menu.gameObject.SetActive(true);
+
+        }
+
+        public void loadMenu(Menu menu, float delay)
+        {
+            StartCoroutine(loadAfterDelay(menu,delay));
+        }
+
+        IEnumerator loadAfterDelay(Menu menu, float delay) {
+            yield return new WaitForSeconds(delay);
+            menuStack.Peek().gameObject.SetActive(false);
+            menuStack.Push(menu);
+            menu.gameObject.SetActive(true);
+
+        }
+
+        public void goBack()
+        {
+            menuStack.Peek().gameObject.SetActive(false);
+            menuStack.Pop();
+            menuStack.Peek().gameObject.SetActive(true);
+        }
+    }
+}
