@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerController1 : MonoBehaviour
 {
-    public float movespeed;
+    private float _moveSpeed;
 
     public bool allowMoving;
+
+    public float MoveSpeed { get => _moveSpeed; set => _moveSpeed = value; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,7 @@ public class PlayerController1 : MonoBehaviour
     void Update()
     {
         if(allowMoving)
-            transform.position += Vector3.up * Time.deltaTime * movespeed;
+            transform.position += Vector3.up * Time.deltaTime * MoveSpeed;
         
 
 
