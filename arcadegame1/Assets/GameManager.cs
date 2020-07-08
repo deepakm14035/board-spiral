@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    GenerateLevel levelGenerator;
+    GenerateLevel _levelGenerator;
+    LineRenderer _boundaries;
     // Start is called before the first frame update
     void Start()
     {
-        levelGenerator = GameObject.FindObjectOfType<GenerateLevel>();
+        _levelGenerator = GameObject.FindObjectOfType<GenerateLevel>();
     }
 
     public void loadCurrentLevel() {
@@ -26,17 +27,27 @@ public class GameManager : MonoBehaviour
         GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
         saveData = jsonSaver.loadData(saveData);
         saveData.currentLevel++;
-        if (saveData.currentLevel >= levelGenerator.NoOfLevels())
+        if (saveData.currentLevel >= _levelGenerator.NoOfLevels())
             saveData.currentLevel = 0;
         jsonSaver.saveData(saveData);
         loadLevel(saveData.currentLevel);
     }
 
     public void loadLevel(int index) {
-        levelGenerator.clearLevel();
+        _levelGenerator.clearLevel();
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         playerController.resetPosition();
-        levelGenerator.generateLevel(index);
+        _levelGenerator.generateLevel(index);
+        _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
+        Debug.Log("boundaries-"+ _boundaries);
+    }
+
+    public bool isPositionOutOfBounds(Vector3 position)
+    {
+        if (_boundaries == null)
+            _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
+        return position.x < _boundaries.GetPosition(0).x || position.y < _boundaries.GetPosition(0).y //left and lower boundaries
+            || position.x > _boundaries.GetPosition(2).x || position.y > _boundaries.GetPosition(2).y;
     }
     
 }

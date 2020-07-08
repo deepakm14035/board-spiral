@@ -10,6 +10,8 @@ public class GenerateLevel : MonoBehaviour
     private GameObject[] obstacles;
     [SerializeField]
     private GameObject finishPoint;
+    [SerializeField]
+    private Material borderMaterial;
 
     public int NoOfLevels() {
         return _levels.noOfLevels;
@@ -23,11 +25,35 @@ public class GenerateLevel : MonoBehaviour
             GameObject obstacle = Instantiate(obstacles[level.obstacles[i].obstacleID], level.obstacles[i].position, level.obstacles[i].rotation);
             obstacle.transform.localScale = level.obstacles[i].scale;
         }
+
+        createBoundaries(level.borders);
+        PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
+        playerController.RotSpeed = level.playerRotationSpeed;
+        PlayerController1 playerController1 = GameObject.FindObjectOfType<PlayerController1>();
+        playerController1.MoveSpeed = level.playerMovementSpeed;
+
+    }
+
+    private void createBoundaries(Vector4 rect) {
+        GameObject lineObj = new GameObject();
+        lineObj.tag = "borders";
+        LineRenderer lines =  lineObj.AddComponent<LineRenderer>();
+        lines.positionCount = 4;
+        lines.SetPosition(0,new Vector3(rect.x,rect.y,1f));
+        lines.SetPosition(1, new Vector3(rect.x, rect.y + rect.w, 1f));
+        lines.SetPosition(2, new Vector3(rect.x + rect.z, rect.y + rect.w, 1f));
+        lines.SetPosition(3, new Vector3(rect.x + rect.z, rect.y, 1f));
+        lines.material = borderMaterial;
+        lines.loop = true;
+
     }
 
     public void clearLevel() {
         GameObject finishObj = GameObject.FindGameObjectWithTag("finish");
         GameObject.Destroy(finishObj);
+        GameObject boundaryObj = GameObject.FindGameObjectWithTag("borders");
+        GameObject.Destroy(boundaryObj);
+
         GameObject[] obstacles = GameObject.FindGameObjectsWithTag("obstacle");
         for(int i=0;i<obstacles.Length;i++) GameObject.Destroy(obstacles[i]);
         

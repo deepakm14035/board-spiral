@@ -7,10 +7,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Transform pos1, pos2,curpos;
-    public float movespeed, rotSpeed;
-    public GameObject pivotEffectPrefab;
-    public GameObject trailRenderer1;
-    public GameObject trailRenderer2;
+    [SerializeField] private float rotSpeed;
+    [SerializeField] private GameObject pivotEffectPrefab;
+    [SerializeField] private GameObject trailRenderer1;
+    [SerializeField] private GameObject trailRenderer2;
+    [SerializeField] private GameObject UIButtonLeft, UIButtonRight;
+
+    GameManager _gameManager;
 
     float direction = -1f;
     UIEffects uiEffects;
@@ -18,6 +21,9 @@ public class PlayerController : MonoBehaviour
     bool gameStarted = false;
     PlayerController1 pc;
     GameObject mainCamera;
+
+    public float RotSpeed { get => rotSpeed; set => rotSpeed = value; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +32,15 @@ public class PlayerController : MonoBehaviour
         setMoving(false);
         allowMoving = true;
         mainCamera = Camera.main.gameObject.transform.parent.gameObject;
-        trailRenderer1.SetActive(true);
-        trailRenderer2.SetActive(true);
+        trailRenderer1.SetActive(false);
+        trailRenderer2.SetActive(false);
+        if (SystemInfo.deviceType.Equals(DeviceType.Desktop))
+        {
+            UIButtonLeft.SetActive(false);
+            UIButtonRight.SetActive(false);
+        }
 
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     public void setMoving(bool moving) {
@@ -40,17 +52,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position += Vector3.up*Time.deltaTime*movespeed;
         if(allowMoving&& gameStarted)
-            transform.RotateAround(curpos.position,Vector3.forward, direction * 5f*Time.deltaTime*rotSpeed);
+            transform.RotateAround(curpos.position,Vector3.forward, direction * 5f*Time.deltaTime*RotSpeed);
         if (Input.GetButtonDown("Fire1")&& allowMoving) {
+            if(!SystemInfo.deviceType.Equals(DeviceType.Handheld))
             changePivot();
         }
         if (Input.GetButtonDown("Fire2")&& allowMoving)
         {
-            changeDirection();
+            if (!SystemInfo.deviceType.Equals(DeviceType.Handheld))
+                changeDirection();
         }
-        //Debug.Log(transform.rotation.eulerAngles);
 
     }
 
@@ -59,17 +71,19 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.identity;
         mainCamera.GetComponent<CameraFollow>().resetCamera();
         curpos = pos2;
+        gameStarted = true;
         StartCoroutine(allowMovementAfterDelay());
     }
 
     IEnumerator allowMovementAfterDelay() {
         yield return new WaitForSeconds(1f);
-        trailRenderer1.SetActive(true);
-        trailRenderer2.SetActive(true);
+        //trailRenderer1.SetActive(true);
+        //trailRenderer2.SetActive(true);
         setMoving(true);
     }
 
     public void changeDirection() {
+        Debug.Log("chn");
         if (!allowMoving)
             return;
         direction *= -1f;
@@ -77,12 +91,20 @@ public class PlayerController : MonoBehaviour
 
     public void changePivot()
     {
-        if (!allowMoving)
+        if (!allowMoving ||_gameManager.isPositionOutOfBounds(pos1 == curpos ? pos2.transform.position : pos1.transform.position))
             return;
         if (pos1 == curpos)
+        {
             curpos = pos2;
+            trailRenderer1.SetActive(false);
+            trailRenderer2.SetActive(true);
+        }
         else
+        {
             curpos = pos1;
+            trailRenderer2.SetActive(false);
+            trailRenderer1.SetActive(true);
+        }
         if (!gameStarted)
         {
             gameStarted = true;
@@ -90,11 +112,11 @@ public class PlayerController : MonoBehaviour
             return;
         }
         Instantiate(pivotEffectPrefab,curpos.transform.position,Quaternion.identity);
-        StartCoroutine(pivotChange());
+        StartCoroutine(pivotChangeDelay());
 
     }
 
-    IEnumerator pivotChange()
+    IEnumerator pivotChangeDelay()
     {
         setMoving(false);
         yield return new WaitForSeconds(0.2f);
