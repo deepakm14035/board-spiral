@@ -17,6 +17,10 @@ public class Level
         public Vector3 scale;
         [SerializeField]
         public Quaternion rotation;
+        [SerializeField]
+        public Vector3[] path;
+        [SerializeField]
+        public float speed;
     }
     [SerializeField]
     protected Obstacle[] _obstacles;

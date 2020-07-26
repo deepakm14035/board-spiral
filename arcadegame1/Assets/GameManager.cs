@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
         JSONSaver jsonSaver = FindObjectOfType<JSONSaver>();
         SaveData saveData = new SaveData();
         saveData = jsonSaver.loadData(saveData);
+        Time.timeScale = 1f;
         loadLevel(saveData.currentLevel);
     }
 
@@ -48,6 +49,16 @@ public class GameManager : MonoBehaviour
             _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
         return position.x < _boundaries.GetPosition(0).x || position.y < _boundaries.GetPosition(0).y //left and lower boundaries
             || position.x > _boundaries.GetPosition(2).x || position.y > _boundaries.GetPosition(2).y;
+    }
+
+    public void stopAllObstacles()
+    {
+        GameObject[] obstacles = GameObject.FindGameObjectsWithTag("obstacle");
+        for(int i = 0; i < obstacles.Length; i++)
+        {
+            if (obstacles[i].GetComponent<WaypointMovement>())
+                obstacles[i].GetComponent<WaypointMovement>().m_stopMoving = true; ;
+        }
     }
     
 }

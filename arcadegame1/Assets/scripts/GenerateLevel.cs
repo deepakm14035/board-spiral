@@ -18,12 +18,19 @@ public class GenerateLevel : MonoBehaviour
     }
 
     public void generateLevel(int index) {
-        Level level = _levels.getLevel(index);
+        Level level = _levels.getLevel(9);
         Debug.Log("generating - "+level.obstacles.Length);
         Instantiate(finishPoint,level.finishPosition,Quaternion.identity);
         for (int i =0; i < level.obstacles.Length; i++) {
             GameObject obstacle = Instantiate(obstacles[level.obstacles[i].obstacleID], level.obstacles[i].position, level.obstacles[i].rotation);
             obstacle.transform.localScale = level.obstacles[i].scale;
+
+            if (level.obstacles[i].path.Length > 0)
+            {
+                obstacle.AddComponent<WaypointMovement>();
+                obstacle.GetComponent<WaypointMovement>().m_waypoints= level.obstacles[i].path;
+                obstacle.GetComponent<WaypointMovement>().m_speed = level.obstacles[i].speed;
+            }
         }
 
         createBoundaries(level.borders);

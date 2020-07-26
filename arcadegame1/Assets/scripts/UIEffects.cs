@@ -21,6 +21,7 @@ public class UIEffects : MonoBehaviour
 
     IEnumerator loseAnim()
     {
+        objects.gameObject.SetActive(true);
         Fade(0.7f,0.2f);
         yield return new WaitForSeconds(0.1f);
         Fade(0.1f, 0.2f);

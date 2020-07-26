@@ -70,8 +70,10 @@ public class PlayerController : MonoBehaviour
         transform.position = Vector3.zero;
         transform.rotation = Quaternion.identity;
         mainCamera.GetComponent<CameraFollow>().resetCamera();
-        curpos = pos2;
+        curpos = pos1;
+        trailRenderer2.SetActive(true);
         gameStarted = true;
+
         StartCoroutine(allowMovementAfterDelay());
     }
 
@@ -96,14 +98,14 @@ public class PlayerController : MonoBehaviour
         if (pos1 == curpos)
         {
             curpos = pos2;
-            trailRenderer1.SetActive(false);
-            trailRenderer2.SetActive(true);
+            trailRenderer1.SetActive(true);
+            trailRenderer2.SetActive(false);
         }
         else
         {
             curpos = pos1;
-            trailRenderer2.SetActive(false);
-            trailRenderer1.SetActive(true);
+            trailRenderer2.SetActive(true);
+            trailRenderer1.SetActive(false);
         }
         if (!gameStarted)
         {
@@ -130,13 +132,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("obstacle"))
         {
             mainCamera.GetComponent<Animator>().SetTrigger("shake");
+            _gameManager.stopAllObstacles();
             uiEffects.playLoseAnimation();
             setMoving(false);
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             uiEffects.disableObjects();
             trailRenderer1.SetActive(false);
             trailRenderer2.SetActive(false);
-            menuManager.loadMenu(LoseMenu.Instance);
+            menuManager.loadMenu(LoseMenu.Instance,3f);
         }
         if (collision.gameObject.tag.Equals("finish"))
         {
