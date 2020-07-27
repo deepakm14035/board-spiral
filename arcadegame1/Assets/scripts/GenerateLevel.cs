@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GenerateLevel : MonoBehaviour
 {
@@ -12,13 +13,16 @@ public class GenerateLevel : MonoBehaviour
     private GameObject finishPoint;
     [SerializeField]
     private Material borderMaterial;
+    [SerializeField]
+    private GameObject backgroundImage;
+
 
     public int NoOfLevels() {
         return _levels.noOfLevels;
     }
 
     public void generateLevel(int index) {
-        Level level = _levels.getLevel(9);
+        Level level = _levels.getLevel(16);
         Debug.Log("generating - "+level.obstacles.Length);
         Instantiate(finishPoint,level.finishPosition,Quaternion.identity);
         for (int i =0; i < level.obstacles.Length; i++) {
@@ -34,11 +38,60 @@ public class GenerateLevel : MonoBehaviour
         }
 
         createBoundaries(level.borders);
+        generateBackground(level.borders);
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         playerController.RotSpeed = level.playerRotationSpeed;
         PlayerController1 playerController1 = GameObject.FindObjectOfType<PlayerController1>();
         playerController1.MoveSpeed = level.playerMovementSpeed;
 
+    }
+
+    private void generateBackground(Vector4 area)
+    {
+        bool emptySpacePresent = true;
+        area.x -= 10f;
+        area.y -= 10f;
+        area.z += 20f;
+        area.w += 20f;
+
+        List<Transform> positionsList = new List<Transform>();
+
+        while (emptySpacePresent)
+        {
+            Vector3 newPos;
+            float scale = Random.Range(5f,20f);
+            newPos = new Vector3(Random.Range(area.x,area.x+area.z), Random.Range(area.y, area.y + area.w),0f);
+            GameObject newImage = Instantiate(backgroundImage, newPos, Quaternion.identity);
+            newImage.transform.localScale = new Vector3(scale,scale,1f);
+            newImage.GetComponent<BackgroundImage>().m_spinningClockwise = Random.Range(0f, 1f) > 0.5f;
+            PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
+            newImage.GetComponent<BackgroundImage>().m_rotSpeed = Random.Range((playerController.RotSpeed/1.5f)-5f, (playerController.RotSpeed / 1.5f)+5f);
+            int tries = 0;
+            while (!isValidPosition(newImage, positionsList))
+            {
+                newPos = new Vector3(Random.Range(area.x, area.x + area.z), Random.Range(area.y, area.y + area.w),0f);
+                newImage.transform.position = newPos;
+                if (tries > 20)
+                    break;
+                tries++;
+            }
+            if (tries > 20)
+            {
+                emptySpacePresent = false;
+                GameObject.Destroy(newImage);
+            }
+            else positionsList.Add(newImage.transform);
+        }
+    }
+
+    bool isValidPosition(GameObject newPos, List<Transform> positionsList)
+    {
+        for(int i = 0; i < positionsList.Count; i++)
+        {
+            if (Vector3.Distance(newPos.transform.position, positionsList[i].transform.position) - newPos.transform.localScale.x/2 - positionsList[i].localScale.x/2 < 0f)
+                return false;
+        }
+        return true;
     }
 
     private void createBoundaries(Vector4 rect) {
@@ -63,6 +116,8 @@ public class GenerateLevel : MonoBehaviour
 
         GameObject[] obstacles = GameObject.FindGameObjectsWithTag("obstacle");
         for(int i=0;i<obstacles.Length;i++) GameObject.Destroy(obstacles[i]);
-        
+        BackgroundImage[] images = GameObject.FindObjectsOfType<BackgroundImage>();
+        for (int i = 0; i < images.Length; i++) GameObject.Destroy(images[i].gameObject);
+
     }
 }

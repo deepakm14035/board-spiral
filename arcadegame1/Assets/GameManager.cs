@@ -60,5 +60,14 @@ public class GameManager : MonoBehaviour
                 obstacles[i].GetComponent<WaypointMovement>().m_stopMoving = true; ;
         }
     }
+
+    public void reverseRotation()
+    {
+        BackgroundImage[] images = GameObject.FindObjectsOfType<BackgroundImage>();
+        for (int i = 0; i < images.Length; i++)
+        {
+            images[i].m_spinningClockwise = !images[i].m_spinningClockwise;
+        }
+    }
     
 }

@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour
         if (!allowMoving)
             return;
         direction *= -1f;
+        _gameManager.reverseRotation();
     }
 
     public void changePivot()
