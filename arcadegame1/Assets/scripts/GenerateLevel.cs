@@ -22,7 +22,7 @@ public class GenerateLevel : MonoBehaviour
     }
 
     public void generateLevel(int index) {
-        Level level = _levels.getLevel(16);
+        Level level = _levels.getLevel(3);
         Debug.Log("generating - "+level.obstacles.Length);
         Instantiate(finishPoint,level.finishPosition,Quaternion.identity);
         for (int i =0; i < level.obstacles.Length; i++) {

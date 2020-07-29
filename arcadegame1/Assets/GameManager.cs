@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     GenerateLevel _levelGenerator;
     LineRenderer _boundaries;
+    public int _currentLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
         SaveData saveData = new SaveData();
         saveData = jsonSaver.loadData(saveData);
         Time.timeScale = 1f;
+        _currentLevel = saveData.currentLevel;
         loadLevel(saveData.currentLevel);
     }
 
@@ -31,7 +33,9 @@ public class GameManager : MonoBehaviour
         if (saveData.currentLevel >= _levelGenerator.NoOfLevels())
             saveData.currentLevel = 0;
         jsonSaver.saveData(saveData);
+        _currentLevel = saveData.currentLevel;
         loadLevel(saveData.currentLevel);
+
     }
 
     public void loadLevel(int index) {

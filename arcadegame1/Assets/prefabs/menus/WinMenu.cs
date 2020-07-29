@@ -14,5 +14,13 @@ namespace MenuManagement
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             menuManager.loadMenu(GameMenu.Instance);
         }
+
+        public void Replay()
+        {
+            GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
+            gameManager.loadCurrentLevel();
+            MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
+            menuManager.loadMenu(GameMenu.Instance);
+        }
     }
 }
