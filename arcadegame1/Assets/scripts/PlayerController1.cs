@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController1 : MonoBehaviour
 {
+    [SerializeField]
     private float _moveSpeed;
 
     public bool allowMoving;

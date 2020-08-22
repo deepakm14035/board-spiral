@@ -22,11 +22,12 @@ public class GenerateLevel : MonoBehaviour
     }
 
     public void generateLevel(int index) {
-        Level level = _levels.getLevel(3);
+        Level level = _levels.getLevel(21);
         Debug.Log("generating - "+level.obstacles.Length);
-        Instantiate(finishPoint,level.finishPosition,Quaternion.identity);
         for (int i =0; i < level.obstacles.Length; i++) {
-            GameObject obstacle = Instantiate(obstacles[level.obstacles[i].obstacleID], level.obstacles[i].position, level.obstacles[i].rotation);
+            Vector3 position = level.obstacles[i].position;
+
+            GameObject obstacle = Instantiate(obstacles[level.obstacles[i].obstacleID], position, level.obstacles[i].rotation);
             obstacle.transform.localScale = level.obstacles[i].scale;
 
             if (level.obstacles[i].path.Length > 0)
@@ -36,14 +37,38 @@ public class GenerateLevel : MonoBehaviour
                 obstacle.GetComponent<WaypointMovement>().m_speed = level.obstacles[i].speed;
             }
         }
-
         createBoundaries(level.borders);
         generateBackground(level.borders);
+        Instantiate(finishPoint, level.finishPosition, Quaternion.identity);
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         playerController.RotSpeed = level.playerRotationSpeed;
         PlayerController1 playerController1 = GameObject.FindObjectOfType<PlayerController1>();
         playerController1.MoveSpeed = level.playerMovementSpeed;
+    }
 
+    public GameObject generateLevel(int index, float offset)
+    {
+        GameObject parentObj = new GameObject();
+        Level level = _levels.getLevel(index);
+        Debug.Log("generating - " + level.obstacles.Length);
+        for (int i = 0; i < level.obstacles.Length; i++)
+        {
+            Vector3 position = level.obstacles[i].position + Vector3.up*offset;
+
+            GameObject obstacle = Instantiate(obstacles[level.obstacles[i].obstacleID], position, level.obstacles[i].rotation);
+            obstacle.transform.localScale = level.obstacles[i].scale;
+
+            if (level.obstacles[i].path.Length > 0)
+            {
+                obstacle.AddComponent<WaypointMovement>();
+                obstacle.GetComponent<WaypointMovement>().m_waypoints = level.obstacles[i].path;
+                obstacle.GetComponent<WaypointMovement>().m_speed = level.obstacles[i].speed;
+            }
+            obstacle.transform.parent = parentObj.transform;
+        }
+        Debug.Log("backgr - "+(level.borders + new Vector4(0, offset, 0f, 0f)));
+        generateBackground(level.borders+new Vector4(0,offset+5f,0f,0f));
+        return parentObj;
     }
 
     private void generateBackground(Vector4 area)
@@ -55,7 +80,6 @@ public class GenerateLevel : MonoBehaviour
         area.w += 20f;
 
         List<Transform> positionsList = new List<Transform>();
-
         while (emptySpacePresent)
         {
             Vector3 newPos;
@@ -94,7 +118,7 @@ public class GenerateLevel : MonoBehaviour
         return true;
     }
 
-    private void createBoundaries(Vector4 rect) {
+    public void createBoundaries(Vector4 rect) {
         GameObject lineObj = new GameObject();
         lineObj.tag = "borders";
         LineRenderer lines =  lineObj.AddComponent<LineRenderer>();
@@ -120,4 +144,17 @@ public class GenerateLevel : MonoBehaviour
         for (int i = 0; i < images.Length; i++) GameObject.Destroy(images[i].gameObject);
 
     }
+
+    public float getLevelHeight(int levelNo)
+    {
+        return _levels.getLevel(levelNo).borders.w;
+    }
+
+    public bool isMovingLevel(int i)
+    {
+        if (_levels.getLevel(i).playerMovementSpeed > 1f)
+            return true;
+        return false;
+    }
+
 }

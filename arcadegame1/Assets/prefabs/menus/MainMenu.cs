@@ -14,5 +14,13 @@ namespace MenuManagement
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             menuManager.loadMenu(GameMenu.Instance);
         }
+        
+        public void playInfinite()
+        {
+            GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
+            gameManager.loadInfinityMode();
+            MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
+            menuManager.loadMenu(GameMenu.Instance);
+        }
     }
 }
