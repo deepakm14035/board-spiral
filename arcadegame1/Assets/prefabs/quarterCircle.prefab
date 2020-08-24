@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5940443693954941124}
   - component: {fileID: 5940443693954941125}
   - component: {fileID: 5940443693954941127}
+  - component: {fileID: 8817473697556754946}
   m_Layer: 0
   m_Name: quarterCircle
   m_TagString: obstacle
@@ -124,3 +125,18 @@ PolygonCollider2D:
       - {x: 0.75, y: -0.755}
       - {x: 0.35, y: -0.685}
       - {x: 0.16, y: -0.615}
+--- !u!114 &8817473697556754946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5940443693954941130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31165d2ae178670418f56c95c1bc143d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_waypoints: []
+  m_speed: 8
+  m_stopMoving: 0

@@ -22,7 +22,7 @@ public class GenerateLevel : MonoBehaviour
     }
 
     public void generateLevel(int index) {
-        Level level = _levels.getLevel(21);
+        Level level = _levels.getLevel(26);
         Debug.Log("generating - "+level.obstacles.Length);
         for (int i =0; i < level.obstacles.Length; i++) {
             Vector3 position = level.obstacles[i].position;
@@ -43,7 +43,7 @@ public class GenerateLevel : MonoBehaviour
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         playerController.RotSpeed = level.playerRotationSpeed;
         PlayerController1 playerController1 = GameObject.FindObjectOfType<PlayerController1>();
-        playerController1.MoveSpeed = level.playerMovementSpeed;
+        //playerController1.MoveSpeed = level.playerMovementSpeed;
     }
 
     public GameObject generateLevel(int index, float offset)

@@ -136,8 +136,8 @@ public class GameManager : MonoBehaviour
             if (_playerController.gameObject.transform.position.y - _lastIncrementHeight > _incrementAfterDistance)
             {
                 _lastIncrementHeight = _playerController.gameObject.transform.position.y;
-                _playerController.RotSpeed = _playerController.RotSpeed * _rotationIncrement;
-                _playerController1.MoveSpeed = _playerController1.MoveSpeed * _speedIncrement;
+                _playerController.RotSpeed *= _rotationIncrement;
+                _playerController1.MoveSpeed *= _speedIncrement;
 
             }
         }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1409631529367093317}
   - component: {fileID: 1409631529367093314}
   - component: {fileID: 7424726952197276609}
+  - component: {fileID: 6470437100914672601}
   m_Layer: 0
   m_Name: circle
   m_TagString: obstacle
@@ -98,3 +99,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.47
+--- !u!114 &6470437100914672601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409631529367093315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31165d2ae178670418f56c95c1bc143d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_waypoints: []
+  m_speed: 8
+  m_stopMoving: 0

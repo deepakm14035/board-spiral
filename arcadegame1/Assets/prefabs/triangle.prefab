@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3973830906796418479}
   - component: {fileID: 5567394401922838880}
   - component: {fileID: 808147636158463466}
+  - component: {fileID: -3207034483853086126}
   m_Layer: 0
   m_Name: triangle
   m_TagString: obstacle
@@ -112,3 +113,18 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: -0.4942363}
       - {x: -0.4942363, y: 0.5}
+--- !u!114 &-3207034483853086126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8286136841097739739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31165d2ae178670418f56c95c1bc143d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_waypoints: []
+  m_speed: 8
+  m_stopMoving: 0
