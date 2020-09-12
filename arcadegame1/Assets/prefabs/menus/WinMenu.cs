@@ -12,7 +12,7 @@ namespace MenuManagement
             GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
             gameManager.loadNextLevel();
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
-            menuManager.loadMenu(GameMenu.Instance);
+            menuManager.loadMenu(GameMenu.Instance, 3f, true);
         }
 
         public void Replay()
@@ -20,7 +20,7 @@ namespace MenuManagement
             GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
             gameManager.loadCurrentLevel();
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
-            menuManager.loadMenu(GameMenu.Instance);
+            menuManager.loadMenu(GameMenu.Instance, 3f, true);
         }
     }
 }

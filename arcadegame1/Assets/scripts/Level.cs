@@ -32,12 +32,14 @@ public class Level
     protected float _playerRotationSpeed;
     [SerializeField]
     protected float _playerMovementSpeed;
+    [SerializeField]
+    protected bool _AllowedInInfinity;
 
     public Obstacle[] obstacles => _obstacles;
     public Vector3 finishPosition => _finishPosition;
     public Vector4 borders => _borders;
     public float playerRotationSpeed => _playerRotationSpeed;
     public float playerMovementSpeed => _playerMovementSpeed;
-
+    public bool allowedInInfinity => _AllowedInInfinity;
 
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace MenuManagement
 {
@@ -16,6 +17,9 @@ namespace MenuManagement
         private GameObject _gameMenu;
         [SerializeField]
         private GameObject _pauseMenu;
+
+        [SerializeField]
+        private GameObject _loadingScreen;
 
 
         private static MenuManager _instance;
@@ -61,24 +65,56 @@ namespace MenuManagement
 
         }
 
-        public void loadMenu(Menu menu, float delay)
+        public void loadMenu(Menu menu, float delay, bool isLoadingRequired)
         {
-            StartCoroutine(loadAfterDelay(menu,delay));
+            StartCoroutine(loadAfterDelay(menu, delay, isLoadingRequired));
         }
 
-        IEnumerator loadAfterDelay(Menu menu, float delay) {
+        IEnumerator loadAfterDelay(Menu menu, float delay, bool isLoadingRequired) {
+            GameObject loadingScreen=new GameObject();
+            if (isLoadingRequired)
+            {
+                GameObject.Destroy(loadingScreen);
+                loadingScreen = null;
+                loadingScreen = Instantiate(_loadingScreen, Vector3.zero, Quaternion.identity);
+                yield return null;
+            }
+            Debug.Log("loadingsc");
+            SceneTransitionUtil.fadeObjects(menuStack.Peek().gameObject.GetComponentsInChildren<MaskableGraphic>(),0.5f,0f);
             yield return new WaitForSeconds(delay);
+            SceneTransitionUtil.fadeObjects(menuStack.Peek().gameObject.GetComponentsInChildren<MaskableGraphic>(), 0f, 1f);
             menuStack.Peek().gameObject.SetActive(false);
             menuStack.Push(menu);
             menu.gameObject.SetActive(true);
-
+            Debug.Log("loadingsc des");
+            GameObject.Destroy(loadingScreen);
         }
 
-        public void goBack()
+        
+
+        public void goBack(bool delayRequired)
         {
+            if (delayRequired)
+                StartCoroutine(LoadAndGoBack());
+            else
+            {
+                menuStack.Peek().gameObject.SetActive(false);
+                menuStack.Pop();
+                menuStack.Peek().gameObject.SetActive(true);
+            }
+        }
+
+        IEnumerator LoadAndGoBack()
+        {
+            GameObject loadingScreen = Instantiate(_loadingScreen, Vector3.zero, Quaternion.identity);
+            yield return null;
+            SceneTransitionUtil.fadeObjects(menuStack.Peek().gameObject.GetComponentsInChildren<MaskableGraphic>(), 0.5f, 0f);
+            yield return new WaitForSeconds(1f);
+            SceneTransitionUtil.fadeObjects(menuStack.Peek().gameObject.GetComponentsInChildren<MaskableGraphic>(), 0f, 1f);
             menuStack.Peek().gameObject.SetActive(false);
             menuStack.Pop();
             menuStack.Peek().gameObject.SetActive(true);
+            GameObject.Destroy(loadingScreen);
         }
     }
 }

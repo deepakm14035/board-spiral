@@ -18,6 +18,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -15, z: 30, w: 40}
     _playerRotationSpeed: 25
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 0
       position: {x: 0, y: 15, z: 0}
@@ -29,6 +30,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 40}
     _playerRotationSpeed: 25
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 0
       position: {x: -10, y: 10, z: 0}
@@ -52,6 +54,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 50}
     _playerRotationSpeed: 20
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 1
       position: {x: 8.6, y: 26, z: 0}
@@ -65,33 +68,35 @@ MonoBehaviour:
       rotation: {x: 0, y: 0, z: 0.06975647, w: -0.9975641}
       path: []
       speed: 0
-    _finishPosition: {x: 0, y: 55, z: 0}
-    _borders: {x: -15, y: -10, z: 30, w: 65}
-    _playerRotationSpeed: 25
+    _finishPosition: {x: 0, y: 70, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 80}
+    _playerRotationSpeed: 35
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 1
-      position: {x: -12, y: 15, z: 0}
+      position: {x: -12, y: 20, z: 0}
       scale: {x: 6, y: 6, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       speed: 0
     - obstacleID: 1
-      position: {x: 12, y: 15, z: 0}
+      position: {x: 12, y: 20, z: 0}
       scale: {x: 6, y: 6, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       speed: 0
     - obstacleID: 1
-      position: {x: 0, y: 15, z: 0}
+      position: {x: 0, y: 20, z: 0}
       scale: {x: 1, y: 6, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       speed: 0
     _finishPosition: {x: 0, y: 40, z: 0}
-    _borders: {x: -15, y: -10, z: 30, w: 40}
+    _borders: {x: -15, y: -10, z: 30, w: 50}
     _playerRotationSpeed: 20
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 1
       position: {x: 3, y: 16.25, z: 0}
@@ -139,6 +144,7 @@ MonoBehaviour:
     _borders: {x: -17, y: -10, z: 34, w: 55}
     _playerRotationSpeed: 15
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 4
       position: {x: -15, y: 36, z: 0}
@@ -156,40 +162,43 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 110}
     _playerRotationSpeed: 35
     _playerMovementSpeed: 10
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -15, y: 15, z: 0}
       scale: {x: 8, y: 1.5, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -15, y: 15, z: 0}
-      - {x: 15, y: 15, z: 0}
+      - {x: -15, y: 235, z: 0}
+      - {x: 15, y: 235, z: 0}
       speed: 8
     - obstacleID: 1
       position: {x: 0, y: 25, z: 0}
       scale: {x: 8, y: 1.5, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -15, y: 25, z: 0}
-      - {x: 15, y: 25, z: 0}
+      - {x: -15, y: 245, z: 0}
+      - {x: 15, y: 245, z: 0}
       speed: 8
     _finishPosition: {x: 0, y: 40, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 50}
     _playerRotationSpeed: 35
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 1
       position: {x: -15, y: 30, z: 0}
       scale: {x: 8, y: 16, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -15, y: 30, z: 0}
-      - {x: 15, y: 30, z: 0}
+      - {x: -15, y: 45, z: 0}
+      - {x: 15, y: 45, z: 0}
       speed: 4
     _finishPosition: {x: 0, y: 65, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 75}
     _playerRotationSpeed: 35
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 1
       position: {x: -15, y: 30, z: 0}
@@ -211,6 +220,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 65}
     _playerRotationSpeed: 35
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 1
       position: {x: -15, y: 20, z: 0}
@@ -248,27 +258,29 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 70}
     _playerRotationSpeed: 35
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
-      position: {x: -15, y: 25, z: 0}
+      position: {x: -16, y: 25, z: 0}
       scale: {x: 6, y: 20, z: 1}
       rotation: {x: 0, y: 0, z: -0.25881904, w: 0.9659258}
       path:
-      - {x: -15, y: 25, z: 0}
-      - {x: 5, y: 25, z: 0}
+      - {x: -16, y: 25, z: 0}
+      - {x: 4, y: 25, z: 0}
       speed: 4
     - obstacleID: 1
-      position: {x: 7.5, y: 25, z: 0}
+      position: {x: 8.5, y: 25, z: 0}
       scale: {x: 6, y: 20, z: 1}
       rotation: {x: 0, y: 0, z: -0.25881904, w: 0.9659258}
       path:
-      - {x: 7.5, y: 25, z: 0}
-      - {x: 27.5, y: 25, z: 0}
+      - {x: 8.5, y: 25, z: 0}
+      - {x: 28.5, y: 25, z: 0}
       speed: 4
     _finishPosition: {x: 0, y: 50, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 60}
-    _playerRotationSpeed: 35
+    _playerRotationSpeed: 45
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 1
       position: {x: -10, y: 25, z: 0}
@@ -292,15 +304,16 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 110}
     _playerRotationSpeed: 35
     _playerMovementSpeed: 10
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
-      position: {x: -10, y: 50, z: 0}
+      position: {x: -11, y: 50, z: 0}
       scale: {x: 8, y: 30, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       speed: 0
     - obstacleID: 1
-      position: {x: 10, y: 50, z: 0}
+      position: {x: 11, y: 50, z: 0}
       scale: {x: 8, y: 30, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
@@ -309,6 +322,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 110}
     _playerRotationSpeed: 30
     _playerMovementSpeed: 10
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -15, y: 50, z: 0}
@@ -332,6 +346,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 110}
     _playerRotationSpeed: 35
     _playerMovementSpeed: 6
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -15, y: 20, z: 0}
@@ -355,6 +370,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 50}
     _playerRotationSpeed: 35
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 1
       position: {x: -15, y: 15, z: 0}
@@ -510,6 +526,7 @@ MonoBehaviour:
     _borders: {x: -12.5, y: -10, z: 25, w: 80}
     _playerRotationSpeed: 35
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 1
       position: {x: -15, y: 50, z: 0}
@@ -551,6 +568,7 @@ MonoBehaviour:
     _borders: {x: -12.5, y: -10, z: 30, w: 210}
     _playerRotationSpeed: 30
     _playerMovementSpeed: 8
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -9, y: 50, z: 0}
@@ -580,6 +598,7 @@ MonoBehaviour:
     _borders: {x: -12.5, y: -10, z: 30, w: 210}
     _playerRotationSpeed: 30
     _playerMovementSpeed: 8
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 5
       position: {x: -6, y: 55, z: 0}
@@ -609,6 +628,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 210}
     _playerRotationSpeed: 40
     _playerMovementSpeed: 10
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -10, y: 40, z: 0}
@@ -638,6 +658,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 110}
     _playerRotationSpeed: 45
     _playerMovementSpeed: 8
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -10, y: 25, z: 0}
@@ -667,6 +688,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 85}
     _playerRotationSpeed: 40
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -12, y: 35, z: 0}
@@ -726,6 +748,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 135}
     _playerRotationSpeed: 20
     _playerMovementSpeed: 10
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -12, y: 35, z: 0}
@@ -740,21 +763,22 @@ MonoBehaviour:
       scale: {x: 1.5, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 7, y: 35, z: 0}
-      - {x: -7, y: 35, z: 0}
+      - {x: 7, y: 17220, z: 0}
+      - {x: -7, y: 17220, z: 0}
       speed: 3
     - obstacleID: 1
       position: {x: 12, y: 35, z: 0}
       scale: {x: 9, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 19, y: 35, z: 0}
-      - {x: 5, y: 35, z: 0}
+      - {x: 19, y: 17220, z: 0}
+      - {x: 5, y: 17220, z: 0}
       speed: 3
     _finishPosition: {x: 0, y: 50, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 60}
     _playerRotationSpeed: 45
     _playerMovementSpeed: 10
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -13, y: 55, z: 0}
@@ -776,25 +800,64 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 110}
     _playerRotationSpeed: 40
     _playerMovementSpeed: 8
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -15, y: 30, z: 0}
       scale: {x: 2, y: 2, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 15, y: 30, z: 0}
-      - {x: -15, y: 30, z: 0}
+      - {x: 15, y: 140, z: 0}
+      - {x: -15, y: 140, z: 0}
       speed: 8
     - obstacleID: 1
       position: {x: 15, y: 37.5, z: 0}
       scale: {x: 2, y: 2, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 15, y: 37.5, z: 0}
-      - {x: -15, y: 37.5, z: 0}
+      - {x: 15, y: 147.5, z: 0}
+      - {x: -15, y: 147.5, z: 0}
       speed: 8
     - obstacleID: 1
       position: {x: -15, y: 45, z: 0}
+      scale: {x: 2, y: 2, z: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path:
+      - {x: 15, y: 155, z: 0}
+      - {x: -15, y: 155, z: 0}
+      speed: 8
+    - obstacleID: 1
+      position: {x: 15, y: 52.5, z: 0}
+      scale: {x: 2, y: 2, z: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path:
+      - {x: 15, y: 162.5, z: 0}
+      - {x: -15, y: 162.5, z: 0}
+      speed: 8
+    - obstacleID: 1
+      position: {x: -15, y: 60, z: 0}
+      scale: {x: 2, y: 2, z: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path:
+      - {x: 15, y: 170, z: 0}
+      - {x: -15, y: 170, z: 0}
+      speed: 8
+    - obstacleID: 1
+      position: {x: 15, y: 67.5, z: 0}
+      scale: {x: 2, y: 2, z: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path:
+      - {x: 15, y: 177.5, z: 0}
+      - {x: -15, y: 177.5, z: 0}
+      speed: 8
+    _finishPosition: {x: 0, y: 100, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 110}
+    _playerRotationSpeed: 40
+    _playerMovementSpeed: 8
+    _AllowedInInfinity: 0
+  - _obstacles:
+    - obstacleID: 1
+      position: {x: -15, y: 30, z: 0}
       scale: {x: 2, y: 2, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
@@ -802,15 +865,15 @@ MonoBehaviour:
       - {x: -15, y: 45, z: 0}
       speed: 8
     - obstacleID: 1
-      position: {x: 15, y: 52.5, z: 0}
+      position: {x: -10, y: 37.5, z: 0}
       scale: {x: 2, y: 2, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 15, y: 52.5, z: 0}
-      - {x: -15, y: 52.5, z: 0}
+      - {x: 15, y: 37.5, z: 0}
+      - {x: -15, y: 37.5, z: 0}
       speed: 8
     - obstacleID: 1
-      position: {x: -15, y: 60, z: 0}
+      position: {x: -5, y: 45, z: 0}
       scale: {x: 2, y: 2, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
@@ -818,17 +881,18 @@ MonoBehaviour:
       - {x: -15, y: 60, z: 0}
       speed: 8
     - obstacleID: 1
-      position: {x: 15, y: 67.5, z: 0}
+      position: {x: 0, y: 52.5, z: 0}
       scale: {x: 2, y: 2, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
       - {x: 15, y: 67.5, z: 0}
       - {x: -15, y: 67.5, z: 0}
       speed: 8
-    _finishPosition: {x: 0, y: 100, z: 0}
-    _borders: {x: -15, y: -10, z: 30, w: 110}
+    _finishPosition: {x: 0, y: 80, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 90}
     _playerRotationSpeed: 40
     _playerMovementSpeed: 8
+    _AllowedInInfinity: 1
   - _obstacles:
     - obstacleID: 1
       position: {x: -15, y: 30, z: 0}
@@ -866,43 +930,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 90}
     _playerRotationSpeed: 40
     _playerMovementSpeed: 8
-  - _obstacles:
-    - obstacleID: 1
-      position: {x: -15, y: 30, z: 0}
-      scale: {x: 2, y: 2, z: 1}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      path:
-      - {x: 15, y: 30, z: 0}
-      - {x: -15, y: 30, z: 0}
-      speed: 8
-    - obstacleID: 1
-      position: {x: -10, y: 37.5, z: 0}
-      scale: {x: 2, y: 2, z: 1}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      path:
-      - {x: 15, y: 37.5, z: 0}
-      - {x: -15, y: 37.5, z: 0}
-      speed: 8
-    - obstacleID: 1
-      position: {x: -5, y: 45, z: 0}
-      scale: {x: 2, y: 2, z: 1}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      path:
-      - {x: 15, y: 45, z: 0}
-      - {x: -15, y: 45, z: 0}
-      speed: 8
-    - obstacleID: 1
-      position: {x: 0, y: 52.5, z: 0}
-      scale: {x: 2, y: 2, z: 1}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      path:
-      - {x: 15, y: 52.5, z: 0}
-      - {x: -15, y: 52.5, z: 0}
-      speed: 8
-    _finishPosition: {x: 0, y: 80, z: 0}
-    _borders: {x: -15, y: -10, z: 30, w: 90}
-    _playerRotationSpeed: 40
-    _playerMovementSpeed: 8
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -10, y: 35, z: 0}
@@ -928,6 +956,7 @@ MonoBehaviour:
     _borders: {x: -15, y: -10, z: 30, w: 70}
     _playerRotationSpeed: 40
     _playerMovementSpeed: 0
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: -12, y: 35, z: 0}
@@ -1004,7 +1033,8 @@ MonoBehaviour:
     _finishPosition: {x: 0, y: 110, z: 0}
     _borders: {x: -15, y: -15, z: 30, w: 120}
     _playerRotationSpeed: 30
-    _playerMovementSpeed: 8
+    _playerMovementSpeed: 6
+    _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 4
       position: {x: -12, y: 38, z: 0}
@@ -1069,4 +1099,5 @@ MonoBehaviour:
     _finishPosition: {x: 0, y: 110, z: 0}
     _borders: {x: -15, y: -15, z: 30, w: 120}
     _playerRotationSpeed: 30
-    _playerMovementSpeed: 8
+    _playerMovementSpeed: 6
+    _AllowedInInfinity: 0

@@ -32,7 +32,7 @@ namespace MenuManagement
         {
             MenuManager menuManager = MenuManager.Instance;
             if (menuManager != null)
-                menuManager.goBack();
+                menuManager.goBack(false);
         }
 
         public virtual void GoHome() {

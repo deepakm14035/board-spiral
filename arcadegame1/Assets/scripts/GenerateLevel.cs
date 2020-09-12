@@ -22,7 +22,7 @@ public class GenerateLevel : MonoBehaviour
     }
 
     public void generateLevel(int index) {
-        Level level = _levels.getLevel(30);
+        Level level = _levels.getLevel(index);
         Debug.Log("generating - "+level.obstacles.Length);
         for (int i =0; i < level.obstacles.Length; i++) {
             Vector3 position = level.obstacles[i].position;
@@ -50,7 +50,7 @@ public class GenerateLevel : MonoBehaviour
     {
         GameObject parentObj = new GameObject();
         Level level = _levels.getLevel(index);
-        Debug.Log("generating - " + level.obstacles.Length);
+        Debug.Log("[generateLevel] - " + level.obstacles.Length);
         for (int i = 0; i < level.obstacles.Length; i++)
         {
             Vector3 position = level.obstacles[i].position + Vector3.up*offset;
@@ -62,6 +62,11 @@ public class GenerateLevel : MonoBehaviour
             {
                 obstacle.AddComponent<WaypointMovement>();
                 obstacle.GetComponent<WaypointMovement>().m_waypoints = level.obstacles[i].path;
+                for(int w=0;w< level.obstacles[i].path.Length; w++)
+                {
+                    obstacle.GetComponent<WaypointMovement>().m_waypoints[w] += Vector3.up * offset;
+                    Debug.Log(obstacle.GetComponent<WaypointMovement>().m_waypoints[w]+", "+ Vector3.up * offset);
+                }
                 obstacle.GetComponent<WaypointMovement>().m_speed = level.obstacles[i].speed;
             }
             obstacle.transform.parent = parentObj.transform;
@@ -152,7 +157,20 @@ public class GenerateLevel : MonoBehaviour
 
     public bool isMovingLevel(int i)
     {
-        if (_levels.getLevel(i).playerMovementSpeed > 1f)
+        if (_levels.getLevel(i).playerMovementSpeed > 1f || _levels.getLevel(i).allowedInInfinity)
+            return true;
+        return false;
+    }
+
+    public bool isMoving(int i)
+    {
+        return _levels.getLevel(i).playerMovementSpeed > 1f;
+        
+    }
+
+    public bool isNonMovingLevel(int i)
+    {
+        if (_levels.getLevel(i).allowedInInfinity)
             return true;
         return false;
     }

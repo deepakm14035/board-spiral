@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject pivotEffectPrefab;
     [SerializeField] private GameObject trailRenderer1;
     [SerializeField] private GameObject trailRenderer2;
+    [SerializeField] private GameObject gameWinParticles;
     [SerializeField] private GameObject UIButtonLeft, UIButtonRight;
 
     GameManager _gameManager;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     bool gameStarted = false;
     PlayerController1 pc;
     GameObject mainCamera;
+    bool gameComplete = false;
 
     public float RotSpeed { get => rotSpeed; set => rotSpeed = value; }
 
@@ -30,7 +32,7 @@ public class PlayerController : MonoBehaviour
         uiEffects = GameObject.FindObjectOfType<UIEffects>();
         pc = GameObject.FindObjectOfType<PlayerController1>();
         setMoving(false);
-        allowMoving = true;
+        //allowMoving = true;
         mainCamera = Camera.main.gameObject.transform.parent.gameObject;
         trailRenderer1.SetActive(false);
         trailRenderer2.SetActive(false);
@@ -73,12 +75,13 @@ public class PlayerController : MonoBehaviour
         curpos = pos1;
         trailRenderer2.SetActive(true);
         gameStarted = true;
+        gameComplete = false;
 
         StartCoroutine(allowMovementAfterDelay());
     }
 
     IEnumerator allowMovementAfterDelay() {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         //trailRenderer1.SetActive(true);
         //trailRenderer2.SetActive(true);
         setMoving(true);
@@ -108,12 +111,12 @@ public class PlayerController : MonoBehaviour
             trailRenderer2.SetActive(true);
             trailRenderer1.SetActive(false);
         }
-        if (!gameStarted)
+        /*if (!gameStarted)
         {
             gameStarted = true;
             setMoving(true);
             return;
-        }
+        }*/
         Instantiate(pivotEffectPrefab,curpos.transform.position,Quaternion.identity);
         StartCoroutine(pivotChangeDelay());
 
@@ -130,8 +133,9 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.tag.Equals("obstacle"))
+        if (collision.gameObject.tag.Equals("obstacle") && !gameComplete)
         {
+            gameComplete = true;
             mainCamera.GetComponent<Animator>().SetTrigger("shake");
             _gameManager.stopAllObstacles();
             uiEffects.playLoseAnimation();
@@ -140,10 +144,11 @@ public class PlayerController : MonoBehaviour
             uiEffects.disableObjects();
             trailRenderer1.SetActive(false);
             trailRenderer2.SetActive(false);
-            menuManager.loadMenu(LoseMenu.Instance,3f);
+            menuManager.loadMenu(LoseMenu.Instance,3f,false);
         }
-        if (collision.gameObject.tag.Equals("finish"))
+        if (collision.gameObject.tag.Equals("finish") && !gameComplete)
         {
+            gameComplete = true;
             uiEffects.playWinAnimation();
             setMoving(false);
             if (pc != null)
@@ -152,7 +157,8 @@ public class PlayerController : MonoBehaviour
             uiEffects.disableObjects();
             trailRenderer1.SetActive(false);
             trailRenderer2.SetActive(false);
-            menuManager.loadMenu(WinMenu.Instance,3f);
+            Instantiate(gameWinParticles, curpos.transform.position+Vector3.up*15f,Quaternion.identity);
+            menuManager.loadMenu(WinMenu.Instance,3f, false);
 
 
         }

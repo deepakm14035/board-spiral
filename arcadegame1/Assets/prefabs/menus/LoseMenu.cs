@@ -7,9 +7,12 @@ public class LoseMenu : Menu<LoseMenu>
 {
     public void Replay() {
         GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
-        gameManager.loadCurrentLevel();
+        if (!gameManager._isInfinityMode)
+            gameManager.loadCurrentLevel();
+        else
+            gameManager.loadInfinityMode();
         MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
-        menuManager.goBack();
+        menuManager.goBack(true);
 
     }
 }

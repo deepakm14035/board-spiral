@@ -26,4 +26,4 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - _ObstacleColor: {r: 0.088608615, g: 0.50767577, b: 1.7077296, a: 1}
+    - _ObstacleColor: {r: 0.06153601, g: 0.35075524, b: 1.1753378, a: 1}

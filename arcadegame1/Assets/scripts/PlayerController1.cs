@@ -14,7 +14,7 @@ public class PlayerController1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        allowMoving = true;
+        allowMoving = false;
     }
 
     // Update is called once per frame
