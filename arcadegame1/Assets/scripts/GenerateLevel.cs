@@ -49,6 +49,7 @@ public class GenerateLevel : MonoBehaviour
     public GameObject generateLevel(int index, float offset)
     {
         GameObject parentObj = new GameObject();
+        parentObj.name = "index " + index;
         Level level = _levels.getLevel(index);
         Debug.Log("[generateLevel] - " + level.obstacles.Length);
         for (int i = 0; i < level.obstacles.Length; i++)

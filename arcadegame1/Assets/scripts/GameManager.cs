@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     void generateInfinityObstacles()
     {
         _numLevelsCrossed++;
-        while (_nextHeight - _playerController.gameObject.transform.position.y < 200f)
+        while (_nextHeight - _playerController.gameObject.transform.position.y < 2000f)
         {
             int randomLevel = getRandomLevel();
             if (!_levelGenerator.isMovingLevel(randomLevel))
@@ -106,11 +106,11 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator loadLevel(int index) {
-        yield return new WaitForSeconds(2f);//wait for menu transitions
+        yield return new WaitForSeconds(1.2f);//wait for menu transitions
         _levelGenerator.clearLevel();
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         playerController.resetPosition();
-        //index = 33;
+        index = 9;
         _levelGenerator.generateLevel(index);
         _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
         if (index == 0)

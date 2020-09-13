@@ -157,7 +157,7 @@ public class PlayerController : MonoBehaviour
             uiEffects.disableObjects();
             trailRenderer1.SetActive(false);
             trailRenderer2.SetActive(false);
-            Instantiate(gameWinParticles, curpos.transform.position+Vector3.up*15f,Quaternion.identity);
+            Instantiate(gameWinParticles, curpos.transform.position+Vector3.up*10f,Quaternion.identity);
             menuManager.loadMenu(WinMenu.Instance,3f, false);
 
 
