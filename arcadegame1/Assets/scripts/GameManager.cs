@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         _levelGenerator.clearLevel();
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         playerController.resetPosition();
-        index = 0;
+        index = 31;
         _levelGenerator.generateLevel(index);
         _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
         if (index == 0)
