@@ -169,16 +169,16 @@ MonoBehaviour:
       scale: {x: 8, y: 1.5, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -15, y: 235, z: 0}
-      - {x: 15, y: 235, z: 0}
+      - {x: -15, y: 15, z: 0}
+      - {x: 15, y: 15, z: 0}
       speed: 8
     - obstacleID: 1
       position: {x: 0, y: 25, z: 0}
       scale: {x: 8, y: 1.5, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -15, y: 245, z: 0}
-      - {x: 15, y: 245, z: 0}
+      - {x: -15, y: 25, z: 0}
+      - {x: 15, y: 25, z: 0}
       speed: 8
     _finishPosition: {x: 0, y: 40, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 50}
