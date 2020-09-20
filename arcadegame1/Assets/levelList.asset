@@ -169,16 +169,16 @@ MonoBehaviour:
       scale: {x: 8, y: 1.5, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -15, y: 4635, z: 0}
-      - {x: 15, y: 4635, z: 0}
+      - {x: -15, y: 15, z: 0}
+      - {x: 15, y: 15, z: 0}
       speed: 8
     - obstacleID: 1
       position: {x: 0, y: 25, z: 0}
       scale: {x: 8, y: 1.5, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -15, y: 4645, z: 0}
-      - {x: 15, y: 4645, z: 0}
+      - {x: -15, y: 25, z: 0}
+      - {x: 15, y: 25, z: 0}
       speed: 8
     _finishPosition: {x: 0, y: 40, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 50}
@@ -191,8 +191,8 @@ MonoBehaviour:
       scale: {x: 8, y: 16, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -15, y: 1360, z: 0}
-      - {x: 15, y: 1360, z: 0}
+      - {x: -15, y: 30, z: 0}
+      - {x: 15, y: 30, z: 0}
       speed: 4
     _finishPosition: {x: 0, y: 65, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 75}
@@ -899,32 +899,32 @@ MonoBehaviour:
       scale: {x: 2, y: 2, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 15, y: 2480, z: 0}
-      - {x: -15, y: 2480, z: 0}
+      - {x: 15, y: 30, z: 0}
+      - {x: -15, y: 30, z: 0}
       speed: 8
     - obstacleID: 1
       position: {x: -10, y: 37.5, z: 0}
       scale: {x: 2, y: 2, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 15, y: 2487.5, z: 0}
-      - {x: -15, y: 2487.5, z: 0}
+      - {x: 15, y: 37.5, z: 0}
+      - {x: -15, y: 37.5, z: 0}
       speed: 8
     - obstacleID: 1
       position: {x: -5, y: 45, z: 0}
       scale: {x: 2, y: 2, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 15, y: 2495, z: 0}
-      - {x: -15, y: 2495, z: 0}
+      - {x: 15, y: 45, z: 0}
+      - {x: -15, y: 45, z: 0}
       speed: 8
     - obstacleID: 1
       position: {x: 0, y: 52.5, z: 0}
       scale: {x: 2, y: 2, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 15, y: 2502.5, z: 0}
-      - {x: -15, y: 2502.5, z: 0}
+      - {x: 15, y: 52.5, z: 0}
+      - {x: -15, y: 52.5, z: 0}
       speed: 8
     _finishPosition: {x: 0, y: 80, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 90}
@@ -963,72 +963,72 @@ MonoBehaviour:
       scale: {x: 9, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -5, y: 1300, z: 0}
-      - {x: -19, y: 1300, z: 0}
+      - {x: -5, y: 35, z: 0}
+      - {x: -19, y: 35, z: 0}
       speed: 5
     - obstacleID: 1
       position: {x: -12, y: 85, z: 0}
       scale: {x: 9, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -5, y: 1350, z: 0}
-      - {x: -19, y: 1350, z: 0}
+      - {x: -5, y: 85, z: 0}
+      - {x: -19, y: 85, z: 0}
       speed: 5
     - obstacleID: 1
       position: {x: 0, y: 35, z: 0}
       scale: {x: 1.5, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 7, y: 1300, z: 0}
-      - {x: -7, y: 1300, z: 0}
+      - {x: 7, y: 35, z: 0}
+      - {x: -7, y: 35, z: 0}
       speed: 5
     - obstacleID: 1
       position: {x: 0, y: 85, z: 0}
       scale: {x: 1.5, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 7, y: 1350, z: 0}
-      - {x: -7, y: 1350, z: 0}
+      - {x: 7, y: 85, z: 0}
+      - {x: -7, y: 85, z: 0}
       speed: 5
     - obstacleID: 1
       position: {x: 12, y: 35, z: 0}
       scale: {x: 9, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 19, y: 1300, z: 0}
-      - {x: 5, y: 1300, z: 0}
+      - {x: 19, y: 35, z: 0}
+      - {x: 5, y: 35, z: 0}
       speed: 5
     - obstacleID: 1
       position: {x: 12, y: 85, z: 0}
       scale: {x: 9, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 19, y: 1350, z: 0}
-      - {x: 5, y: 1350, z: 0}
+      - {x: 19, y: 85, z: 0}
+      - {x: 5, y: 85, z: 0}
       speed: 5
     - obstacleID: 1
       position: {x: -12, y: 60, z: 0}
       scale: {x: 9, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -19, y: 1325, z: 0}
-      - {x: -5, y: 1325, z: 0}
+      - {x: -19, y: 60, z: 0}
+      - {x: -5, y: 60, z: 0}
       speed: 5
     - obstacleID: 1
       position: {x: 0, y: 60, z: 0}
       scale: {x: 1.5, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -7, y: 1325, z: 0}
-      - {x: 7, y: 1325, z: 0}
+      - {x: -7, y: 60, z: 0}
+      - {x: 7, y: 60, z: 0}
       speed: 5
     - obstacleID: 1
       position: {x: 12, y: 60, z: 0}
       scale: {x: 9, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 5, y: 1325, z: 0}
-      - {x: 19, y: 1325, z: 0}
+      - {x: 5, y: 60, z: 0}
+      - {x: 19, y: 60, z: 0}
       speed: 5
     _finishPosition: {x: 0, y: 110, z: 0}
     _borders: {x: -15, y: -15, z: 30, w: 120}
