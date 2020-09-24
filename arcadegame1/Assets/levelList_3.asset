@@ -16,25 +16,53 @@ MonoBehaviour:
   - _obstacles: []
     _finishPosition: {x: 0, y: 40, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 50}
-    _playerRotationSpeed: 80
+    _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
   - _obstacles:
     - obstacleID: 1
       position: {x: 0, y: 20, z: 0}
-      scale: {x: 1, y: 8, z: 0}
+      scale: {x: 8, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
       speed: 0
     _finishPosition: {x: 0, y: 40, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 50}
-    _playerRotationSpeed: 80
+    _playerRotationSpeed: 70
+    _playerMovementSpeed: 0
+    _AllowedInInfinity: 0
+  - _obstacles:
+    - obstacleID: 1
+      position: {x: 0, y: 20, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
+      path:
+      - {x: -10, y: 20, z: 0}
+      - {x: 10, y: 20, z: 0}
+      speed: 5
+    _finishPosition: {x: 0, y: 40, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 50}
+    _playerRotationSpeed: 70
+    _playerMovementSpeed: 0
+    _AllowedInInfinity: 0
+  - _obstacles:
+    - obstacleID: 1
+      position: {x: 0, y: 30, z: 0}
+      scale: {x: 3, y: 24, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
+      path:
+      - {x: -10, y: 30, z: 0}
+      - {x: 10, y: 30, z: 0}
+      speed: 5
+    _finishPosition: {x: 0, y: 60, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 70}
+    _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
   - _obstacles: []
-    _finishPosition: {x: 0, y: 40, z: 0}
-    _borders: {x: -15, y: -10, z: 30, w: 50}
-    _playerRotationSpeed: 80
+    _finishPosition: {x: 0, y: 30, z: 0}
+    _borders: {x: -2, y: -10, z: 4, w: 40}
+    _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
   levelsName: WORLD 3
