@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     }
 
     IEnumerator allowMovementAfterDelay() {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.2f);
         //trailRenderer1.SetActive(true);
         //trailRenderer2.SetActive(true);
         setMoving(true);
@@ -158,7 +158,11 @@ public class PlayerController : MonoBehaviour
             trailRenderer1.SetActive(false);
             trailRenderer2.SetActive(false);
             Instantiate(gameWinParticles, curpos.transform.position+Vector3.up*10f,Quaternion.identity);
-            menuManager.loadMenu(WinMenu.Instance,3f, false);
+            _gameManager.updateProgressForWin();
+            if(!_gameManager.isLastLevel())
+                menuManager.loadMenu(WinMenu.Instance,1f, false);
+            else
+                menuManager.loadMenu(MainMenu.Instance, 1f, false);
 
 
         }

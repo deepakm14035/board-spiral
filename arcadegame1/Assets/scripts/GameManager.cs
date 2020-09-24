@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private GameObject _HowToPlayPanel2;
 
     public int _currentLevel;
+    public int _currentWorld;
     public GameObject MovingIndicator;
     int _numLevelsCrossed;
     float _nextHeight = 15f;
@@ -82,42 +83,34 @@ public class GameManager : MonoBehaviour
     }
 
     public void loadCurrentLevel() {
-        JSONSaver jsonSaver = FindObjectOfType<JSONSaver>();
-        SaveData saveData = new SaveData();
-        saveData = jsonSaver.loadData(saveData);
         Time.timeScale = 1f;
-        _currentLevel = saveData.currentLevel;
-        StartCoroutine(loadLevel(saveData.currentLevel));
+        StartCoroutine(loadLevel(0, _currentLevel));
     }
 
     public void loadNextLevel()
     {
-        JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
-        SaveData saveData = new SaveData();
-        GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
-        saveData = jsonSaver.loadData(saveData);
-        saveData.currentLevel++;
-        if (saveData.currentLevel >= _levelGenerator.NoOfLevels())
-            saveData.currentLevel = 0;
-        jsonSaver.saveData(saveData);
-        _currentLevel = saveData.currentLevel;
-        StartCoroutine( loadLevel(saveData.currentLevel));
-
+        _currentLevel++;
+        startLevel( _currentWorld, _currentLevel);
     }
 
-    IEnumerator loadLevel(int index) {
+    public void startLevel(int worldNo, int index) {
+        _currentLevel = index;
+        _currentWorld = worldNo;
+        StartCoroutine(loadLevel(worldNo,index));
+    }
+
+    IEnumerator loadLevel(int worldNo, int index) {
         yield return new WaitForSeconds(1.2f);//wait for menu transitions
         _levelGenerator.clearLevel();
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         playerController.resetPosition();
-        index = 9;
-        _levelGenerator.generateLevel(index);
+        _levelGenerator.generateLevel(worldNo, index);
         _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
         if (index == 0)
         {
             StartCoroutine(playTutorial());
         }
-        if (_levelGenerator.isMoving(index))
+        if (_levelGenerator.isMoving(worldNo, index))
             StartCoroutine(playMovingIndicator());
         Debug.Log("boundaries-"+ _boundaries);
     }
@@ -175,6 +168,51 @@ public class GameManager : MonoBehaviour
         {
             images[i].m_spinningClockwise = !images[i].m_spinningClockwise;
         }
+    }
+
+    public void getLevelProgressData()
+    {
+        JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
+        SaveData saveData = new SaveData();
+        saveData = jsonSaver.loadData(saveData);
+        saveData.currentLevel++;
+        if (saveData.currentLevel >= _levelGenerator.NoOfLevels())
+            saveData.currentLevel = 0;
+        jsonSaver.saveData(saveData);
+    }
+    public void updateProgressForWin()
+    {
+        updateProgress(_currentWorld, _currentLevel,2);
+
+    }
+
+    public void updateProgress(int worldNo, int level,int value)
+    {
+        JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
+        SaveData saveData = new SaveData();
+        saveData = jsonSaver.loadData(saveData);
+        saveData.worlds[worldNo].levelList.scores[level] = value;
+        if(saveData.worlds[worldNo].levelList.scores.Length > level + 1)
+            saveData.worlds[worldNo].levelList.scores[level+1] = 1;
+        jsonSaver.saveData(saveData);
+
+    }
+
+    public int getLevelProgress(int worldNo, int level)
+    {
+        JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
+        SaveData saveData = new SaveData();
+        saveData = jsonSaver.loadData(saveData);
+        Debug.Log("w no - "+worldNo+", "+level);
+        return saveData.worlds[worldNo].levelList.scores[level];
+    }
+
+    public bool isLastLevel()
+    {
+        if (_currentLevel == _levelGenerator.getNoOfLevels(_currentWorld) - 1)
+            return true;
+        return false;
+        
     }
 
     private void Update()

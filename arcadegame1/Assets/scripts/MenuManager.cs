@@ -17,6 +17,8 @@ namespace MenuManagement
         private GameObject _gameMenu;
         [SerializeField]
         private GameObject _pauseMenu;
+        [SerializeField]
+        private GameObject _levelSelecterMenu;
 
         [SerializeField]
         private GameObject _loadingScreen;
@@ -49,11 +51,13 @@ namespace MenuManagement
             GameObject menu3 = Instantiate(_winMenu, transform.forward, Quaternion.identity);
             GameObject menu4 = Instantiate(_gameMenu, transform.forward, Quaternion.identity);
             GameObject menu5 = Instantiate(_pauseMenu, transform.forward, Quaternion.identity);
+            GameObject menu6 = Instantiate(_levelSelecterMenu, transform.forward, Quaternion.identity);
 
             menu2.SetActive(false);
             menu3.SetActive(false);
             menu4.SetActive(false);
             menu5.SetActive(false);
+            menu6.SetActive(false);
 
             menuStack.Push(menu1.GetComponent<Menu>());
         }

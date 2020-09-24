@@ -21,8 +21,8 @@ public class GenerateLevel : MonoBehaviour
         return _levels.noOfLevels;
     }
 
-    public void generateLevel(int index) {
-        Level level = _levels.getLevel(index);
+    public void generateLevel(int worldNo, int index) {
+        Level level = _levels.levelLists[worldNo].getLevel(index);
         Debug.Log("generating - "+level.obstacles.Length);
         for (int i =0; i < level.obstacles.Length; i++) {
             Vector3 position = level.obstacles[i].position;
@@ -163,9 +163,9 @@ public class GenerateLevel : MonoBehaviour
         return false;
     }
 
-    public bool isMoving(int i)
+    public bool isMoving(int world, int i)
     {
-        return _levels.getLevel(i).playerMovementSpeed > 1f;
+        return world!=0;
         
     }
 
@@ -176,4 +176,16 @@ public class GenerateLevel : MonoBehaviour
         return false;
     }
 
+    public LevelList getWorldDetails(int worldNo)
+    {
+        return _levels.levelLists[worldNo];
+    }
+    public int getNoOfWorlds()
+    {
+        return _levels.levelLists.Capacity;
+    }
+    public int getNoOfLevels(int worldNo)
+    {
+        return _levels.levelLists[worldNo].noOfLevels;
+    }
 }

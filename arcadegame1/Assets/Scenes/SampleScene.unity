@@ -631,6 +631,8 @@ MonoBehaviour:
     type: 3}
   _pauseMenu: {fileID: 3128730849667205544, guid: 584d5e27d25e4f0418ded2556a34d659,
     type: 3}
+  _levelSelecterMenu: {fileID: 2788869506907080486, guid: 2a0d94673bfb0b148b57c31ceb434f5a,
+    type: 3}
   _loadingScreen: {fileID: 1900187599087333344, guid: dda60d54c05dd2e4a88d17b86e3d4440,
     type: 3}
 --- !u!4 &441126576
@@ -1582,6 +1584,7 @@ MonoBehaviour:
   _HowToPlayPanel1: {fileID: 1296304735}
   _HowToPlayPanel2: {fileID: 1612420814}
   _currentLevel: 0
+  _currentWorld: 0
   MovingIndicator: {fileID: 619007939}
   _isInfinityMode: 0
 --- !u!4 &872192443
