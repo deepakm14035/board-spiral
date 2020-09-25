@@ -113,7 +113,7 @@ namespace MenuManagement
             GameObject loadingScreen = Instantiate(_loadingScreen, Vector3.zero, Quaternion.identity);
             yield return null;
             SceneTransitionUtil.fadeObjects(menuStack.Peek().gameObject.GetComponentsInChildren<MaskableGraphic>(), 0.5f, 0f);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.2f);
             SceneTransitionUtil.fadeObjects(menuStack.Peek().gameObject.GetComponentsInChildren<MaskableGraphic>(), 0f, 1f);
             menuStack.Peek().gameObject.SetActive(false);
             menuStack.Pop();

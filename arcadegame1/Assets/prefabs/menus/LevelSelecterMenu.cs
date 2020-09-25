@@ -46,7 +46,7 @@ public class LevelSelecterMenu : Menu<LevelSelecterMenu>
     }
 
     void addEventListener(Button button, int worldNo, int i, int type) {
-        //if(type==1||type==2)
+        if(type==1||type==2)
             button.onClick.AddListener(delegate {
                 GameObject.FindObjectOfType<MenuManager>().loadMenu(GameMenu.Instance);
                 Debug.Log("w" + worldNo + ", i-" + i);

@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator loadLevel(int worldNo, int index) {
-        yield return new WaitForSeconds(1.2f);//wait for menu transitions
+        yield return new WaitForSeconds(1f);//wait for menu transitions
         _levelGenerator.clearLevel();
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         playerController.resetPosition();

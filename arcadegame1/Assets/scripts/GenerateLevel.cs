@@ -165,7 +165,7 @@ public class GenerateLevel : MonoBehaviour
 
     public bool isMoving(int world, int i)
     {
-        return world!=0;
+        return _levels.levelLists[world].getLevel(i).playerMovementSpeed>1f;
         
     }
 
