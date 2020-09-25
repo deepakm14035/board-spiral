@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     public void loadCurrentLevel() {
         Time.timeScale = 1f;
-        StartCoroutine(loadLevel(0, _currentLevel));
+        StartCoroutine(loadLevel(_currentWorld, _currentLevel));
     }
 
     public void loadNextLevel()
