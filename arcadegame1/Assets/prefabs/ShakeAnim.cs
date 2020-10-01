@@ -7,7 +7,7 @@ public class ShakeAnim : MonoBehaviour
     public Vector3[] m_waypoints;
 
     int m_currentWaypoint = 0;
-    public float m_speed = 0.0002f;
+    public float m_speed = 0.0001f;
 
 
     // Start is called before the first frame update

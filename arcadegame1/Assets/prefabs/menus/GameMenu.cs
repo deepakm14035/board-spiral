@@ -8,6 +8,9 @@ public class GameMenu : Menu<GameMenu>
 {
     [SerializeField]
     private Text _levelText;
+    [SerializeField]
+    private Text _scoreText;
+
     public void OnPause()
     {
         MenuManager menuManager = MenuManager.Instance;
@@ -20,5 +23,13 @@ public class GameMenu : Menu<GameMenu>
         GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
         if (_levelText)
             _levelText.text = gameManager._currentLevel + "";
+    }
+
+    public void setScore(string score) {
+        _scoreText.text = score;
+    }
+    public void setScoreVisibility(bool isVisible)
+    {
+        _scoreText.gameObject.transform.parent.gameObject.SetActive(isVisible);
     }
 }

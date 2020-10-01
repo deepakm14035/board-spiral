@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _HowToPlayPanel2;
 
+    public float _score = 0;
     public int _currentLevel;
     public int _currentWorld;
     public GameObject MovingIndicator;
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     float _rotationIncrement = 1.1f;
     float _incrementAfterDistance = 150f;
     float _lastIncrementHeight=0f;
+    int _noOfIncrements = 1;
 
     void Start()
     {
@@ -48,7 +50,9 @@ public class GameManager : MonoBehaviour
         generateInfinityObstacles();
         _playerController1.MoveSpeed = 7f;
         _playerController.RotSpeed = 35f;
-
+        GameMenu.Instance.setScoreVisibility(true);
+        _score = 0;
+        _noOfIncrements = 1;
     }
 
     void generateInfinityObstacles()
@@ -226,8 +230,11 @@ public class GameManager : MonoBehaviour
                 _lastIncrementHeight = _playerController.gameObject.transform.position.y;
                 _playerController.RotSpeed *= _rotationIncrement;
                 _playerController1.MoveSpeed *= _speedIncrement;
+                _noOfIncrements++;
 
             }
+            _score += Time.deltaTime * _noOfIncrements;
+            GameMenu.Instance.setScore(Mathf.Round(_score)+"");
         }
     }
 
