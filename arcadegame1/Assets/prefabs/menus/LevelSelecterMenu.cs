@@ -28,6 +28,7 @@ public class LevelSelecterMenu : Menu<LevelSelecterMenu>
         _worldName.text = levels.getLevelsName();
         int rowNo = 0;
         for (int i = 0; i < levels.noOfLevels; i++){
+            Debug.Log("rowno-"+rowNo);
             Button newButton = Instantiate(_levelButtonPrefab, _levelListRows[rowNo].transform).GetComponent<Button>();
             Debug.Log(newButton);
             newButton.GetComponentInChildren<Text>().text=""+ (i+1);

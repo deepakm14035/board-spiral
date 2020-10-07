@@ -36,6 +36,8 @@ public class Level
     protected float _playerMovementSpeed;
     [SerializeField]
     protected bool _AllowedInInfinity;
+    [SerializeField]
+    protected Vector3[] _coinPositions;
 
     public Obstacle[] obstacles => _obstacles;
     public Vector3 finishPosition => _finishPosition;
@@ -43,5 +45,6 @@ public class Level
     public float playerRotationSpeed => _playerRotationSpeed;
     public float playerMovementSpeed => _playerMovementSpeed;
     public bool allowedInInfinity => _AllowedInInfinity;
+    public Vector3[] coinPositions => _coinPositions;
 
 }

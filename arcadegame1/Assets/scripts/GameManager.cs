@@ -48,8 +48,8 @@ public class GameManager : MonoBehaviour
         _levelGenerator.createBoundaries(new Vector4(-15f,-15f,30f,10000f));
         _playerController.resetPosition();
         generateInfinityObstacles();
-        _playerController1.MoveSpeed = 7f;
-        _playerController.RotSpeed = 35f;
+        _playerController1.MoveSpeed = 5f;
+        _playerController.RotSpeed = 40f;
         GameMenu.Instance.setScoreVisibility(true);
         _score = 0;
         _noOfIncrements = 1;

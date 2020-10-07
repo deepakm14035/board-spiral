@@ -21,7 +21,7 @@ public class GameMenu : Menu<GameMenu>
     public void OnEnable()
     {
         GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
-        if (_levelText)
+        if (_levelText && !gameManager._isInfinityMode)
             _levelText.text = gameManager._currentLevel + "";
     }
 
