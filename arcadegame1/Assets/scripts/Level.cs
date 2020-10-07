@@ -20,6 +20,8 @@ public class Level
         [SerializeField]
         public Vector3[] path;
         [SerializeField]
+        public float rotateSpeed;
+        [SerializeField]
         public float speed;
     }
     [SerializeField]

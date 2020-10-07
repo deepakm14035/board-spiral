@@ -36,6 +36,12 @@ public class GenerateLevel : MonoBehaviour
                 obstacle.GetComponent<WaypointMovement>().m_waypoints= level.obstacles[i].path;
                 obstacle.GetComponent<WaypointMovement>().m_speed = level.obstacles[i].speed;
             }
+            if (Mathf.Abs(level.obstacles[i].rotateSpeed) > 1f)
+            {
+                obstacle.AddComponent<Spin>();
+                obstacle.GetComponent<Spin>().spinSpeed = level.obstacles[i].rotateSpeed;
+
+            }
         }
         createBoundaries(level.borders);
         generateBackground(level.borders);

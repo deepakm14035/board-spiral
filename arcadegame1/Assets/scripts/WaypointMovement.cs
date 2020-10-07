@@ -21,6 +21,8 @@ public class WaypointMovement : MonoBehaviour
     {
         if (!m_stopMoving)
         {
+            if (Vector3.Distance(transform.position, m_waypoints[m_currentWaypoint]) < m_speed * Time.deltaTime)
+                transform.position = m_waypoints[m_currentWaypoint];
             if (Vector3.Distance(transform.position, m_waypoints[m_currentWaypoint]) < 0.2f)
             {
                 m_currentWaypoint++;

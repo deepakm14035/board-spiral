@@ -14,7 +14,7 @@ namespace MenuManagement
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             //menuManager.loadMenu(GameMenu.Instance,3f,true);
             LevelSelecterMenu.Instance.setup();
-            menuManager.loadMenu(LevelSelecterMenu.Instance, 0f, true);
+            menuManager.loadMenu(LevelSelecterMenu.Instance, 1f, true);
 
         }
 

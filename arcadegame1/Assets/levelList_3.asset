@@ -25,6 +25,7 @@ MonoBehaviour:
       scale: {x: 8, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     _finishPosition: {x: 0, y: 40, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 50}
@@ -39,6 +40,7 @@ MonoBehaviour:
       path:
       - {x: -10, y: 20, z: 0}
       - {x: 10, y: 20, z: 0}
+      rotateSpeed: 0
       speed: 5
     _finishPosition: {x: 0, y: 40, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 50}
@@ -53,6 +55,7 @@ MonoBehaviour:
       path:
       - {x: -10, y: 30, z: 0}
       - {x: 10, y: 30, z: 0}
+      rotateSpeed: 0
       speed: 5
     _finishPosition: {x: 0, y: 60, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 70}
@@ -71,6 +74,7 @@ MonoBehaviour:
       scale: {x: 6, y: 2, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: 0, y: 62, z: 0}
@@ -79,6 +83,7 @@ MonoBehaviour:
       path:
       - {x: 0, y: 87, z: 0}
       - {x: 0, y: 37, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: -12, y: 35, z: 0}
@@ -87,18 +92,21 @@ MonoBehaviour:
       path:
       - {x: -12, y: 60, z: 0}
       - {x: -12, y: 10, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: -12, y: 62, z: 0}
       scale: {x: 8, y: 2, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: -12, y: 89, z: 0}
       scale: {x: 8, y: 2, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: 12, y: 35, z: 0}
@@ -107,18 +115,21 @@ MonoBehaviour:
       path:
       - {x: 12, y: 10, z: 0}
       - {x: 12, y: 60, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: 12, y: 62, z: 0}
       scale: {x: 8, y: 2, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: 12, y: 89, z: 0}
       scale: {x: 8, y: 2, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     _finishPosition: {x: 0, y: 110, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 120}
@@ -133,6 +144,7 @@ MonoBehaviour:
       path:
       - {x: -15, y: 15, z: 0}
       - {x: 15, y: 15, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 4
       position: {x: 0, y: 55, z: 0}
@@ -141,6 +153,7 @@ MonoBehaviour:
       path:
       - {x: -15, y: 55, z: 0}
       - {x: 15, y: 55, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 4
       position: {x: 15, y: 25, z: 0}
@@ -149,6 +162,7 @@ MonoBehaviour:
       path:
       - {x: -15, y: 25, z: 0}
       - {x: 15, y: 25, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 4
       position: {x: 0, y: 65, z: 0}
@@ -157,6 +171,7 @@ MonoBehaviour:
       path:
       - {x: 15, y: 65, z: 0}
       - {x: -15, y: 65, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 4
       position: {x: -15, y: 35, z: 0}
@@ -165,6 +180,7 @@ MonoBehaviour:
       path:
       - {x: -15, y: 35, z: 0}
       - {x: 15, y: 35, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 4
       position: {x: 0, y: 75, z: 0}
@@ -173,6 +189,7 @@ MonoBehaviour:
       path:
       - {x: -15, y: 75, z: 0}
       - {x: 15, y: 75, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 4
       position: {x: 15, y: 45, z: 0}
@@ -181,6 +198,7 @@ MonoBehaviour:
       path:
       - {x: -15, y: 45, z: 0}
       - {x: 15, y: 45, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 4
       position: {x: 0, y: 85, z: 0}
@@ -189,6 +207,7 @@ MonoBehaviour:
       path:
       - {x: 15, y: 85, z: 0}
       - {x: -15, y: 85, z: 0}
+      rotateSpeed: 0
       speed: 10
     _finishPosition: {x: 0, y: 110, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 120}
@@ -205,6 +224,7 @@ MonoBehaviour:
       - {x: 15, y: 35, z: 0}
       - {x: -15, y: 60, z: 0}
       - {x: 15, y: 35, z: 0}
+      rotateSpeed: 0
       speed: 15
     - obstacleID: 4
       position: {x: 15, y: 35, z: 0}
@@ -215,6 +235,7 @@ MonoBehaviour:
       - {x: 15, y: 35, z: 0}
       - {x: -15, y: 60, z: 0}
       - {x: 15, y: 35, z: 0}
+      rotateSpeed: 0
       speed: 15
     - obstacleID: 4
       position: {x: -15, y: 65, z: 0}
@@ -225,6 +246,7 @@ MonoBehaviour:
       - {x: 15, y: 90, z: 0}
       - {x: -15, y: 115, z: 0}
       - {x: 15, y: 90, z: 0}
+      rotateSpeed: 0
       speed: 15
     - obstacleID: 4
       position: {x: 15, y: 90, z: 0}
@@ -235,6 +257,7 @@ MonoBehaviour:
       - {x: 15, y: 90, z: 0}
       - {x: -15, y: 115, z: 0}
       - {x: 15, y: 90, z: 0}
+      rotateSpeed: 0
       speed: 15
     - obstacleID: 4
       position: {x: 15, y: 10, z: 0}
@@ -245,6 +268,7 @@ MonoBehaviour:
       - {x: -15, y: 35, z: 0}
       - {x: 15, y: 60, z: 0}
       - {x: -15, y: 35, z: 0}
+      rotateSpeed: 0
       speed: 15
     - obstacleID: 4
       position: {x: -15, y: 35, z: 0}
@@ -255,6 +279,7 @@ MonoBehaviour:
       - {x: -15, y: 35, z: 0}
       - {x: 15, y: 60, z: 0}
       - {x: -15, y: 35, z: 0}
+      rotateSpeed: 0
       speed: 15
     - obstacleID: 4
       position: {x: 15, y: 65, z: 0}
@@ -265,6 +290,7 @@ MonoBehaviour:
       - {x: -15, y: 90, z: 0}
       - {x: 15, y: 115, z: 0}
       - {x: -15, y: 90, z: 0}
+      rotateSpeed: 0
       speed: 15
     - obstacleID: 4
       position: {x: -15, y: 90, z: 0}
@@ -275,6 +301,7 @@ MonoBehaviour:
       - {x: -15, y: 90, z: 0}
       - {x: 15, y: 115, z: 0}
       - {x: -15, y: 90, z: 0}
+      rotateSpeed: 0
       speed: 15
     _finishPosition: {x: 0, y: 125, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 135}
@@ -289,6 +316,7 @@ MonoBehaviour:
       path:
       - {x: -18, y: 45, z: 0}
       - {x: 18, y: 45, z: 0}
+      rotateSpeed: 0
       speed: 10
     _finishPosition: {x: 0, y: 125, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 135}
@@ -301,60 +329,70 @@ MonoBehaviour:
       scale: {x: 8, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: -14, y: 35, z: 0}
       scale: {x: 10, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: -14, y: 50, z: 0}
       scale: {x: 12, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: -14, y: 65, z: 0}
       scale: {x: 14, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: -14, y: 80, z: 0}
       scale: {x: 15, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: 14, y: 20, z: 0}
       scale: {x: 8, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: 14, y: 35, z: 0}
       scale: {x: 10, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: 14, y: 50, z: 0}
       scale: {x: 12, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: 14, y: 65, z: 0}
       scale: {x: 14, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     - obstacleID: 1
       position: {x: 14, y: 80, z: 0}
       scale: {x: 15, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0}
       path: []
+      rotateSpeed: 0
       speed: 0
     _finishPosition: {x: 0, y: 95, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 105}
@@ -369,6 +407,7 @@ MonoBehaviour:
       path:
       - {x: -10, y: 20, z: 0}
       - {x: -17, y: 20, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: -14, y: 50, z: 0}
@@ -377,6 +416,7 @@ MonoBehaviour:
       path:
       - {x: -10, y: 50, z: 0}
       - {x: -17, y: 50, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: -12, y: 30, z: 0}
@@ -385,6 +425,7 @@ MonoBehaviour:
       path:
       - {x: -10, y: 30, z: 0}
       - {x: -17, y: 30, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: -12, y: 60, z: 0}
@@ -393,6 +434,7 @@ MonoBehaviour:
       path:
       - {x: -10, y: 60, z: 0}
       - {x: -17, y: 60, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: -10, y: 40, z: 0}
@@ -401,6 +443,7 @@ MonoBehaviour:
       path:
       - {x: -10, y: 40, z: 0}
       - {x: -17, y: 40, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: -10, y: 70, z: 0}
@@ -409,6 +452,7 @@ MonoBehaviour:
       path:
       - {x: -10, y: 70, z: 0}
       - {x: -17, y: 70, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: 14, y: 20, z: 0}
@@ -417,6 +461,7 @@ MonoBehaviour:
       path:
       - {x: 10, y: 20, z: 0}
       - {x: 17, y: 20, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: 14, y: 50, z: 0}
@@ -425,6 +470,7 @@ MonoBehaviour:
       path:
       - {x: 10, y: 50, z: 0}
       - {x: 17, y: 50, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: 12, y: 30, z: 0}
@@ -433,6 +479,7 @@ MonoBehaviour:
       path:
       - {x: 10, y: 30, z: 0}
       - {x: 17, y: 30, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: 12, y: 60, z: 0}
@@ -441,6 +488,7 @@ MonoBehaviour:
       path:
       - {x: 10, y: 60, z: 0}
       - {x: 17, y: 60, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: 10, y: 40, z: 0}
@@ -449,6 +497,7 @@ MonoBehaviour:
       path:
       - {x: 10, y: 40, z: 0}
       - {x: 17, y: 40, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: 10, y: 70, z: 0}
@@ -457,6 +506,7 @@ MonoBehaviour:
       path:
       - {x: 10, y: 70, z: 0}
       - {x: 17, y: 70, z: 0}
+      rotateSpeed: 0
       speed: 10
     _finishPosition: {x: 0, y: 85, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 95}
@@ -471,6 +521,7 @@ MonoBehaviour:
       path:
       - {x: -14, y: 20, z: 0}
       - {x: 12, y: 20, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: -8, y: 55, z: 0}
@@ -479,6 +530,7 @@ MonoBehaviour:
       path:
       - {x: -8, y: 55, z: 0}
       - {x: 18, y: 55, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: -8, y: 35, z: 0}
@@ -487,6 +539,7 @@ MonoBehaviour:
       path:
       - {x: -8, y: 35, z: 0}
       - {x: 18, y: 35, z: 0}
+      rotateSpeed: 0
       speed: 10
     - obstacleID: 1
       position: {x: -14, y: 70, z: 0}
@@ -495,6 +548,7 @@ MonoBehaviour:
       path:
       - {x: -14, y: 70, z: 0}
       - {x: 12, y: 70, z: 0}
+      rotateSpeed: 0
       speed: 10
     _finishPosition: {x: 0, y: 85, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 95}
@@ -502,22 +556,42 @@ MonoBehaviour:
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
   - _obstacles:
-    - obstacleID: 4
-      position: {x: 0, y: 45, z: 0}
-      scale: {x: 0.5, y: 0.5, z: 0}
+    - obstacleID: 1
+      position: {x: 0, y: 40, z: 0}
+      scale: {x: 17, y: 1, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      path:
-      - {x: 10.6, y: 40.6, z: 0}
-      - {x: 15, y: 30, z: 0}
-      - {x: 10.6, y: 19.4, z: 0}
-      - {x: 0, y: 15, z: 0}
-      - {x: -10.6, y: 19.4, z: 0}
-      - {x: -15, y: 30, z: 0}
-      - {x: -10.6, y: 40.6, z: 0}
-      - {x: 0, y: 45, z: 0}
-      speed: 10
-    _finishPosition: {x: 0, y: 85, z: 0}
-    _borders: {x: -15, y: -10, z: 30, w: 95}
+      path: []
+      rotateSpeed: -60
+      speed: 0
+    - obstacleID: 1
+      position: {x: 0, y: 75, z: 0}
+      scale: {x: 17, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+      path: []
+      rotateSpeed: -80
+      speed: 0
+    - obstacleID: 1
+      position: {x: 0, y: 110, z: 0}
+      scale: {x: 17, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+      path: []
+      rotateSpeed: -90
+      speed: 0
+    _finishPosition: {x: 0, y: 135, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 145}
+    _playerRotationSpeed: 70
+    _playerMovementSpeed: 0
+    _AllowedInInfinity: 0
+  - _obstacles:
+    - obstacleID: 1
+      position: {x: 0, y: 45, z: 0}
+      scale: {x: 17, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 20
+      speed: 0
+    _finishPosition: {x: 0, y: 80, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 90}
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
