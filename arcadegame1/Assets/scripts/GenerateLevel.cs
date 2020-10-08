@@ -15,6 +15,8 @@ public class GenerateLevel : MonoBehaviour
     private Material borderMaterial;
     [SerializeField]
     private GameObject backgroundImage;
+    [SerializeField]
+    private GameObject coinPrefab;
 
 
     public int NoOfLevels() {
@@ -77,6 +79,13 @@ public class GenerateLevel : MonoBehaviour
                 obstacle.GetComponent<WaypointMovement>().m_speed = level.obstacles[i].speed;
             }
             obstacle.transform.parent = parentObj.transform;
+        }
+        for (int i = 0; i < level.coinPositions.Length; i++)
+        {
+            Vector3 position = level.coinPositions[i];
+
+            GameObject obstacle = Instantiate(coinPrefab, position, Quaternion.identity);
+            
         }
         Debug.Log("backgr - "+(level.borders + new Vector4(0, offset, 0f, 0f)));
         generateBackground(level.borders+new Vector4(0,offset+5f,0f,0f));
