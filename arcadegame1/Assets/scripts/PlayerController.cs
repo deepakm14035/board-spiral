@@ -144,6 +144,8 @@ public class PlayerController : MonoBehaviour
             uiEffects.disableObjects();
             trailRenderer1.SetActive(false);
             trailRenderer2.SetActive(false);
+            if (_gameManager._isInfinityMode)
+                _gameManager.updateStats();
             menuManager.loadMenu(LoseMenu.Instance,3f,false);
         }
         if (collision.gameObject.tag.Equals("finish") && !gameComplete)

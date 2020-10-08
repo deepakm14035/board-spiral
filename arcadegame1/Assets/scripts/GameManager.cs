@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     float _nextHeight = 15f;
     float _lookAheadConst = 50f;
     public bool _isInfinityMode = false;
+    int _coinCount;
 
     float _speedIncrement = 1.1f;
     float _rotationIncrement = 1.1f;
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
         GameMenu.Instance.setScoreVisibility(true);
         _score = 0;
         _noOfIncrements = 1;
+        _coinCount = 0;
     }
 
     void generateInfinityObstacles()
@@ -217,6 +219,22 @@ public class GameManager : MonoBehaviour
             return true;
         return false;
         
+    }
+
+    public void addCoin()
+    {
+        _coinCount++;
+    }
+
+    public void updateStats()
+    {
+        JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
+        SaveData saveData = new SaveData();
+        saveData = jsonSaver.loadData(saveData);
+        if (saveData.maxScore > _score)
+            saveData.maxScore = Mathf.RoundToInt(_score);
+        saveData.totalCoins += _coinCount;
+        jsonSaver.saveData(saveData);
     }
 
     private void Update()

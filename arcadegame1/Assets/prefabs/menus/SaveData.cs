@@ -14,6 +14,8 @@ namespace MenuManagement.Data
         public bool isFirstTime;
         public string hashValue;
         public World[] worlds;
+        public int maxScore;
+        public int totalCoins;
 
         public SaveData() {
             playerName = defaultPlayerName;

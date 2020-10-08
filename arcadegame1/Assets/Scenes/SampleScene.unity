@@ -1443,6 +1443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 856164867}
   - component: {fileID: 856164866}
+  - component: {fileID: 856164868}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -1479,6 +1480,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &856164868
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856164865}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000016689303, y: -1.9895197e-13}
+  m_Size: {x: 7.024875, y: 1.0000099}
+  m_Direction: 1
 --- !u!1 &866667101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1586,7 @@ MonoBehaviour:
   borderMaterial: {fileID: 2100000, guid: 3d4a4c16246a9054198fdfb696bc6d70, type: 2}
   backgroundImage: {fileID: 7448481242046736270, guid: f405428c45b752d4ca5ebcd80a90796c,
     type: 3}
+  coinPrefab: {fileID: 0}
 --- !u!114 &872192442
 MonoBehaviour:
   m_ObjectHideFlags: 0
