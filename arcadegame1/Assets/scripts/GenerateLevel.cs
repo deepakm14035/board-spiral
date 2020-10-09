@@ -70,11 +70,11 @@ public class GenerateLevel : MonoBehaviour
             if (level.obstacles[i].path.Length > 0)
             {
                 obstacle.AddComponent<WaypointMovement>();
-                obstacle.GetComponent<WaypointMovement>().m_waypoints = level.obstacles[i].path;
+                obstacle.GetComponent<WaypointMovement>().m_waypoints = new Vector3[level.obstacles[i].path.Length];
                 for(int w=0;w< level.obstacles[i].path.Length; w++)
                 {
-                    obstacle.GetComponent<WaypointMovement>().m_waypoints[w] += Vector3.up * offset;
-                    Debug.Log(obstacle.GetComponent<WaypointMovement>().m_waypoints[w]+", "+ Vector3.up * offset);
+                    obstacle.GetComponent<WaypointMovement>().m_waypoints[w] = level.obstacles[i].path[w] + Vector3.up * offset;
+                    Debug.Log(", "+ Vector3.up * offset);
                 }
                 obstacle.GetComponent<WaypointMovement>().m_speed = level.obstacles[i].speed;
             }
@@ -82,7 +82,7 @@ public class GenerateLevel : MonoBehaviour
         }
         for (int i = 0; i < level.coinPositions.Length; i++)
         {
-            Vector3 position = level.coinPositions[i];
+            Vector3 position = level.coinPositions[i] + Vector3.up * offset;
 
             GameObject obstacle = Instantiate(coinPrefab, position, Quaternion.identity);
             

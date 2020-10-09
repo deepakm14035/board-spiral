@@ -11,15 +11,7 @@ public class PlayerController1 : MonoBehaviour
 
     public float MoveSpeed { get => _moveSpeed; set => _moveSpeed = value; }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag.Equals("coin"))
-        {
-            GameManager gameManager = FindObjectOfType<GameManager>();
-            gameManager.addCoin();
-            GameObject.Destroy(collision.gameObject);
-        }
-    }
+    
 
     // Start is called before the first frame update
     void Start()

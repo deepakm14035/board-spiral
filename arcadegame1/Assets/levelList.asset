@@ -909,8 +909,8 @@ MonoBehaviour:
       scale: {x: 1.5, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 7, y: 280, z: 0}
-      - {x: -7, y: 280, z: 0}
+      - {x: 7, y: 35, z: 0}
+      - {x: -7, y: 35, z: 0}
       rotateSpeed: 0
       speed: 3
     - obstacleID: 1
@@ -918,8 +918,8 @@ MonoBehaviour:
       scale: {x: 9, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 19, y: 280, z: 0}
-      - {x: 5, y: 280, z: 0}
+      - {x: 19, y: 35, z: 0}
+      - {x: 5, y: 35, z: 0}
       rotateSpeed: 0
       speed: 3
     _finishPosition: {x: 0, y: 50, z: 0}

@@ -224,6 +224,7 @@ public class GameManager : MonoBehaviour
     public void addCoin()
     {
         _coinCount++;
+        GameMenu.Instance.setCoins(_coinCount + "");
     }
 
     public void updateStats()

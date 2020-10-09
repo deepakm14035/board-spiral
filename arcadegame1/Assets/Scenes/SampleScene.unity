@@ -1443,7 +1443,6 @@ GameObject:
   m_Component:
   - component: {fileID: 856164867}
   - component: {fileID: 856164866}
-  - component: {fileID: 856164868}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -1480,22 +1479,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &856164868
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856164865}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0000016689303, y: -1.9895197e-13}
-  m_Size: {x: 7.024875, y: 1.0000099}
-  m_Direction: 1
 --- !u!1 &866667101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,7 +1569,8 @@ MonoBehaviour:
   borderMaterial: {fileID: 2100000, guid: 3d4a4c16246a9054198fdfb696bc6d70, type: 2}
   backgroundImage: {fileID: 7448481242046736270, guid: f405428c45b752d4ca5ebcd80a90796c,
     type: 3}
-  coinPrefab: {fileID: 0}
+  coinPrefab: {fileID: 7259325120624211437, guid: 55639f09400d7444289628fa62cd79c9,
+    type: 3}
 --- !u!114 &872192442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2568,6 +2552,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612420814}
   m_CullTransparentMesh: 0
+--- !u!1 &1680373736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680373737}
+  - component: {fileID: 1680373739}
+  - component: {fileID: 1680373738}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1680373737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680373736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2119727244}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1680373738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680373736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd41279f95885e438d82b96ba3b2671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &1680373739
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680373736}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000016689303, y: -1.9895197e-13}
+  m_Size: {x: 7.024875, y: 1.0000099}
+  m_Direction: 1
 --- !u!1 &1724871327
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,7 +3196,6 @@ GameObject:
   - component: {fileID: 2119727243}
   - component: {fileID: 2119727242}
   - component: {fileID: 2119727245}
-  - component: {fileID: 2119727246}
   - component: {fileID: 2119727247}
   - component: {fileID: 2119727249}
   - component: {fileID: 2119727248}
@@ -3245,11 +3288,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119727241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1248626958}
   - {fileID: 2097346525}
+  - {fileID: 1680373737}
   m_Father: {fileID: 856164867}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3359,22 +3403,6 @@ TrailRenderer:
   m_MinVertexDistance: 1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!70 &2119727246
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119727241}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 7.06, y: 1.09}
-  m_Direction: 1
 --- !u!50 &2119727247
 Rigidbody2D:
   serializedVersion: 4

@@ -10,6 +10,8 @@ public class GameMenu : Menu<GameMenu>
     private Text _levelText;
     [SerializeField]
     private Text _scoreText;
+    [SerializeField]
+    private Text _coinsText;
 
     public void OnPause()
     {
@@ -27,6 +29,10 @@ public class GameMenu : Menu<GameMenu>
 
     public void setScore(string score) {
         _scoreText.text = score;
+    }
+    public void setCoins(string coins)
+    {
+        _coinsText.text = coins;
     }
     public void setScoreVisibility(bool isVisible)
     {

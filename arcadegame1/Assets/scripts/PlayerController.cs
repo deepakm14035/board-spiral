@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     PlayerController1 pc;
     GameObject mainCamera;
     bool gameComplete = false;
+    Vector3 startPosition;
 
     public float RotSpeed { get => rotSpeed; set => rotSpeed = value; }
 
@@ -43,6 +44,8 @@ public class PlayerController : MonoBehaviour
         }
 
         _gameManager = GameObject.FindObjectOfType<GameManager>();
+        startPosition = transform.position;
+
     }
 
     public void setMoving(bool moving) {
@@ -69,7 +72,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void resetPosition() {
-        transform.position = Vector3.zero;
+        transform.position = startPosition;
         transform.rotation = Quaternion.identity;
         mainCamera.GetComponent<CameraFollow>().resetCamera();
         curpos = pos1;
