@@ -1664,7 +1664,7 @@ MonoBehaviour:
     _playerMovementSpeed: 0
     _AllowedInInfinity: 1
     _coinPositions: []
-  levelsName: 
+  levelsName: world 0
   levelLists:
   - {fileID: 11400000}
   - {fileID: 11400000, guid: 6c1c31dc8de37a3409280174c79c1abf, type: 2}

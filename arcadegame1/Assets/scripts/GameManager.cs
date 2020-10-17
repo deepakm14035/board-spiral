@@ -14,20 +14,25 @@ public class GameManager : MonoBehaviour
     private GameObject _HowToPlayPanel1;
     [SerializeField]
     private GameObject _HowToPlayPanel2;
-
+    [SerializeField]
+    private GameObject _newBestScorePS;
     public float _score = 0;
     public int _currentLevel;
     public int _currentWorld;
+    public int maxScore;
     public GameObject MovingIndicator;
+    SaveData loadedData;
+
     int _numLevelsCrossed;
-    float _nextHeight = 15f;
+    float _nextHeight = 25f;
     float _lookAheadConst = 50f;
     public bool _isInfinityMode = false;
+    bool gameStarted = false;
     int _coinCount;
 
     float _speedIncrement = 1.1f;
     float _rotationIncrement = 1.1f;
-    float _incrementAfterDistance = 150f;
+    float _incrementAfterDistance = 100f;
     float _lastIncrementHeight=0f;
     int _noOfIncrements = 1;
 
@@ -39,15 +44,21 @@ public class GameManager : MonoBehaviour
         MovingIndicator.SetActive(false);
     }
 
-    public void loadInfinityMode()
+    public void loadInfinityMode(bool resetRequired)
     {
         _isInfinityMode = true;
+        gameStarted = true;
         _nextHeight = 15f;
         _lastIncrementHeight = 0f;
         _numLevelsCrossed = 2;
         _levelGenerator.clearLevel();
-        _levelGenerator.createBoundaries(new Vector4(-15f,-15f,30f,10000f));
-        _playerController.resetPosition();
+        _levelGenerator.createBoundaries(new Vector4(-15f,-15f,30f,10000f), true);
+        _playerController.resetPosition(resetRequired);
+        if (getPlayerData(false).gamesPlayed == 0)
+        {
+            StartCoroutine(playTutorial());
+            //_nextHeight = 100f;
+        }
         generateInfinityObstacles();
         _playerController1.MoveSpeed = 5f;
         _playerController.RotSpeed = 40f;
@@ -55,12 +66,13 @@ public class GameManager : MonoBehaviour
         _score = 0;
         _noOfIncrements = 1;
         _coinCount = 0;
+        
     }
 
     void generateInfinityObstacles()
     {
         _numLevelsCrossed++;
-        while (_nextHeight - _playerController.gameObject.transform.position.y < 2000f)
+        while (_nextHeight - _playerController.gameObject.transform.position.y < 200f)
         {
             int randomLevel = getRandomLevel();
             if (!_levelGenerator.isMovingLevel(randomLevel))
@@ -102,6 +114,7 @@ public class GameManager : MonoBehaviour
     public void startLevel(int worldNo, int index) {
         _currentLevel = index;
         _currentWorld = worldNo;
+        _isInfinityMode = false;
         StartCoroutine(loadLevel(worldNo,index));
     }
 
@@ -109,7 +122,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);//wait for menu transitions
         _levelGenerator.clearLevel();
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
-        playerController.resetPosition();
+        playerController.resetPosition(true);
         _levelGenerator.generateLevel(worldNo, index);
         _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
         if (index == 0)
@@ -123,15 +136,20 @@ public class GameManager : MonoBehaviour
 
     IEnumerator playTutorial()
     {
+        _isInfinityMode = false;
+        gameStarted = false;
         yield return new WaitForSeconds(2f);
         _HowToPlayPanel1.SetActive(true);
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(6f);
         _HowToPlayPanel1.SetActive(false);
         yield return new WaitForSeconds(2f);
         _HowToPlayPanel2.SetActive(true);
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(6f);
         _HowToPlayPanel2.SetActive(false);
         yield return null;
+        _isInfinityMode = true;
+        gameStarted = true;
+
     }
 
     IEnumerator playMovingIndicator()
@@ -176,16 +194,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void getLevelProgressData()
-    {
-        JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
-        SaveData saveData = new SaveData();
-        saveData = jsonSaver.loadData(saveData);
-        saveData.currentLevel++;
-        if (saveData.currentLevel >= _levelGenerator.NoOfLevels())
-            saveData.currentLevel = 0;
-        jsonSaver.saveData(saveData);
-    }
     public void updateProgressForWin()
     {
         updateProgress(_currentWorld, _currentLevel,2);
@@ -195,20 +203,17 @@ public class GameManager : MonoBehaviour
     public void updateProgress(int worldNo, int level,int value)
     {
         JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
-        SaveData saveData = new SaveData();
-        saveData = jsonSaver.loadData(saveData);
+        SaveData saveData = getPlayerData(false);
         saveData.worlds[worldNo].levelList.scores[level] = value;
         if(saveData.worlds[worldNo].levelList.scores.Length > level + 1)
             saveData.worlds[worldNo].levelList.scores[level+1] = 1;
         jsonSaver.saveData(saveData);
-
+        getPlayerData(true);
     }
 
     public int getLevelProgress(int worldNo, int level)
     {
-        JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
-        SaveData saveData = new SaveData();
-        saveData = jsonSaver.loadData(saveData);
+        SaveData saveData = getPlayerData(false);
         Debug.Log("w no - "+worldNo+", "+level);
         return saveData.worlds[worldNo].levelList.scores[level];
     }
@@ -227,20 +232,62 @@ public class GameManager : MonoBehaviour
         GameMenu.Instance.setCoins(_coinCount + "");
     }
 
-    public void updateStats()
+    public bool updateStats()
     {
         JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
-        SaveData saveData = new SaveData();
-        saveData = jsonSaver.loadData(saveData);
-        if (saveData.maxScore > _score)
+        SaveData saveData = getPlayerData(false);
+        bool isHighScore = false;
+        if (saveData.maxScore < _score)
+        {
             saveData.maxScore = Mathf.RoundToInt(_score);
+            Instantiate(_newBestScorePS, _playerController.gameObject.transform.position,Quaternion.identity);
+            isHighScore = true;
+        }
+        maxScore = saveData.maxScore;
         saveData.totalCoins += _coinCount;
+        saveData.gamesPlayed++;
+        saveData.infinityAverage = (saveData.infinityAverage * saveData.gamesPlayed + _score) / saveData.gamesPlayed;
+
+        for (int i = 0; i < saveData.pastScores.Length-1; i++)
+        {
+            saveData.pastScores[i+1] = saveData.pastScores[i];
+            if (i == 0)
+                saveData.pastScores[i] = Mathf.RoundToInt(_score);
+            
+        }
+
         jsonSaver.saveData(saveData);
+        getPlayerData(true);
+        return isHighScore;
+    }
+
+    public int getCoins()
+    {
+        SaveData saveData = getPlayerData(false);
+        return saveData.totalCoins;
+    }
+
+    public SaveData getPlayerData(bool reload)
+    {
+        if (reload || loadedData==null)
+        {
+            JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
+            if(_levelGenerator==null)
+                _levelGenerator = GameObject.FindObjectOfType<GenerateLevel>();
+            SaveData saveData = new SaveData(_levelGenerator);
+            loadedData = jsonSaver.loadData(saveData, _levelGenerator);
+        }
+        return loadedData;
+    }
+
+    public void setGameStarted(bool started)
+    {
+        gameStarted = started;
     }
 
     private void Update()
     {
-        if (_isInfinityMode)
+        if (_isInfinityMode && gameStarted)
         {
             if (_nextHeight - _playerController.gameObject.transform.position.y < _lookAheadConst)
                 generateInfinityObstacles();

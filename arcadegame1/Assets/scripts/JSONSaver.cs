@@ -41,7 +41,7 @@ namespace MenuManagement.Data
             }
         }
 
-        public SaveData loadData(SaveData data)
+        public SaveData loadData(SaveData data, GenerateLevel levelGenerator)
         {
             string dat = "";
             Debug.Log(GetFileName());
@@ -58,7 +58,7 @@ namespace MenuManagement.Data
                     if (!checkHash(data))
                     {
                         Debug.Log("hacked..resetting");
-                        data = new SaveData();
+                        data = new SaveData(levelGenerator);
                     }
                     else
                         Debug.Log("okay!");

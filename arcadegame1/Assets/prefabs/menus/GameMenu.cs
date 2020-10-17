@@ -23,6 +23,10 @@ public class GameMenu : Menu<GameMenu>
     public void OnEnable()
     {
         GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
+        if (gameManager._isInfinityMode)
+            _levelText.gameObject.SetActive(false);
+        else
+            _levelText.gameObject.SetActive(true);
         if (_levelText && !gameManager._isInfinityMode)
             _levelText.text = gameManager._currentLevel + "";
     }

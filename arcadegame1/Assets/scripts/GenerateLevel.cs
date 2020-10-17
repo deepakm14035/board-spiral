@@ -45,7 +45,7 @@ public class GenerateLevel : MonoBehaviour
 
             }
         }
-        createBoundaries(level.borders);
+        createBoundaries(level.borders, false);
         generateBackground(level.borders);
         Instantiate(finishPoint, level.finishPosition, Quaternion.identity);
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
@@ -139,7 +139,7 @@ public class GenerateLevel : MonoBehaviour
         return true;
     }
 
-    public void createBoundaries(Vector4 rect) {
+    public void createBoundaries(Vector4 rect, bool isInfinity) {
         GameObject lineObj = new GameObject();
         lineObj.tag = "borders";
         LineRenderer lines =  lineObj.AddComponent<LineRenderer>();
@@ -149,7 +149,7 @@ public class GenerateLevel : MonoBehaviour
         lines.SetPosition(2, new Vector3(rect.x + rect.z, rect.y + rect.w, 1f));
         lines.SetPosition(3, new Vector3(rect.x + rect.z, rect.y, 1f));
         lines.material = borderMaterial;
-        lines.loop = true;
+        lines.loop = !isInfinity;
 
     }
 
@@ -163,7 +163,8 @@ public class GenerateLevel : MonoBehaviour
         for(int i=0;i<obstacles.Length;i++) GameObject.Destroy(obstacles[i]);
         BackgroundImage[] images = GameObject.FindObjectsOfType<BackgroundImage>();
         for (int i = 0; i < images.Length; i++) GameObject.Destroy(images[i].gameObject);
-
+        obstacles = GameObject.FindGameObjectsWithTag("coin");
+        for (int i = 0; i < obstacles.Length; i++) GameObject.Destroy(obstacles[i]);
     }
 
     public float getLevelHeight(int levelNo)

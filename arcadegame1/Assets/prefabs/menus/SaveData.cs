@@ -16,15 +16,18 @@ namespace MenuManagement.Data
         public World[] worlds;
         public int maxScore;
         public int totalCoins;
-
-        public SaveData() {
+        public int gamesPlayed;
+        public float infinityAverage;
+        public int[] pastScores;
+        public SaveData(GenerateLevel generateLevel) {
             playerName = defaultPlayerName;
             currentLevel = 0;
             isFirstTime = true;
-            GenerateLevel generateLevel = GameObject.FindObjectOfType<GenerateLevel>();
             worlds = new World[generateLevel.getNoOfWorlds()];
             Debug.Log("worlds - "+ generateLevel.getNoOfWorlds());
-            for(int i = 0; i < worlds.Length; i++)
+            maxScore = 0;
+            pastScores = new int[10];
+            for (int i = 0; i < worlds.Length; i++)
             {
                 Debug.Log("i = "+i);
                 worlds[i] = new World();
@@ -35,6 +38,8 @@ namespace MenuManagement.Data
                 //1 - can play
                 //2 - completed
             }
+            gamesPlayed = 0;
+            infinityAverage = 0f;
         }
 
     }

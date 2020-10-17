@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     PlayerController _player;
-    Vector3 _offset;
-
+    public Vector3 _offset;
+    public bool startFollowing = false;
     public void resetCamera() {
         transform.position = _player.curpos.transform.position + _offset;
     }
@@ -15,13 +15,15 @@ public class CameraFollow : MonoBehaviour
     void Start()
     {
         _player = GameObject.FindObjectOfType<PlayerController>();
-        _offset = -_player.curpos.transform.position + gameObject.transform.position;
-        _offset.x = 0f;
+        //_offset = -_player.curpos.transform.position + gameObject.transform.position;
+        //_offset.x = 0f;
+        startFollowing = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Slerp(gameObject.transform.position, _player.curpos.transform.position + _offset,Time.deltaTime*5f);
+        if(startFollowing)
+            transform.position = Vector3.Slerp(gameObject.transform.position, _player.curpos.transform.position + _offset,Time.deltaTime*1f);
     }
 }

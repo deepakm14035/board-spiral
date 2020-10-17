@@ -52,6 +52,8 @@ public class LevelSelecterMenu : Menu<LevelSelecterMenu>
                 GameObject.FindObjectOfType<MenuManager>().loadMenu(GameMenu.Instance);
                 Debug.Log("w" + worldNo + ", i-" + i);
                 int i1 = i;
+                CameraFollow cf = FindObjectOfType<CameraFollow>();
+                cf.startFollowing = true;
                 GameObject.FindObjectOfType<GameManager>().startLevel(worldNo, i1);
             });
 

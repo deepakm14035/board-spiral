@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject UIButtonLeft, UIButtonRight;
 
     GameManager _gameManager;
+    MenuManager _menuManager;
 
     float direction = -1f;
     UIEffects uiEffects;
@@ -44,13 +45,14 @@ public class PlayerController : MonoBehaviour
         }
 
         _gameManager = GameObject.FindObjectOfType<GameManager>();
+        _menuManager = GameObject.FindObjectOfType<MenuManager>();
         startPosition = transform.position;
 
     }
 
     public void setMoving(bool moving) {
         allowMoving = moving;
-        if (pc != null)
+        //if (pc != null)
             pc.allowMoving = moving;
     }
 
@@ -71,10 +73,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void resetPosition() {
+    public void resetPosition(bool resetRequired) {
         transform.position = startPosition;
         transform.rotation = Quaternion.identity;
-        mainCamera.GetComponent<CameraFollow>().resetCamera();
+        if(resetRequired)
+            mainCamera.GetComponent<CameraFollow>().resetCamera();
         curpos = pos1;
         trailRenderer2.SetActive(true);
         gameStarted = true;
@@ -135,21 +138,29 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        Debug.Log("coll name - "+collision.gameObject.name);
         if (collision.gameObject.tag.Equals("obstacle") && !gameComplete)
         {
             gameComplete = true;
             mainCamera.GetComponent<Animator>().SetTrigger("shake");
             _gameManager.stopAllObstacles();
-            uiEffects.playLoseAnimation();
+            bool isHighScore = false;
+            if (_gameManager._isInfinityMode)
+            {
+                isHighScore= _gameManager.updateStats();
+                _menuManager.populateStats(_gameManager);
+                _gameManager.setGameStarted(false);
+            }
+            Debug.Log("ishighscore-"+isHighScore);
+            if(!isHighScore)
+                uiEffects.playLoseAnimation();
             setMoving(false);
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             uiEffects.disableObjects();
             trailRenderer1.SetActive(false);
             trailRenderer2.SetActive(false);
-            if (_gameManager._isInfinityMode)
-                _gameManager.updateStats();
-            menuManager.loadMenu(LoseMenu.Instance,3f,false);
+            menuManager.loadMenu(LoseMenu.Instance, 2f, false);
+            LoseMenu.Instance.GetComponent<Animator>().SetTrigger("open");
         }
         if (collision.gameObject.tag.Equals("finish") && !gameComplete)
         {
