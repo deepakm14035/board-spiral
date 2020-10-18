@@ -1836,6 +1836,7 @@ MonoBehaviour:
   gamesPlayed: {fileID: 5792255172025384620}
   bestScore: {fileID: 3007327082455881869}
   CoinsEarned: {fileID: 3468023438306748783}
+  infinityAverage: {fileID: 4434244546732450109}
   pastScores:
   - {fileID: 2548175796102172974}
   - {fileID: 7589642297299269405}

@@ -73,14 +73,14 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void resetPosition(bool resetRequired) {
+    public void resetPosition(bool resetRequired, bool startGame) {
         transform.position = startPosition;
         transform.rotation = Quaternion.identity;
         if(resetRequired)
             mainCamera.GetComponent<CameraFollow>().resetCamera();
         curpos = pos1;
         trailRenderer2.SetActive(true);
-        gameStarted = true;
+        gameStarted = startGame;
         gameComplete = false;
 
         StartCoroutine(allowMovementAfterDelay());

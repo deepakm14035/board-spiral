@@ -14,7 +14,7 @@ namespace MenuManagement
         {
             GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
             coinsText.text = gameManager.getCoins()+"";
-            topScore.text = gameManager.maxScore+"";
+            topScore.text = gameManager.getPlayerData(true).maxScore+"";
         }
 
         private void OnEnable()
@@ -27,6 +27,7 @@ namespace MenuManagement
             yield return new WaitForEndOfFrame();
             GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
             coinsText.text = gameManager.getCoins() + "";
+            topScore.text = gameManager.getPlayerData(true).maxScore + "";
         }
 
         public void play()

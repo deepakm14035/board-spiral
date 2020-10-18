@@ -12,6 +12,7 @@ namespace MenuManagement
         private Text gamesPlayed;
         [SerializeField] private Text bestScore;
         [SerializeField] private Text CoinsEarned;
+        [SerializeField] private Text infinityAverage;
         [SerializeField] private GameObject[] pastScores;
         // Start is called before the first frame update
         void Start()
@@ -25,6 +26,7 @@ namespace MenuManagement
             gamesPlayed.text = saveData.gamesPlayed + "";
             bestScore.text = saveData.maxScore + "";
             CoinsEarned.text = saveData.totalCoins + "";
+            infinityAverage.text = Mathf.RoundToInt(saveData.infinityAverage) + "";
             int[] pastScore = saveData.pastScores;
             for(int i = 0; i < pastScore.Length; i++)
             {

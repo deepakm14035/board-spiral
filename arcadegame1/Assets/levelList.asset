@@ -1604,7 +1604,9 @@ MonoBehaviour:
     _playerRotationSpeed: 45
     _playerMovementSpeed: 0
     _AllowedInInfinity: 1
-    _coinPositions: []
+    _coinPositions:
+    - {x: 0, y: 20, z: 0}
+    - {x: 0, y: 40, z: 0}
   - _obstacles:
     - obstacleID: 1
       position: {x: -10, y: 40, z: 0}
@@ -1638,8 +1640,8 @@ MonoBehaviour:
       scale: {x: 6, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 10, y: 35, z: 0}
       - {x: 10, y: 45, z: 0}
+      - {x: 10, y: 35, z: 0}
       rotateSpeed: 0
       speed: 5
     _finishPosition: {x: 0, y: 65, z: 0}
@@ -1647,7 +1649,9 @@ MonoBehaviour:
     _playerRotationSpeed: 45
     _playerMovementSpeed: 0
     _AllowedInInfinity: 1
-    _coinPositions: []
+    _coinPositions:
+    - {x: 0, y: 30, z: 0}
+    - {x: 0, y: 20, z: 0}
   - _obstacles:
     - obstacleID: 1
       position: {x: 0, y: 40, z: 0}
@@ -1658,12 +1662,16 @@ MonoBehaviour:
       - {x: 13, y: 40, z: 0}
       rotateSpeed: 0
       speed: 4
-    _finishPosition: {x: 0, y: 100, z: 0}
-    _borders: {x: -15, y: -15, z: 30, w: 115}
+    _finishPosition: {x: 0, y: 80, z: 0}
+    _borders: {x: -15, y: -15, z: 30, w: 95}
     _playerRotationSpeed: 55
     _playerMovementSpeed: 0
     _AllowedInInfinity: 1
-    _coinPositions: []
+    _coinPositions:
+    - {x: 0, y: 15, z: 0}
+    - {x: -4, y: 25, z: 0}
+    - {x: -8, y: 35, z: 0}
+    - {x: -12, y: 45, z: 0}
   levelsName: world 0
   levelLists:
   - {fileID: 11400000}

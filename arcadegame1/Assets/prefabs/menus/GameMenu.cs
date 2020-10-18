@@ -24,9 +24,9 @@ public class GameMenu : Menu<GameMenu>
     {
         GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
         if (gameManager._isInfinityMode)
-            _levelText.gameObject.SetActive(false);
+            _levelText.gameObject.transform.parent.gameObject.SetActive(false);
         else
-            _levelText.gameObject.SetActive(true);
+            _levelText.gameObject.transform.parent.gameObject.SetActive(true);
         if (_levelText && !gameManager._isInfinityMode)
             _levelText.text = gameManager._currentLevel + "";
     }

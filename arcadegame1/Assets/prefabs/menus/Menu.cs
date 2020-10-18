@@ -37,6 +37,9 @@ namespace MenuManagement
 
         public virtual void GoHome() {
             MenuManager menuManager = MenuManager.Instance;
+            Time.timeScale = 1f;
+            PlayerController playerController = FindObjectOfType<PlayerController>();
+            playerController.resetPosition(true, false);
             if (menuManager != null)
             {
                 menuManager.loadMenu( MainMenu.Instance);

@@ -53,15 +53,16 @@ public class GameManager : MonoBehaviour
         _numLevelsCrossed = 2;
         _levelGenerator.clearLevel();
         _levelGenerator.createBoundaries(new Vector4(-15f,-15f,30f,10000f), true);
-        _playerController.resetPosition(resetRequired);
         if (getPlayerData(false).gamesPlayed == 0)
         {
             StartCoroutine(playTutorial());
             //_nextHeight = 100f;
         }
+        else
+            _playerController.resetPosition(resetRequired, true);
         generateInfinityObstacles();
-        _playerController1.MoveSpeed = 5f;
-        _playerController.RotSpeed = 40f;
+        _playerController1.MoveSpeed = 6f;
+        _playerController.RotSpeed = 35f;
         GameMenu.Instance.setScoreVisibility(true);
         _score = 0;
         _noOfIncrements = 1;
@@ -122,7 +123,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);//wait for menu transitions
         _levelGenerator.clearLevel();
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
-        playerController.resetPosition(true);
+        playerController.resetPosition(true, true);
         _levelGenerator.generateLevel(worldNo, index);
         _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
         if (index == 0)
@@ -149,6 +150,7 @@ public class GameManager : MonoBehaviour
         yield return null;
         _isInfinityMode = true;
         gameStarted = true;
+        _playerController.resetPosition(true, true);
 
     }
 
@@ -246,15 +248,14 @@ public class GameManager : MonoBehaviour
         maxScore = saveData.maxScore;
         saveData.totalCoins += _coinCount;
         saveData.gamesPlayed++;
-        saveData.infinityAverage = (saveData.infinityAverage * saveData.gamesPlayed + _score) / saveData.gamesPlayed;
+        saveData.infinityAverage = (saveData.infinityAverage * (saveData.gamesPlayed-1) + _score) / saveData.gamesPlayed;
 
-        for (int i = 0; i < saveData.pastScores.Length-1; i++)
+        for (int i = saveData.pastScores.Length-1; i >0; i--)
         {
-            saveData.pastScores[i+1] = saveData.pastScores[i];
-            if (i == 0)
-                saveData.pastScores[i] = Mathf.RoundToInt(_score);
-            
+            saveData.pastScores[i] = saveData.pastScores[i-1];
+           
         }
+        saveData.pastScores[0] = Mathf.RoundToInt(_score);
 
         jsonSaver.saveData(saveData);
         getPlayerData(true);
@@ -263,7 +264,7 @@ public class GameManager : MonoBehaviour
 
     public int getCoins()
     {
-        SaveData saveData = getPlayerData(false);
+        SaveData saveData = getPlayerData(true);
         return saveData.totalCoins;
     }
 
