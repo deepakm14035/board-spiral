@@ -30,6 +30,13 @@ namespace MenuManagement
             topScore.text = gameManager.getPlayerData(true).maxScore + "";
         }
 
+        public void loadBoardSelector()
+        {
+            MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
+            menuManager.loadMenu(BoardSelectorMenu.Instance, 1f, false);
+            BoardSelectorMenu.Instance.setup();
+        }
+
         public void play()
         {
             //GameManager gameManager = GameObject.FindObjectOfType<GameManager>();

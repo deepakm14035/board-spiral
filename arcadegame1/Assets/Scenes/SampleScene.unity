@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -507,6 +507,8 @@ MonoBehaviour:
   _levelSelecterMenu: {fileID: 2788869506907080486, guid: 2a0d94673bfb0b148b57c31ceb434f5a,
     type: 3}
   _statisticsMenu: {fileID: 2788869506907080486, guid: 86eb8f15704a2604fa1646e44f300b8f,
+    type: 3}
+  _BoardSelectorMenu: {fileID: 2788869506907080486, guid: c3bfeac2876f7a645ad422179f46f320,
     type: 3}
   _loadingScreen: {fileID: 1900187599087333344, guid: dda60d54c05dd2e4a88d17b86e3d4440,
     type: 3}
@@ -1294,6 +1296,12 @@ MonoBehaviour:
   _HowToPlayPanel2: {fileID: 866667101}
   _newBestScorePS: {fileID: 760794541889778980, guid: e2f07e87f4a22314f8c376a09baa777d,
     type: 3}
+  _BoardList:
+  - {fileID: 8039982883125405615, guid: 3aec847a26ab6474a8c120b73388c422, type: 3}
+  - {fileID: 1759265579114270394, guid: e6c7e1ed41848de42bf54e8054bee472, type: 3}
+  - {fileID: 5332234760947493923, guid: 83d60eb85377809459a7950379176665, type: 3}
+  - {fileID: 3012958274026612179, guid: 712407c70aed818428d90378bdaa42d1, type: 3}
+  - {fileID: 7838362279915445527, guid: a4cee241a4df2b4409ec4619792b8037, type: 3}
   _score: 0
   _currentLevel: 0
   _currentWorld: 0
@@ -2326,6 +2334,7 @@ GameObject:
   - component: {fileID: 1972075597}
   - component: {fileID: 1972075599}
   - component: {fileID: 1972075598}
+  - component: {fileID: 1972075600}
   m_Layer: 5
   m_Name: WinningScreen
   m_TagString: Untagged
@@ -2366,7 +2375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0.3773585, b: 0.1472618, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2389,6 +2398,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972075596}
   m_CullTransparentMesh: 0
+--- !u!225 &1972075600
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972075596}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1988600764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,6 +2870,7 @@ MonoBehaviour:
   pos1: {fileID: 1248626958}
   pos2: {fileID: 2097346525}
   curpos: {fileID: 1248626958}
+  boardImage: {fileID: 0}
   rotSpeed: 15
   pivotEffectPrefab: {fileID: 849482621380641636, guid: 8c7a00ed299c2974b90ab5480cdba1a1,
     type: 3}

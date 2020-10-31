@@ -1,0 +1,449 @@
+fileFormatVersion: 2
+guid: e58b36d22b3a3b44d877abbcdcd685e3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1087906297073446147
+    second: boards_0
+  - first:
+      213: 7405774353435898266
+    second: boards_1
+  - first:
+      213: -5797233974561093106
+    second: boards_2
+  - first:
+      213: 8025704644926142010
+    second: boards_3
+  - first:
+      213: -4538593165248732891
+    second: boards_4
+  - first:
+      213: 3040927993572024318
+    second: boards_5
+  - first:
+      213: 5667371545591199942
+    second: boards_6
+  - first:
+      213: -5760567583738064208
+    second: boards_7
+  - first:
+      213: -9141637086784927611
+    second: boards_8
+  - first:
+      213: -4531938029847285970
+    second: boards_9
+  - first:
+      213: 3463600613039024648
+    second: boards_10
+  - first:
+      213: -4202562867795833949
+    second: boards_11
+  - first:
+      213: -6861206985851398047
+    second: boards_12
+  - first:
+      213: 8077745618272482309
+    second: boards_13
+  - first:
+      213: 4481079451907578513
+    second: boards_14
+  - first:
+      213: 2902336990641841696
+    second: boards_15
+  - first:
+      213: -7252498523277442805
+    second: boards_16
+  - first:
+      213: 4886668576823980852
+    second: boards_17
+  - first:
+      213: -5782612142063825837
+    second: boards_18
+  - first:
+      213: 6060196246849910606
+    second: boards_19
+  - first:
+      213: 2009518428858526295
+    second: boards_20
+  - first:
+      213: -8387437865990390190
+    second: boards_21
+  - first:
+      213: 3590650802782483411
+    second: boards_22
+  - first:
+      213: 1101852208957063816
+    second: boards_23
+  - first:
+      213: -8476991406520200959
+    second: boards_24
+  - first:
+      213: -1291045074570033832
+    second: boards_25
+  - first:
+      213: 7183093388578823277
+    second: boards_26
+  - first:
+      213: -5927037371408581075
+    second: boards_27
+  - first:
+      213: 8487986838261461546
+    second: boards_28
+  - first:
+      213: 6411169833351126049
+    second: boards_29
+  - first:
+      213: 2786956834549902321
+    second: boards_30
+  - first:
+      213: 8667647189677827203
+    second: boards_31
+  - first:
+      213: 5115285904700704586
+    second: boards_32
+  - first:
+      213: -1583053984531156548
+    second: boards_33
+  - first:
+      213: -1108738873378465446
+    second: boards_34
+  - first:
+      213: -3252046749515174836
+    second: boards_35
+  - first:
+      213: -3590585082066450730
+    second: boards_36
+  - first:
+      213: -9199579181541074305
+    second: boards_37
+  - first:
+      213: 2875994420175203676
+    second: boards_38
+  - first:
+      213: 798677364645661634
+    second: boards_39
+  - first:
+      213: 3552320221082245171
+    second: boards_40
+  - first:
+      213: -3078476897128058164
+    second: boards_41
+  - first:
+      213: -1911958433707246033
+    second: boards_42
+  - first:
+      213: 4746714275764422696
+    second: boards_43
+  - first:
+      213: -8466921553730028135
+    second: boards_44
+  - first:
+      213: -165573721706671942
+    second: boards_45
+  - first:
+      213: 9192612336645761237
+    second: boards_46
+  - first:
+      213: -9131951886466855384
+    second: boards_47
+  - first:
+      213: -6354050033055015494
+    second: boards_48
+  - first:
+      213: 2674330759401558812
+    second: boards_49
+  - first:
+      213: -5510061993274342483
+    second: boards_50
+  - first:
+      213: 7528518515340422953
+    second: boards_51
+  - first:
+      213: 4088180958426685596
+    second: boards_52
+  - first:
+      213: -8643691454629726352
+    second: boards_53
+  - first:
+      213: 966908586799918171
+    second: boards_54
+  - first:
+      213: 109031841534001384
+    second: boards_0
+  - first:
+      213: 194931144496343567
+    second: boards_1
+  - first:
+      213: 2446562346017580624
+    second: boards_2
+  - first:
+      213: 3189205629873180459
+    second: boards_3
+  - first:
+      213: 5213482515599905537
+    second: boards_4
+  - first:
+      213: -3945064876688031766
+    second: boards_5
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 115
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boards_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1409
+        width: 811
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e047d7d1eb538100800000000000000
+      internalID: 109031841534001384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boards_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1125
+        width: 811
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a6d57d7d884b200800000000000000
+      internalID: 194931144496343567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boards_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 821
+        width: 811
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0566933cd7fe3f120800000000000000
+      internalID: 2446562346017580624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boards_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 549
+        width: 811
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f444c8f95524c20800000000000000
+      internalID: 3189205629873180459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boards_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 281
+        width: 811
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103da09c9b20a5840800000000000000
+      internalID: 5213482515599905537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boards_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 811
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefb32185605049c0800000000000000
+      internalID: -3945064876688031766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

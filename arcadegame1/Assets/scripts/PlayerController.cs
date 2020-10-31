@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Transform pos1, pos2,curpos;
+    public SpriteRenderer boardImage;
     [SerializeField] private float rotSpeed;
     [SerializeField] private GameObject pivotEffectPrefab;
     [SerializeField] private GameObject trailRenderer1;
@@ -27,6 +28,11 @@ public class PlayerController : MonoBehaviour
     Vector3 startPosition;
 
     public float RotSpeed { get => rotSpeed; set => rotSpeed = value; }
+
+    private void Awake()
+    {
+        boardImage = GetComponent<SpriteRenderer>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -73,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void resetPosition(bool resetRequired, bool startGame) {
+    public void resetPosition(bool resetRequired, bool startGame, bool allowMoving) {
         transform.position = startPosition;
         transform.rotation = Quaternion.identity;
         if(resetRequired)
@@ -83,14 +89,14 @@ public class PlayerController : MonoBehaviour
         gameStarted = startGame;
         gameComplete = false;
 
-        StartCoroutine(allowMovementAfterDelay());
+        StartCoroutine(allowMovementAfterDelay(allowMoving));
     }
 
-    IEnumerator allowMovementAfterDelay() {
+    IEnumerator allowMovementAfterDelay(bool allowMoving) {
         yield return new WaitForSeconds(2f);
         //trailRenderer1.SetActive(true);
         //trailRenderer2.SetActive(true);
-        setMoving(true);
+        setMoving(allowMoving);
     }
 
     public void changeDirection() {

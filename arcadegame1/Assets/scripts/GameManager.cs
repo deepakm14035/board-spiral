@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     private GameObject _HowToPlayPanel2;
     [SerializeField]
     private GameObject _newBestScorePS;
+    public GameObject[] _BoardList;
+
     public float _score = 0;
     public int _currentLevel;
     public int _currentWorld;
@@ -41,6 +44,8 @@ public class GameManager : MonoBehaviour
         _levelGenerator = GameObject.FindObjectOfType<GenerateLevel>();
         _playerController = GameObject.FindObjectOfType<PlayerController>();
         _playerController1 = GameObject.FindObjectOfType<PlayerController1>();
+        getPlayerData(true);
+        _playerController.boardImage.sprite = _BoardList[loadedData.selectedBoard].GetComponent<Image>().sprite;
         MovingIndicator.SetActive(false);
     }
 
@@ -53,13 +58,12 @@ public class GameManager : MonoBehaviour
         _numLevelsCrossed = 2;
         _levelGenerator.clearLevel();
         _levelGenerator.createBoundaries(new Vector4(-15f,-15f,30f,10000f), true);
+        _playerController.resetPosition(resetRequired, true,true);
         if (getPlayerData(false).gamesPlayed == 0)
         {
             StartCoroutine(playTutorial());
-            //_nextHeight = 100f;
+            _nextHeight = 100f;
         }
-        else
-            _playerController.resetPosition(resetRequired, true);
         generateInfinityObstacles();
         _playerController1.MoveSpeed = 6f;
         _playerController.RotSpeed = 35f;
@@ -123,7 +127,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);//wait for menu transitions
         _levelGenerator.clearLevel();
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
-        playerController.resetPosition(true, true);
+        playerController.resetPosition(true, true,true);
         _levelGenerator.generateLevel(worldNo, index);
         _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
         if (index == 0)
@@ -137,8 +141,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator playTutorial()
     {
-        _isInfinityMode = false;
-        gameStarted = false;
+        //_playerController1.allowMoving = false;
+        //gameStarted = false;
         yield return new WaitForSeconds(2f);
         _HowToPlayPanel1.SetActive(true);
         yield return new WaitForSeconds(6f);
@@ -148,9 +152,9 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(6f);
         _HowToPlayPanel2.SetActive(false);
         yield return null;
-        _isInfinityMode = true;
-        gameStarted = true;
-        _playerController.resetPosition(true, true);
+        //gameStarted = true;
+        //_playerController.resetPosition(true, true);
+        //_playerController1.allowMoving = true;
 
     }
 
@@ -242,7 +246,7 @@ public class GameManager : MonoBehaviour
         if (saveData.maxScore < _score)
         {
             saveData.maxScore = Mathf.RoundToInt(_score);
-            Instantiate(_newBestScorePS, _playerController.gameObject.transform.position,Quaternion.identity);
+            Instantiate(_newBestScorePS, _playerController.gameObject.transform.position+new Vector3(0f,0f,10f),Quaternion.identity);
             isHighScore = true;
         }
         maxScore = saveData.maxScore;
@@ -303,6 +307,19 @@ public class GameManager : MonoBehaviour
             _score += Time.deltaTime * _noOfIncrements;
             GameMenu.Instance.setScore(Mathf.Round(_score)+"");
         }
+    }
+
+    public bool buyBoard(int i)
+    {
+        getPlayerData(true);
+        int currCoins = loadedData.totalCoins;
+        if (currCoins < _BoardList[i].GetComponent<Board>().cost)
+            return false;
+        loadedData.totalCoins -= _BoardList[i].GetComponent<Board>().cost;
+        loadedData.purchasedBoards[i] = 2;
+        JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
+        jsonSaver.saveData(loadedData);
+        return true;
     }
 
 }

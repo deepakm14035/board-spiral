@@ -19,6 +19,34 @@
   <defs
      id="defs1879">
     <inkscape:path-effect
+       fuse_tolerance="0"
+       vertical_pattern="false"
+       prop_units="false"
+       tang_offset="0"
+       normal_offset="0"
+       spacing="1.3"
+       scale_y_rel="false"
+       prop_scale="1"
+       copytype="repeated"
+       pattern="#rect7625"
+       is_visible="true"
+       id="path-effect5991"
+       effect="skeletal" />
+    <inkscape:path-effect
+       fuse_tolerance="0"
+       vertical_pattern="false"
+       prop_units="false"
+       tang_offset="0"
+       normal_offset="0"
+       spacing="0.5"
+       scale_y_rel="false"
+       prop_scale="1.2"
+       copytype="repeated"
+       pattern="#path2669"
+       is_visible="true"
+       id="path-effect5983"
+       effect="skeletal" />
+    <inkscape:path-effect
        effect="skeletal"
        id="path-effect7627"
        is_visible="true"
@@ -60,6 +88,34 @@
        prop_units="false"
        vertical_pattern="false"
        fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect7627-6-6"
+       is_visible="true"
+       pattern="#rect7625-0-8"
+       copytype="repeated"
+       prop_scale="0.76"
+       scale_y_rel="false"
+       spacing="1.3"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect7627-6-6-7"
+       is_visible="true"
+       pattern="#rect7625-0-8-7"
+       copytype="repeated"
+       prop_scale="0.76"
+       scale_y_rel="false"
+       spacing="1.3"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -68,9 +124,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="376.38866"
-     inkscape:cy="628.05097"
+     inkscape:zoom="0.35"
+     inkscape:cx="472.7931"
+     inkscape:cy="1116.0247"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -79,7 +135,8 @@
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:snap-object-midpoints="true" />
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-intersection-paths="true" />
   <metadata
      id="metadata1882">
     <rdf:RDF>
@@ -88,7 +145,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -96,87 +153,117 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <circle
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path2432"
-       cx="13.579958"
-       cy="39.598213"
-       r="5.6696429" />
-    <circle
-       r="5.6696429"
-       cy="39.598213"
-       cx="75.568054"
-       id="circle2434"
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       style="opacity:1;fill:#fffdff;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect2430"
-       width="61.988094"
-       height="11.339286"
-       x="13.607142"
-       y="33.928574" />
-    <circle
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path2432-5"
-       cx="9.0714293"
-       cy="64.166664"
-       r="5.6696429" />
-    <circle
-       r="5.6696429"
-       cy="64.166664"
-       cx="71.059525"
-       id="circle2434-3"
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
-       transform="translate(1.8335927,19.116689)"
+       style="fill:none;stroke:#fcffff;stroke-width:1.46389151;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -259.46269,154.84063 c 70.92459,0 126.53047,0 181.487688,0"
+       id="path5993"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5987"
+       d="m -261.534,5.478458 c 29.95285,19.180961 60.27135,14.59532 90.74384,0 31.17639,-14.3909019 61.76917,-19.735804 90.743839,0"
+       style="fill:none;fill-opacity:1;stroke:#fffffd;stroke-width:1.46389151;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#fffffd;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -261.534,-69.08576 c 29.95285,19.180975 60.27135,14.595331 90.74384,0 31.17639,-14.390907 61.76917,-19.735797 90.743839,0"
+       id="path5985"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5981"
+       d="m -261.534,-69.08576 c 29.95285,19.180975 60.27135,14.595331 90.74384,0 31.17639,-14.390907 61.76917,-19.735797 90.743839,0"
+       style="fill:none;fill-opacity:1;stroke:#fffffd;stroke-width:1.46389151;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g969"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       transform="matrix(2.927783,0,0,2.927783,-307.72891,-334.29074)">
+      <rect
+         y="33.928574"
+         x="15.805303"
+         height="11.339286"
+         width="61.988094"
+         id="rect2430"
+         style="opacity:1;fill:#fffdff;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         r="5.6696429"
+         cy="39.598213"
+         cx="15.778118"
+         id="path2432"
+         style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle2434"
+         cx="77.766212"
+         cy="39.598213"
+         r="5.6696429" />
+    </g>
+    <path
+       transform="matrix(2.927783,0,0,2.927783,-302.64421,-237.81845)"
        style="fill:none;stroke:#fcffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 14.441772,105.9556 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 H 24.93344 Z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 H 51.16261 Z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z m 2.622917,0 h 1.322917 v 5.29167 h -1.322917 z"
        id="path2578-0-0"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:path-effect="#path-effect7627-6"
-       inkscape:original-d="m 14.441772,108.60143 c 24.224676,0 43.217162,0 61.988094,0" />
+       inkscape:original-d="m 14.441772,108.60143 c 24.224676,0 43.217162,0 61.988094,0"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path5989"
+       d="m -260.36184,80.142958 c 70.9246,0 126.53047,0 181.487695,0"
+       style="fill:none;stroke:#fcffff;stroke-width:1.46389151;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193142;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path2432-1"
-       cx="15.875"
-       cy="127.66666"
-       r="5.6696429" />
+       cx="-261.534"
+       cy="79.992279"
+       r="16.599483"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
-       r="5.6696429"
-       cy="127.66666"
-       cx="77.863098"
+       r="16.599483"
+       cy="79.992279"
+       cx="-80.046318"
        id="circle2434-34"
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <circle
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path2432-26"
-       cx="20.410715"
-       cy="166.9762"
-       r="5.6696429" />
-    <circle
-       r="5.6696429"
-       cy="166.9762"
-       cx="82.398811"
-       id="circle2434-7"
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       style="opacity:1;fill:#fffdff;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect2430-69"
-       width="61.988098"
-       height="11.339286"
-       x="20.437899"
-       y="161.30655" />
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193142;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
        style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path2432-55"
-       cx="21.922619"
+       cx="15.778119"
        cy="199.86012"
        r="5.6696429" />
     <circle
        r="5.6696429"
        cy="199.86012"
-       cx="83.910713"
+       cx="77.766212"
        id="circle2434-9"
        style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
@@ -184,7 +271,7 @@
        id="rect2430-8"
        width="61.988098"
        height="11.339286"
-       x="21.949804"
+       x="15.805305"
        y="194.19048" />
     <circle
        style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -319,56 +406,91 @@
        height="11.339286"
        x="128.16112"
        y="184.74107" />
+    <g
+       id="g976"
+       transform="matrix(2.927783,0,0,2.927783,-307.72891,-331.55738)"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <circle
+         r="5.6696429"
+         cy="64.166664"
+         cx="15.778119"
+         id="path2432-5"
+         style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle2434-3"
+         cx="77.766212"
+         cy="64.166664"
+         r="5.6696429" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path2578"
+         d="m 15.778119,64.166665 c 10.230558,6.551365 20.586003,4.985114 30.994046,0 10.648465,-4.915291 21.097593,-6.740867 30.994047,0"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.97368421" />
+      <circle
+         style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:2.90287042;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle2595"
+         cx="15.778119"
+         cy="64.166664"
+         r="3.2642171" />
+      <circle
+         style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:2.90287042;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle2595-4"
+         cx="77.766212"
+         cy="64.166664"
+         r="3.2642174" />
+    </g>
     <path
-       style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.97368419"
-       d="m 9.0714292,64.166665 c 10.2305588,6.551365 20.5860038,4.985114 30.9940468,0 10.648465,-4.915291 21.097593,-6.740867 30.994047,0"
-       id="path2578"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
-    <circle
-       r="3.2642171"
-       cy="64.166664"
-       cx="9.0714293"
-       id="circle2595"
-       style="opacity:1;fill:#d9dcda;fill-opacity:1;stroke:none;stroke-width:2.90287042;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <circle
-       r="3.2642174"
-       cy="64.166664"
-       cx="71.059525"
-       id="circle2595-4"
-       style="opacity:1;fill:#d9dcda;fill-opacity:1;stroke:none;stroke-width:2.90287042;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       style="fill:#d9dcda;stroke:#fffffd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       style="fill:#d9dcda;fill-opacity:1;stroke:#fffffd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 17.162945,85.591877 -0.527626,0.823936 c 0.07121,0.184664 0.144989,0.369287 0.221347,0.553798 0.268815,0.649739 0.569575,1.298104 0.902461,1.942058 -0.719804,0.08539 -1.453915,0.141693 -2.199845,0.167142 -0.211853,0.0072 -0.424658,0.01198 -0.63836,0.01419 l -0.527627,0.823937 c 0.798531,0.0037 1.585485,-0.02697 2.358086,-0.0901 0.772602,-0.06313 1.530851,-0.158708 2.271971,-0.284776 -0.378447,-0.649625 -0.722556,-1.305901 -1.032529,-1.965436 -0.310021,-0.65945 -0.585912,-1.322164 -0.827878,-1.984751 z m 3.361488,1.811971 -0.398566,0.893783 c 0.09798,0.172087 0.198481,0.343707 0.301508,0.514791 0.362734,0.602466 0.756795,1.198285 1.182366,1.78442 -0.69824,0.192476 -1.415595,0.358103 -2.149577,0.495127 -0.208459,0.03892 -0.418258,0.07553 -0.629342,0.109799 l -0.398567,0.893785 c 0.790689,-0.116415 1.564628,-0.264815 2.319041,-0.443244 0.754413,-0.178428 1.4893,-0.386886 2.201886,-0.623416 -0.471849,-0.584094 -0.910024,-1.18051 -1.314727,-1.785858 -0.404738,-0.605258 -0.77601,-1.21945 -1.114022,-1.839187 z m 3.585976,1.287003 -0.257807,0.942644 c 0.122522,0.154973 0.247517,0.309055 0.374988,0.462175 0.448811,0.539218 0.928332,1.066517 1.438746,1.578859 -0.658966,0.29783 -1.341855,0.571056 -2.046182,0.817927 -0.200035,0.07012 -0.401799,0.13811 -0.605236,0.203936 l -0.257807,0.942644 c 0.764479,-0.234753 1.507035,-0.499075 2.224892,-0.791008 0.717857,-0.291932 1.411014,-0.611477 2.076697,-0.956677 -0.557119,-0.501994 -1.081226,-1.021983 -1.572527,-1.556576 -0.49132,-0.534499 -0.94984,-1.083603 -1.375764,-1.643924 z m 3.720235,0.711737 -0.10535,0.970518 c 0.144838,0.133324 0.292098,0.265331 0.441785,0.395951 0.527048,0.459997 1.084188,0.902803 1.671603,1.325378 -0.601982,0.401454 -1.232697,0.780552 -1.889659,1.135541 -0.186582,0.100824 -0.375281,0.199703 -0.56604,0.296598 l -0.105351,0.970519 c 0.719902,-0.351299 1.412707,-0.729748 2.07564,-1.133393 0.648226,-0.394689 1.267891,-0.813469 1.856399,-1.254509 0.01335,-0.01001 0.02668,-0.02002 0.04,-0.03005 -0.01407,-0.0089 -0.02812,-0.01791 -0.04216,-0.02688 -0.618781,-0.395404 -1.20664,-0.813365 -1.763766,-1.250713 -0.569769,-0.447174 -1.107402,-0.914624 -1.613104,-1.398963 z m 3.772425,0.09124 0.05551,0.97579 c 0.16606,0.108231 0.334103,0.214764 0.50406,0.319618 0.598429,0.369269 1.220583,0.717708 1.863413,1.0461 -0.533701,0.48715 -1.092868,0.960624 -1.680017,1.418529 -0.166754,0.130054 -0.335765,0.258852 -0.507091,0.38635 l 0.05551,0.975791 c 0.646547,-0.46784 1.261436,-0.953162 1.847472,-1.453855 0.586035,-0.500694 1.143219,-1.016759 1.674356,-1.546085 -0.680954,-0.311105 -1.341467,-0.642951 -1.978138,-0.996414 -0.636661,-0.353366 -1.249486,-0.728349 -1.835075,-1.125824 z m 3.816472,-0.484944 0.185395,0.958233 c 0.180042,0.08371 0.361664,0.1659 0.544797,0.246597 0.644833,0.284213 1.308398,0.549878 1.987647,0.797779 -0.471768,0.550604 -0.965264,1.091549 -1.483002,1.620945 -0.14704,0.150357 -0.296036,0.299783 -0.447045,0.448233 l 0.185395,0.958235 c 0.568773,-0.545068 1.109909,-1.103295 1.626214,-1.672571 0.516306,-0.569276 1.00778,-1.1496 1.477231,-1.738864 -0.714122,-0.232073 -1.413174,-0.482432 -2.093755,-0.751952 -0.680558,-0.269426 -1.342651,-0.558012 -1.982877,-0.866635 z m 3.791237,-0.985295 0.290913,0.935833 c 0.190267,0.06282 0.381712,0.1243 0.574265,0.184474 0.678009,0.211947 1.369758,0.407628 2.072199,0.587828 -0.417162,0.597181 -0.852312,1.188721 -1.307967,1.77273 -0.129408,0.165868 -0.260469,0.331128 -0.393242,0.495737 l 0.290913,0.935835 c 0.498598,-0.604792 0.973581,-1.218419 1.427756,-1.838773 0.454174,-0.620353 0.88754,-1.247433 1.302904,-1.879129 -0.73357,-0.166308 -1.457442,-0.348445 -2.168213,-0.547289 -0.710739,-0.198752 -1.408382,-0.414209 -2.089528,-0.647246 z m 3.745174,-1.38088 0.372064,0.908589 c 0.196736,0.04556 0.394248,0.08997 0.592464,0.133249 0.697958,0.152471 1.404664,0.290959 2.117069,0.416249 -0.369882,0.626881 -0.754015,1.252139 -1.154913,1.873885 -0.113856,0.176585 -0.229065,0.352887 -0.345683,0.528861 l 0.372065,0.90859 c 0.436023,-0.64701 0.852453,-1.298533 1.252096,-1.95246 0.270112,-0.441977 0.532555,-0.885051 0.788196,-1.328572 0.121867,-0.208836 0.245026,-0.41765 0.369583,-0.626374 -0.240738,-0.04354 -0.482039,-0.08581 -0.723785,-0.126842 -0.497541,-0.08284 -0.9926,-0.171925 -1.484129,-0.267518 -0.727203,-0.141344 -1.446679,-0.296938 -2.155027,-0.467657 z m 3.760109,-1.686855 0.403755,0.893049 c 0.206607,0.03628 0.412865,0.07352 0.618704,0.111728 0.724798,0.13461 1.444388,0.281312 2.155648,0.44116 -0.39761,0.606388 -0.780053,1.216174 -1.150101,1.827574 -0.105094,0.173647 -0.209188,0.347424 -0.312346,0.52129 l 0.403755,0.89305 c 0.369175,-0.6307 0.750002,-1.260314 1.145575,-1.886848 0.395572,-0.626535 0.80589,-1.249991 1.234045,-1.868378 -0.732941,-0.184195 -1.476664,-0.353251 -2.227685,-0.508342 -0.750983,-0.155 -1.509262,-0.296037 -2.27135,-0.424283 z m 4.078941,-1.656719 0.339348,0.920396 c 0.205177,0.05063 0.4096,0.102426 0.613195,0.155424 0.716895,0.186683 1.423541,0.388223 2.116816,0.605672 -0.445833,0.57038 -0.872288,1.148072 -1.282138,1.73129 -0.116398,0.165643 -0.231457,0.331732 -0.34524,0.498225 l 0.339349,0.920398 c 0.404184,-0.604247 0.824552,-1.203197 1.264195,-1.794859 0.439642,-0.591662 0.89856,-1.176036 1.379844,-1.751132 -0.709813,-0.248942 -1.435833,-0.479771 -2.174573,-0.693661 -0.73871,-0.213797 -1.490137,-0.410657 -2.250796,-0.591753 z m 4.254149,-1.322793 0.249121,0.944538 c 0.2001,0.06905 0.399039,0.139495 0.596745,0.211362 0.696148,0.253122 1.377008,0.523866 2.039454,0.813282 -0.502993,0.517302 -0.982399,1.045828 -1.440987,1.583793 -0.130241,0.152791 -0.258803,0.306343 -0.385749,0.460616 l 0.249122,0.944539 c 0.448464,-0.560087 0.917642,-1.110667 1.410625,-1.649751 0.492982,-0.539084 1.00977,-1.06667 1.553454,-1.580769 -0.673366,-0.328589 -1.368361,-0.636092 -2.081499,-0.923682 -0.713119,-0.287496 -1.444376,-0.555081 -2.190286,-0.803928 z m 4.415571,-0.877849 0.133075,0.965474 c 0.191376,0.09155 0.381184,0.184723 0.569353,0.279539 0.662559,0.333929 1.304788,0.688242 1.923563,1.063992 -0.569091,0.447153 -1.110383,0.909442 -1.626648,1.385084 -0.146622,0.13509 -0.291225,0.271258 -0.433873,0.408462 l 0.133075,0.965474 c 0.502014,-0.498221 1.029271,-0.982727 1.584864,-1.451526 0.270517,-0.228258 0.547752,-0.452792 0.83206,-0.673374 0.298239,-0.233142 0.605434,-0.46028 0.921219,-0.681063 -0.317678,-0.218101 -0.644095,-0.43005 -0.979207,-0.635344 -0.316698,-0.194153 -0.639386,-0.382746 -0.96766,-0.565913 -0.674209,-0.376095 -1.371977,-0.729305 -2.089821,-1.060805 z m 4.578239,-0.299889 -0.01602,0.977214 c 0.178122,0.120141 0.353703,0.242077 0.526738,0.365733 0.609259,0.435472 1.186935,0.892253 1.73273,1.366987 -0.636185,0.344172 -1.24529,0.712942 -1.824881,1.103982 -0.164608,0.111063 -0.326836,0.223923 -0.486627,0.338526 l -0.01602,0.977215 c 0.558643,-0.419251 1.150083,-0.816059 1.771605,-1.187828 0.621521,-0.371769 1.273124,-0.718499 1.952094,-1.037594 -0.537339,-0.523614 -1.109533,-1.029959 -1.716248,-1.515293 -0.606725,-0.485239 -1.247962,-0.949467 -1.92338,-1.388942 z m 4.606079,0.472576 -0.180998,0.959805 c 0.154741,0.148206 0.306816,0.29775 0.456221,0.448556 0.526042,0.53107 1.01896,1.077782 1.478455,1.636783 -0.684754,0.233775 -1.347317,0.495395 -1.985257,0.782534 -0.181181,0.08155 -0.360376,0.165168 -0.537528,0.250786 l -0.180998,0.959806 c 0.623418,-0.317053 1.274371,-0.608167 1.950145,-0.870749 0.675774,-0.262581 1.376368,-0.496629 2.099068,-0.699549 -0.443927,-0.605379 -0.924367,-1.199584 -1.440987,-1.778874 -0.516646,-0.579196 -1.069464,-1.143476 -1.658121,-1.689098 z m 4.453217,1.227126 -0.336634,0.917518 c 0.128177,0.171675 0.253565,0.344232 0.376157,0.517593 0.431623,0.610485 0.828581,1.230946 1.190572,1.858031 -0.714236,0.118576 -1.411173,0.268245 -2.088377,0.446681 -0.192332,0.05068 -0.383073,0.103684 -0.572167,0.158954 l -0.336634,0.917519 c 0.668397,-0.209873 1.359068,-0.390313 2.069299,-0.538727 0.710231,-0.148413 1.440021,-0.264798 2.186656,-0.346561 -0.338895,-0.67036 -0.715963,-1.33564 -1.13087,-1.992101 -0.414947,-0.656372 -0.867725,-1.303921 -1.358002,-1.938907 z"
        id="path2578-8"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:path-effect="#path-effect2689"
-       inkscape:original-d="m 15.77812,87.754408 c 10.230559,6.551365 20.586004,4.985114 30.994048,0 10.648463,-4.915291 21.097592,-6.740867 30.994046,0" />
+       inkscape:original-d="m 15.77812,87.754408 c 10.230559,6.551365 20.586004,4.985114 30.994048,0 10.648463,-4.915291 21.097592,-6.740867 30.994046,0"
+       transform="matrix(2.927783,0,0,2.927783,-307.72891,-326.01161)"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193142;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path2432-5-7"
-       cx="15.77812"
-       cy="87.754402"
-       r="5.6696429" />
+       cx="-261.534"
+       cy="-69.085785"
+       r="16.599483"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
-       r="5.6696429"
-       cy="87.754402"
-       cx="77.766212"
+       r="16.599483"
+       cy="-69.085785"
+       cx="-80.046318"
        id="circle2434-3-4"
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193142;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
-       r="3.2642174"
-       cy="87.754402"
-       cx="15.77812"
+       r="9.5569201"
+       cy="-69.085785"
+       cx="-261.534"
        id="circle2595-8"
-       style="opacity:1;fill:#d9dcda;fill-opacity:1;stroke:none;stroke-width:2.90287042;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:8.4989748;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
-       r="3.2642174"
-       cy="87.754402"
-       cx="77.766212"
+       r="9.5569201"
+       cy="-69.085785"
+       cx="-80.046318"
        id="circle2595-4-1"
-       style="opacity:1;fill:#d9dcda;fill-opacity:1;stroke:none;stroke-width:2.90287042;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:8.4989748;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <path
        style="fill:none;stroke:#fcffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 15.711656,106.61839 c 0.34027,0.21754 0.685769,0.42717 1.03603,0.62865 l -2.350469,4.0827 c -0.414289,-0.23868 -0.822888,-0.4872 -1.225329,-0.74527 z m 2.081962,1.19873 c 0.359168,0.18518 0.722638,0.36195 1.089943,0.53005 l -1.958683,4.28438 c -0.435013,-0.1987 -0.865264,-0.40774 -1.290284,-0.62687 z m 2.183434,1.00021 c 0.374389,0.15079 0.752153,0.29265 1.132825,0.42531 l -1.545006,4.44679 c -0.45206,-0.15667 -0.900285,-0.32419 -1.344207,-0.50232 z m 2.263033,0.78952 c 0.385934,0.11434 0.774314,0.21923 1.164675,0.31441 l -1.109436,4.56992 c -0.46543,-0.11258 -0.927952,-0.23653 -1.387099,-0.37161 z m 2.320762,0.56662 c 0.3938,0.0758 0.78912,0.14172 1.185493,0.19736 l -0.651975,4.65379 c -0.475123,-0.0664 -0.948265,-0.14478 -1.418958,-0.23475 z m 2.356617,0.33154 c 0.397989,0.0353 0.796571,0.0601 1.195279,0.0742 l -0.172621,4.69837 c -0.481138,-0.0183 -0.961223,-0.0489 -1.439787,-0.0918 z m 2.3706,0.0843 c 0.165083,-0.003 0.330108,-0.008 0.495043,-0.0148 0.236653,-0.008 0.473265,-0.0188 0.709816,-0.0333 l 0.305023,4.69295 c -0.278141,0.0191 -0.557007,0.0346 -0.836575,0.0466 -0.200157,0.007 -0.400245,0.0118 -0.600232,0.0145 z m 2.394797,-0.14935 c 0.403393,-0.0437 0.8065,-0.0968 1.209214,-0.15875 l 0.704555,4.64219 c -0.466052,0.0712 -0.93443,0.13322 -1.405026,0.18548 z m 2.395186,-0.3663 c 0.401837,-0.0787 0.803174,-0.16573 1.203904,-0.26048 l 1.058487,4.58236 c -0.456401,0.10557 -0.915343,0.20301 -1.376717,0.29178 z m 2.383407,-0.56172 c 0.399433,-0.10944 0.798152,-0.22609 1.196049,-0.34941 l 1.366819,4.51347 c -0.445902,0.13566 -0.894558,0.26427 -1.345862,0.38529 z m 2.366581,-0.73174 c 0.396179,-0.13589 0.79143,-0.27791 1.185646,-0.42552 l 1.629552,4.4355 c -0.434554,0.16148 -0.872077,0.31699 -1.312461,0.46598 z m 2.344704,-0.87636 c 0.392077,-0.15807 0.783012,-0.3212 1.172698,-0.48883 l 1.846685,4.34848 c -0.422358,0.18303 -0.847898,0.36116 -1.276513,0.53386 z m 2.31778,-0.99559 c 0.315335,-0.14335 0.62977,-0.28933 0.943247,-0.43766 0.07634,-0.0357 0.152789,-0.0712 0.229342,-0.10667 l 1.991337,4.2701 c -0.07223,0.0327 -0.144416,0.0655 -0.216571,0.0983 -0.33443,0.162 -0.6711,0.32139 -1.009953,0.47789 z m 2.398372,-1.0977 c 0.418766,-0.1841 0.840531,-0.36435 1.265223,-0.54017 l 1.828378,4.35595 c -0.393233,0.16189 -0.785588,0.32795 -1.176993,0.49762 z m 2.52564,-1.0451 c 0.430375,-0.16655 0.863607,-0.3281 1.299625,-0.48408 l 1.617099,4.43579 c -0.396435,0.14306 -0.792133,0.29144 -1.187024,0.44457 z m 2.59302,-0.92723 c 0.441422,-0.14447 0.88556,-0.28281 1.332342,-0.41443 l 1.3575,4.50964 c -0.399075,0.11971 -0.797555,0.24588 -1.195369,0.37794 z m 2.657058,-0.78246 c 0.451908,-0.11787 0.90639,-0.22846 1.363374,-0.3312 l 1.049582,4.57749 c -0.401154,0.0918 -0.801854,0.19127 -1.20203,0.29773 z m 2.717756,-0.61078 c 0.461832,-0.0867 0.926095,-0.16507 1.392719,-0.2344 l 0.693345,4.63934 c -0.402671,0.0594 -0.805029,0.12761 -1.207005,0.20396 z m 2.775111,-0.41218 c 0.471194,-0.0511 0.944678,-0.0926 1.42038,-0.12402 l 0.288787,4.69518 c -0.403625,0.0225 -0.807081,0.0549 -1.210295,0.0966 z m 2.838905,-0.17734 c 0.483815,-0.004 0.967178,0.005 1.449533,0.0264 l -0.208208,4.69848 c -0.397509,-0.0172 -0.795284,-0.0235 -1.19277,-0.0187 z m 2.868086,0.1277 c 0.47984,0.0469 0.958128,0.10654 1.434309,0.17865 L 65.594645,106.81 c -0.394275,-0.0598 -0.789915,-0.10898 -1.186366,-0.14749 z m 2.831476,0.42722 c 0.471505,0.0964 0.940359,0.20519 1.406007,0.32602 l -1.182565,4.55144 c -0.386682,-0.10063 -0.775829,-0.19116 -1.166886,-0.27138 z m 2.768938,0.71699 c 0.458812,0.14435 0.913873,0.30058 1.364628,0.46848 l -1.64351,4.40809 c -0.374731,-0.13988 -0.753025,-0.27007 -1.134328,-0.39036 z m 2.680472,0.99702 c 0.44176,0.19062 0.878669,0.3927 1.310173,0.60603 l -2.086967,4.2182 c -0.35842,-0.17749 -0.721503,-0.3457 -1.088694,-0.50443 z m 2.56608,1.26733 c 0.420348,0.23524 0.834746,0.48153 1.242641,0.73865 l -2.512937,3.98175 c -0.337749,-0.21346 -0.681261,-0.41806 -1.029981,-0.61358 z"
@@ -376,31 +498,47 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:path-effect="#path-effect7627"
-       inkscape:original-d="m 14.441772,108.60143 c 10.230559,6.55137 20.586004,4.98512 30.994048,0 10.648463,-4.91529 21.097592,-6.74087 30.994046,0" />
+       inkscape:original-d="m 14.441772,108.60143 c 10.230559,6.55137 20.586004,4.98512 30.994048,0 10.648463,-4.91529 21.097592,-6.74087 30.994046,0"
+       transform="matrix(2.927783,0,0,2.927783,-303.81639,-312.48293)"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193142;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path2432-5-4"
-       cx="14.441772"
-       cy="108.60143"
-       r="5.6696429" />
+       cx="-261.534"
+       cy="5.4784875"
+       r="16.599483"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
-       r="5.6696429"
-       cy="108.60143"
-       cx="76.429871"
+       r="16.599483"
+       cy="5.4784875"
+       cx="-80.046318"
        id="circle2434-3-5"
-       style="opacity:1;fill:#a8a8a9;fill-opacity:1;stroke:none;stroke-width:5.04201698;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193142;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
-       r="3.2642174"
-       cy="108.60143"
-       cx="14.441772"
+       r="9.5569201"
+       cy="5.4784875"
+       cx="-261.534"
        id="circle2595-3"
-       style="opacity:1;fill:#d9dcda;fill-opacity:1;stroke:none;stroke-width:2.90287042;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:8.4989748;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
-       r="3.2642174"
-       cy="108.60143"
-       cx="76.429871"
+       r="9.5569201"
+       cy="5.4784875"
+       cx="-80.046318"
        id="circle2595-4-6"
-       style="opacity:1;fill:#d9dcda;fill-opacity:1;stroke:none;stroke-width:2.90287042;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:8.4989748;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <path
        style="opacity:1;fill:#d9dcda;fill-opacity:1;stroke:none;stroke-width:1.39296269;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.42857145"
        d="m -46.636127,72.988028 v 0.815331 l 0.507483,0.292972 1.786866,1.031761 -1.786866,1.031521 -0.507483,0.292972 v 0.815332 l 1.853331,-1.069913 1.85333,-1.069912 -1.85333,-1.070153 z"
@@ -415,5 +553,84 @@
        style="opacity:1;fill:#d9dcda;fill-opacity:1;stroke:#d8d8d8;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -35.624256,124.92634 h 1.322917 v 5.29167 h -1.322917 z"
        id="rect7625-0" />
+    <rect
+       style="opacity:1;fill:#fffcff;fill-opacity:0.58270677;stroke:#ffffff;stroke-width:0.71109611;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54511276"
+       id="rect7726"
+       width="43.65625"
+       height="6.4983034"
+       x="24.944042"
+       y="177.69188" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#8a8786;fill-opacity:1;stroke:#d8d8d8;stroke-width:0.61199999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -35.012451,165.50282 c 4.793052,-4.07487 4.071778,-2.87309 1.603903,0 v 6.41561 h -1.603903 v -6.41561 z"
+       id="rect7625-0-8"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#8a8786;fill-opacity:1;stroke:#d8d8d8;stroke-width:0.61176282;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -40.826788,169.22568 c -4.791195,4.07329 -4.0702,2.87198 -1.603282,0 v -6.41312 h 1.603282 z"
+       id="rect7625-0-8-7"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       transform="matrix(2.927783,0,0,2.927783,-304.25707,-159.79969)"
+       style="fill:none;stroke:#fcffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 17.975368,110.04142 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833597,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833596,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833596,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833597,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833596,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833596,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833597,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833596,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833596,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833597,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833596,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z m 4.833596,0 c -4.791195,3.0957 -4.0702,2.1827 -1.603282,0 v -4.87397 h 1.603282 z"
+       id="path2578-0-0-8-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:path-effect="#path-effect7627-6-6-7"
+       inkscape:original-d="m 14.441772,108.60143 c 24.224676,0 43.217162,0 61.988094,0"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       transform="matrix(2.927783,0,0,2.927783,-303.32145,-165.63603)"
+       style="fill:none;stroke:#fcffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 14.441772,107.16088 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 H 28.94667 Z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 H 53.1215 Z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z m 4.834966,0 c 4.793052,-3.0969 4.071778,-2.18355 1.603903,0 v 4.87586 h -1.603903 z"
+       id="path2578-0-0-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:path-effect="#path-effect7627-6-6"
+       inkscape:original-d="m 14.441772,108.60143 c 24.224676,0 43.217162,0 61.988094,0"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193142;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2432-26"
+       cx="-261.534"
+       cy="154.57932"
+       r="16.599483"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       r="16.599483"
+       cy="154.57932"
+       cx="-80.046318"
+       id="circle2434-7"
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193142;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\boards.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="opacity:1;fill:#fffcf9;fill-opacity:1;stroke:none;stroke-width:0.58418173;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54511276"
+       d="m 140.38332,240.00471 a 4.2094951,4.2094951 0 0 0 -4.20956,4.20956 4.2094951,4.2094951 0 0 0 4.20956,4.20956 4.2094951,4.2094951 0 0 0 4.20956,-4.20956 4.2094951,4.2094951 0 0 0 -4.20956,-4.20956 z m 0,1.72289 a 2.4867482,2.4867482 0 0 1 2.48667,2.48667 2.4867482,2.4867482 0 0 1 -2.48667,2.48667 2.4867482,2.4867482 0 0 1 -2.48667,-2.48667 2.4867482,2.4867482 0 0 1 2.48667,-2.48667 z"
+       id="path996"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\store.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;fill:#fffcf9;fill-opacity:1;stroke:none;stroke-width:0.55636364;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.54511276"
+       id="rect994"
+       width="10.690781"
+       height="10.690781"
+       x="134.97112"
+       y="244.41473"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\store.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>

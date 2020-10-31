@@ -39,7 +39,7 @@ namespace MenuManagement
             MenuManager menuManager = MenuManager.Instance;
             Time.timeScale = 1f;
             PlayerController playerController = FindObjectOfType<PlayerController>();
-            playerController.resetPosition(true, false);
+            playerController.resetPosition(true, false,false);
             if (menuManager != null)
             {
                 menuManager.loadMenu( MainMenu.Instance);

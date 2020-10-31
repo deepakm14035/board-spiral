@@ -20,6 +20,14 @@ public class LoseMenu : Menu<LoseMenu>
         bestScore.text = gameManager.maxScore+"";
     }
 
+    private void Start()
+    {
+        GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
+        coinsText.text = gameManager.getCoins() + "";
+        currentScore.text = Mathf.RoundToInt(gameManager._score) + "";
+        bestScore.text = gameManager.maxScore + "";
+    }
+
     public void Replay() {
         GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
         if (!gameManager._isInfinityMode)
