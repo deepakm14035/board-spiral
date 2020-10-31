@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelList:
   - _obstacles: []
-    _finishPosition: {x: 0, y: 20, z: 0}
+    _finishPosition: {x: 0, y: 25, z: 0}
     _borders: {x: -15, y: -15, z: 30, w: 40}
     _playerRotationSpeed: 25
     _playerMovementSpeed: 0
@@ -1517,8 +1517,8 @@ MonoBehaviour:
       scale: {x: 3.5, y: 3.5, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: -7, y: 760, z: 0}
-      - {x: -7, y: 730, z: 0}
+      - {x: -7, y: 60, z: 0}
+      - {x: -7, y: 30, z: 0}
       rotateSpeed: 0
       speed: 4
     - obstacleID: 1
@@ -1526,8 +1526,8 @@ MonoBehaviour:
       scale: {x: 3.5, y: 3.5, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 0, y: 760, z: 0}
-      - {x: 0, y: 730, z: 0}
+      - {x: 0, y: 60, z: 0}
+      - {x: 0, y: 30, z: 0}
       rotateSpeed: 0
       speed: 4
     - obstacleID: 1
@@ -1535,8 +1535,8 @@ MonoBehaviour:
       scale: {x: 3.5, y: 3.5, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 7, y: 760, z: 0}
-      - {x: 7, y: 730, z: 0}
+      - {x: 7, y: 60, z: 0}
+      - {x: 7, y: 30, z: 0}
       rotateSpeed: 0
       speed: 4
     - obstacleID: 1
@@ -1544,8 +1544,8 @@ MonoBehaviour:
       scale: {x: 3.5, y: 3.5, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 14, y: 760, z: 0}
-      - {x: 14, y: 730, z: 0}
+      - {x: 14, y: 60, z: 0}
+      - {x: 14, y: 30, z: 0}
       rotateSpeed: 0
       speed: 4
     _finishPosition: {x: 0, y: 65, z: 0}
