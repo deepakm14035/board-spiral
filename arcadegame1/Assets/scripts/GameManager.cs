@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     float _speedIncrement = 1.1f;
     float _rotationIncrement = 1.1f;
-    float _incrementAfterDistance = 100f;
+    float _incrementAfterDistance = 200f;
     float _lastIncrementHeight=0f;
     int _noOfIncrements = 1;
 
@@ -45,8 +45,13 @@ public class GameManager : MonoBehaviour
         _playerController = GameObject.FindObjectOfType<PlayerController>();
         _playerController1 = GameObject.FindObjectOfType<PlayerController1>();
         getPlayerData(true);
-        _playerController.boardImage.sprite = _BoardList[loadedData.selectedBoard].GetComponent<Image>().sprite;
+        updatePlayerBoard();
         MovingIndicator.SetActive(false);
+    }
+
+    public void updatePlayerBoard()
+    {
+        _playerController.boardImage.sprite = _BoardList[loadedData.selectedBoard].GetComponent<Image>().sprite;
     }
 
     public void loadInfinityMode(bool resetRequired)
@@ -284,6 +289,11 @@ public class GameManager : MonoBehaviour
         }
         return loadedData;
     }
+    public void savePlayerData()
+    {
+        JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
+        jsonSaver.saveData(loadedData);
+    }
 
     public void setGameStarted(bool started)
     {
@@ -299,9 +309,10 @@ public class GameManager : MonoBehaviour
             if (_playerController.gameObject.transform.position.y - _lastIncrementHeight > _incrementAfterDistance)
             {
                 _lastIncrementHeight = _playerController.gameObject.transform.position.y;
-                _playerController.RotSpeed *= _rotationIncrement;
-                _playerController1.MoveSpeed *= _speedIncrement;
+                //_playerController.RotSpeed *= _rotationIncrement;
+                //_playerController1.MoveSpeed *= _speedIncrement;
                 _noOfIncrements++;
+                Time.timeScale *= 1.05f;
 
             }
             _score += Time.deltaTime * _noOfIncrements;
@@ -313,12 +324,14 @@ public class GameManager : MonoBehaviour
     {
         getPlayerData(true);
         int currCoins = loadedData.totalCoins;
+        Debug.Log("cutting");
         if (currCoins < _BoardList[i].GetComponent<Board>().cost)
             return false;
         loadedData.totalCoins -= _BoardList[i].GetComponent<Board>().cost;
         loadedData.purchasedBoards[i] = 2;
         JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
         jsonSaver.saveData(loadedData);
+        Debug.Log("cutted");
         return true;
     }
 

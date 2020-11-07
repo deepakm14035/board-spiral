@@ -55,12 +55,12 @@ namespace MenuManagement.Data
                     dat = sw.ReadToEnd();
                     Debug.Log(dat);
                     JsonUtility.FromJsonOverwrite(dat,data);
-                    if (!checkHash(data))
-                    {
+                    //if (!checkHash(data))
+                    //{
                         Debug.Log("hacked..resetting");
-                        data = new SaveData(levelGenerator);
-                    }
-                    else
+                        //data = new SaveData(levelGenerator);
+                    //}
+                    //else
                         Debug.Log("okay!");
                 }
                 return data;

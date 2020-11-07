@@ -19,6 +19,7 @@ MonoBehaviour:
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 1
       position: {x: 0, y: 20, z: 0}
@@ -32,6 +33,7 @@ MonoBehaviour:
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 1
       position: {x: 0, y: 20, z: 0}
@@ -47,6 +49,7 @@ MonoBehaviour:
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 1
       position: {x: 0, y: 30, z: 0}
@@ -62,12 +65,14 @@ MonoBehaviour:
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles: []
     _finishPosition: {x: 0, y: 30, z: 0}
     _borders: {x: -4, y: -10, z: 4, w: 40}
     _playerRotationSpeed: 80
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 1
       position: {x: 0, y: 35, z: 0}
@@ -136,6 +141,7 @@ MonoBehaviour:
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 4
       position: {x: -15, y: 15, z: 0}
@@ -214,6 +220,7 @@ MonoBehaviour:
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 4
       position: {x: -15, y: 10, z: 0}
@@ -308,6 +315,7 @@ MonoBehaviour:
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 1
       position: {x: 0, y: 45, z: 0}
@@ -323,6 +331,7 @@ MonoBehaviour:
     _playerRotationSpeed: 140
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 1
       position: {x: -14, y: 20, z: 0}
@@ -399,6 +408,7 @@ MonoBehaviour:
     _playerRotationSpeed: 80
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 1
       position: {x: -14, y: 20, z: 0}
@@ -513,6 +523,7 @@ MonoBehaviour:
     _playerRotationSpeed: 80
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 1
       position: {x: -14, y: 20, z: 0}
@@ -555,6 +566,7 @@ MonoBehaviour:
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 1
       position: {x: 0, y: 40, z: 0}
@@ -582,6 +594,7 @@ MonoBehaviour:
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
   - _obstacles:
     - obstacleID: 1
       position: {x: 0, y: 45, z: 0}
@@ -595,5 +608,211 @@ MonoBehaviour:
     _playerRotationSpeed: 70
     _playerMovementSpeed: 0
     _AllowedInInfinity: 0
+    _coinPositions: []
+  - _obstacles:
+    - obstacleID: 1
+      position: {x: -10, y: 40, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: -10, y: 60, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: -10, y: 100, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: -10, y: 120, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: -10, y: 140, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: -10, y: 180, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: -10, y: 260, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: 10, y: 80, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: 10, y: 160, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: 10, y: 200, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: 10, y: 220, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    - obstacleID: 1
+      position: {x: 10, y: 240, z: 0}
+      scale: {x: 8, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 0
+      speed: 0
+    _finishPosition: {x: 0, y: 300, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 310}
+    _playerRotationSpeed: 70
+    _playerMovementSpeed: 16
+    _AllowedInInfinity: 0
+    _coinPositions: []
+  - _obstacles:
+    - obstacleID: 1
+      position: {x: -14, y: 30, z: 0}
+      scale: {x: 20, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path: []
+      rotateSpeed: 40
+      speed: 0
+    - obstacleID: 1
+      position: {x: 14, y: 30, z: 0}
+      scale: {x: 20, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+      path: []
+      rotateSpeed: -40
+      speed: 0
+    - obstacleID: 1
+      position: {x: 14, y: 58, z: 0}
+      scale: {x: 20, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 1, w: -0.00000004371139}
+      path: []
+      rotateSpeed: 40
+      speed: 0
+    - obstacleID: 1
+      position: {x: -14, y: 58, z: 0}
+      scale: {x: 20, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70710677, w: -0.70710677}
+      path: []
+      rotateSpeed: -40
+      speed: 0
+    _finishPosition: {x: 0, y: 90, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 100}
+    _playerRotationSpeed: 70
+    _playerMovementSpeed: 0
+    _AllowedInInfinity: 0
+    _coinPositions: []
+  - _obstacles:
+    - obstacleID: 1
+      position: {x: -14, y: 30, z: 0}
+      scale: {x: 6, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path:
+      - {x: -14, y: 30, z: 0}
+      - {x: 14, y: 30, z: 0}
+      rotateSpeed: 120
+      speed: 10
+    - obstacleID: 1
+      position: {x: -7, y: 40, z: 0}
+      scale: {x: 6, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+      path:
+      - {x: -14, y: 40, z: 0}
+      - {x: 14, y: 40, z: 0}
+      rotateSpeed: 120
+      speed: 10
+    - obstacleID: 1
+      position: {x: 0, y: 50, z: 0}
+      scale: {x: 6, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 1, w: -0.00000004371139}
+      path:
+      - {x: -14, y: 50, z: 0}
+      - {x: 14, y: 50, z: 0}
+      rotateSpeed: 120
+      speed: 10
+    - obstacleID: 1
+      position: {x: 7, y: 60, z: 0}
+      scale: {x: 6, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70710677, w: -0.70710677}
+      path:
+      - {x: -14, y: 60, z: 0}
+      - {x: 14, y: 60, z: 0}
+      rotateSpeed: 120
+      speed: 10
+    - obstacleID: 1
+      position: {x: 14, y: 70, z: 0}
+      scale: {x: 6, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 1, w: -0.00000004371139}
+      path:
+      - {x: -14, y: 70, z: 0}
+      - {x: 14, y: 70, z: 0}
+      rotateSpeed: 120
+      speed: 10
+    - obstacleID: 1
+      position: {x: 7, y: 80, z: 0}
+      scale: {x: 6, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+      path:
+      - {x: -14, y: 80, z: 0}
+      - {x: 14, y: 80, z: 0}
+      rotateSpeed: 120
+      speed: 10
+    - obstacleID: 1
+      position: {x: 0, y: 90, z: 0}
+      scale: {x: 6, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+      path:
+      - {x: -14, y: 90, z: 0}
+      - {x: 14, y: 90, z: 0}
+      rotateSpeed: 120
+      speed: 10
+    - obstacleID: 1
+      position: {x: -7, y: 100, z: 0}
+      scale: {x: 6, y: 1, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+      path:
+      - {x: -14, y: 100, z: 0}
+      - {x: 14, y: 100, z: 0}
+      rotateSpeed: 120
+      speed: 10
+    _finishPosition: {x: 0, y: 110, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 120}
+    _playerRotationSpeed: 70
+    _playerMovementSpeed: 0
+    _AllowedInInfinity: 0
+    _coinPositions: []
   levelsName: WORLD 3
   levelLists: []
