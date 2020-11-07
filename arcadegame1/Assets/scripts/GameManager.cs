@@ -225,7 +225,7 @@ public class GameManager : MonoBehaviour
     public int getLevelProgress(int worldNo, int level)
     {
         SaveData saveData = getPlayerData(false);
-        Debug.Log("w no - "+worldNo+", "+level);
+        //Debug.Log("w no - "+worldNo+", "+level);
         return saveData.worlds[worldNo].levelList.scores[level];
     }
 

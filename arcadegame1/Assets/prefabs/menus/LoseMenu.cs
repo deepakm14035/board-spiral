@@ -17,18 +17,16 @@ public class LoseMenu : Menu<LoseMenu>
         GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
         if (gameManager._isInfinityMode)
         {
-            coinsText.gameObject.SetActive(true);
-            currentScore.gameObject.SetActive(true);
-            bestScore.gameObject.SetActive(true);
+            currentScorePanel.gameObject.SetActive(true);
+            bestScorePanel.gameObject.SetActive(true);
             coinsText.text = gameManager.getCoins() + "";
             currentScore.text = Mathf.RoundToInt(gameManager._score) + "";
             bestScore.text = gameManager.maxScore + "";
         }
         else
         {
-            coinsText.gameObject.SetActive(false);
-            currentScore.gameObject.SetActive(false);
-            bestScore.gameObject.SetActive(false);
+            currentScorePanel.gameObject.SetActive(false);
+            bestScorePanel.gameObject.SetActive(false);
 
         }
     }
