@@ -40,6 +40,7 @@ public class LevelSelecterMenu : Menu<LevelSelecterMenu>
                 newButton.gameObject.GetComponent<Image>().color = new Color32(190, 50, 88, 255);
                 newButton.gameObject.GetComponentInChildren<Text>().color = new Color32(160, 160, 160, 255);
             }
+            newButton.gameObject.GetComponent<Animator>().SetTrigger("fadein");
             if (i == (rowNo * _buttonsPerRow + (_buttonsPerRow-1)))
                 rowNo++;
         }
@@ -76,13 +77,29 @@ public class LevelSelecterMenu : Menu<LevelSelecterMenu>
         if (checkWorldNo(currentWorldNo+1))
             currentWorldNo++;
         Debug.Log("currworl-" + currentWorldNo);
+        StartCoroutine(fadeThenNextList());
+        //generateLevelSelecter(currentWorldNo);
+    }
+    IEnumerator fadeThenNextList() {
+        for (int i = 0; i < _levelListRows.Length; i++)
+        {
+            Button[] rowsButtons = _levelListRows[i].GetComponentsInChildren<Button>();
+            int len = rowsButtons.Length;
+            for (int j = 0; j < len; j++)
+            {
+                rowsButtons[j].gameObject.GetComponent<Animator>().SetTrigger("fadeout");
+            }
+        }
+        yield return new WaitForSeconds(0.33f);
         generateLevelSelecter(currentWorldNo);
+        yield return null;
     }
     public void prevList()
     {
         if (checkWorldNo(currentWorldNo - 1))
             currentWorldNo--;
-        generateLevelSelecter(currentWorldNo);
+        //generateLevelSelecter(currentWorldNo);
+        StartCoroutine(fadeThenNextList());
     }
 
     bool checkWorldNo(int num) {
