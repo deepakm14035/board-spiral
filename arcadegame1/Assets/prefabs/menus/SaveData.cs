@@ -21,6 +21,8 @@ namespace MenuManagement.Data
         public int[] pastScores;
         public int[] purchasedBoards;
         public int selectedBoard;
+        public int[] purchasedBackgrounds;
+        public int selectedBackground;
         public SaveData(GenerateLevel generateLevel) {
             playerName = defaultPlayerName;
             currentLevel = 0;
@@ -41,19 +43,28 @@ namespace MenuManagement.Data
                 //2 - completed
             }
             GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
+            purchasedBackgrounds = new int[gameManager._BackgroundList.Length];
+            for (int i = 0; i < purchasedBackgrounds.Length; i++)
+            {
+                purchasedBackgrounds[i] = 0;
+                if (i == 0)
+                    purchasedBackgrounds[i] = 2;
+                //0 - locked
+                //1 - can buy
+                //2 - bought
+            }
+
             purchasedBoards = new int[gameManager._BoardList.Length];
             for (int i = 0; i < purchasedBoards.Length; i++)
             {
                 purchasedBoards[i] = 0;
                 if (i == 0)
                     purchasedBoards[i] = 2;
-                //0 - locked
-                //1 - can buy
-                //2 - bought
             }
             gamesPlayed = 0;
             infinityAverage = 0f;
             selectedBoard = 0;
+            selectedBackground = 0;
         }
 
     }

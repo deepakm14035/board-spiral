@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 405.5, y: 109.4}
-  m_SizeDelta: {x: 811, y: 174.91992}
+  m_SizeDelta: {x: 600, y: 174.91992}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1759265579114270393
 MonoBehaviour:
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018f9bf9c7a107745bc218876c5a8bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minScore: 100
+  minScore: 50
   cost: 25
   startMoveSpeed: 0
   startRotateSpeed: 0

@@ -34,7 +34,14 @@ namespace MenuManagement
         {
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             menuManager.loadMenu(BoardSelectorMenu.Instance, 1f, false);
-            BoardSelectorMenu.Instance.setup();
+            BoardSelectorMenu.Instance.setup(true);
+        }
+
+        public void loadBGSelector()
+        {
+            MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
+            menuManager.loadMenu(BoardSelectorMenu.Instance, 1f, false);
+            BoardSelectorMenu.Instance.setup(false);
         }
 
         public void play()

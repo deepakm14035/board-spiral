@@ -57,7 +57,7 @@ namespace MenuManagement.Data
                     JsonUtility.FromJsonOverwrite(dat,data);
                     //if (!checkHash(data))
                     //{
-                        Debug.Log("hacked..resetting");
+                      //  Debug.Log("hacked..resetting");
                         //data = new SaveData(levelGenerator);
                     //}
                     //else

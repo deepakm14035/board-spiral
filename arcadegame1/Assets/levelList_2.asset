@@ -331,13 +331,13 @@ MonoBehaviour:
       speed: 0
     _finishPosition: {x: 0, y: 125, z: 0}
     _borders: {x: -15, y: -10, z: 30, w: 135}
-    _playerRotationSpeed: 20
+    _playerRotationSpeed: 30
     _playerMovementSpeed: 10
     _AllowedInInfinity: 0
     _coinPositions: []
   - _obstacles:
     - obstacleID: 1
-      position: {x: -12, y: 35, z: 0}
+      position: {x: -13, y: 35, z: 0}
       scale: {x: 9, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
@@ -346,8 +346,17 @@ MonoBehaviour:
       rotateSpeed: 0
       speed: 3
     - obstacleID: 1
+      position: {x: -13, y: 60, z: 0}
+      scale: {x: 9, y: 1, z: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path:
+      - {x: -19, y: 35, z: 0}
+      - {x: -5, y: 35, z: 0}
+      rotateSpeed: 0
+      speed: 3
+    - obstacleID: 1
       position: {x: 0, y: 35, z: 0}
-      scale: {x: 1.5, y: 1, z: 1}
+      scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
       - {x: 7, y: 35, z: 0}
@@ -355,7 +364,16 @@ MonoBehaviour:
       rotateSpeed: 0
       speed: 3
     - obstacleID: 1
-      position: {x: 12, y: 35, z: 0}
+      position: {x: 0, y: 60, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path:
+      - {x: -7, y: 35, z: 0}
+      - {x: 7, y: 35, z: 0}
+      rotateSpeed: 0
+      speed: 3
+    - obstacleID: 1
+      position: {x: 13, y: 35, z: 0}
       scale: {x: 9, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
@@ -363,8 +381,17 @@ MonoBehaviour:
       - {x: 5, y: 35, z: 0}
       rotateSpeed: 0
       speed: 3
-    _finishPosition: {x: 0, y: 50, z: 0}
-    _borders: {x: -15, y: -10, z: 30, w: 60}
+    - obstacleID: 1
+      position: {x: 13, y: 60, z: 0}
+      scale: {x: 9, y: 1, z: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      path:
+      - {x: 5, y: 35, z: 0}
+      - {x: 19, y: 35, z: 0}
+      rotateSpeed: 0
+      speed: 3
+    _finishPosition: {x: 0, y: 70, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 80}
     _playerRotationSpeed: 45
     _playerMovementSpeed: 10
     _AllowedInInfinity: 0

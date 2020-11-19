@@ -13,8 +13,7 @@ public class GenerateLevel : MonoBehaviour
     private GameObject finishPoint;
     [SerializeField]
     private Material borderMaterial;
-    [SerializeField]
-    private GameObject backgroundImage;
+    public GameObject backgroundImage;
     [SerializeField]
     private GameObject coinPrefab;
 

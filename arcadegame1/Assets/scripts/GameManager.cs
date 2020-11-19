@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _newBestScorePS;
     public GameObject[] _BoardList;
+    public Material[] _BoardTrailList;
+    public GameObject[] _BackgroundList;
+    public GameObject[] _BackgroundPrefabList;
 
     public float _score = 0;
     public int _currentLevel;
@@ -26,15 +29,12 @@ public class GameManager : MonoBehaviour
     public GameObject MovingIndicator;
     SaveData loadedData;
 
-    int _numLevelsCrossed;
     float _nextHeight = 25f;
     float _lookAheadConst = 50f;
     public bool _isInfinityMode = false;
     bool gameStarted = false;
     int _coinCount;
 
-    float _speedIncrement = 1.1f;
-    float _rotationIncrement = 1.1f;
     float _incrementAfterDistance = 200f;
     float _lastIncrementHeight=0f;
     int _noOfIncrements = 1;
@@ -46,12 +46,23 @@ public class GameManager : MonoBehaviour
         _playerController1 = GameObject.FindObjectOfType<PlayerController1>();
         getPlayerData(true);
         updatePlayerBoard();
+        updatePlayerBG();
         MovingIndicator.SetActive(false);
     }
 
     public void updatePlayerBoard()
     {
         _playerController.boardImage.sprite = _BoardList[loadedData.selectedBoard].GetComponent<Image>().sprite;
+        TrailRenderer[] trails = _playerController.gameObject.GetComponentsInChildren<TrailRenderer>();
+        for(int i = 0; i < trails.Length; i++)
+        {
+            trails[i].material = _BoardTrailList[loadedData.selectedBoard];
+        }
+    }
+    public void updatePlayerBG()
+    {
+        Debug.Log(_BackgroundList[loadedData.selectedBackground]);
+        _levelGenerator.backgroundImage = _BackgroundPrefabList[loadedData.selectedBackground];
     }
 
     public void loadInfinityMode(bool resetRequired)
@@ -60,7 +71,6 @@ public class GameManager : MonoBehaviour
         gameStarted = true;
         _nextHeight = 15f;
         _lastIncrementHeight = 0f;
-        _numLevelsCrossed = 2;
         _levelGenerator.clearLevel();
         _levelGenerator.createBoundaries(new Vector4(-15f,-15f,30f,10000f), true);
         _playerController.resetPosition(resetRequired, true,true);
@@ -81,7 +91,6 @@ public class GameManager : MonoBehaviour
 
     void generateInfinityObstacles()
     {
-        _numLevelsCrossed++;
         while (_nextHeight - _playerController.gameObject.transform.position.y < 200f)
         {
             int randomLevel = getRandomLevel();
@@ -312,7 +321,7 @@ public class GameManager : MonoBehaviour
                 //_playerController.RotSpeed *= _rotationIncrement;
                 //_playerController1.MoveSpeed *= _speedIncrement;
                 _noOfIncrements++;
-                Time.timeScale *= 1.05f;
+                Time.timeScale *= 1.1f;
 
             }
             _score += Time.deltaTime * _noOfIncrements;

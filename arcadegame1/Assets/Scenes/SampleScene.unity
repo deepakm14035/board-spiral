@@ -1303,6 +1303,31 @@ MonoBehaviour:
   - {fileID: 5332234760947493923, guid: 83d60eb85377809459a7950379176665, type: 3}
   - {fileID: 3012958274026612179, guid: 712407c70aed818428d90378bdaa42d1, type: 3}
   - {fileID: 7838362279915445527, guid: a4cee241a4df2b4409ec4619792b8037, type: 3}
+  - {fileID: 8874574311157517894, guid: 07ee9c10d92a81249ab495cd0578adcd, type: 3}
+  - {fileID: 8874574311157517894, guid: 165589bac738ab7449ac87d728a4d6ce, type: 3}
+  - {fileID: 8874574311157517894, guid: e984e691952a24542b42c5cd38a94816, type: 3}
+  _BoardTrailList:
+  - {fileID: 2100000, guid: 19ab6ce4d369ff841acf46a629fd200b, type: 2}
+  - {fileID: 2100000, guid: c10bc6ef31969c743a89425a60d43f49, type: 2}
+  - {fileID: 2100000, guid: 501a96b91bd844542aab507c63d65dc0, type: 2}
+  - {fileID: 2100000, guid: 60aea52a412015345a873c25e5159fae, type: 2}
+  - {fileID: 2100000, guid: 60aea52a412015345a873c25e5159fae, type: 2}
+  - {fileID: 2100000, guid: fc70f21dc4a23884fa803ee1863ec1a5, type: 2}
+  - {fileID: 2100000, guid: c4a582e14d4075b44900460e9c8ecb30, type: 2}
+  - {fileID: 2100000, guid: b5e635c81239714449d7de81764b79ee, type: 2}
+  - {fileID: 2100000, guid: c8e621dde9d3c3d42a5639fb52e9713a, type: 2}
+  _BackgroundList:
+  - {fileID: 8039982883125405615, guid: 2619fde6018b5ab439d98dadbae1c933, type: 3}
+  - {fileID: 8039982883125405615, guid: 88a4cbb442559c3448ffebc215405994, type: 3}
+  - {fileID: 8039982883125405615, guid: 59a21b2b26fc67e4bbf2a22d3aa737a9, type: 3}
+  - {fileID: 8039982883125405615, guid: 92e7872112dfb004a8344a8cd5ce9386, type: 3}
+  - {fileID: 8039982883125405615, guid: 943d053157de1df45b5d0658a1901fc6, type: 3}
+  _BackgroundPrefabList:
+  - {fileID: 3562943433276145997, guid: 2c6620558ca62454d97547499a34232b, type: 3}
+  - {fileID: 231793484680330411, guid: 6d3854fdff0696c4e8182f5db64ff1e1, type: 3}
+  - {fileID: 8779253518830219106, guid: 69a4b8ac05f40e449a1bfd00fa218fb8, type: 3}
+  - {fileID: 5685860954085002265, guid: f8db9a2480816d244980f68ffb02d988, type: 3}
+  - {fileID: 6315617726708493223, guid: a62c99bfc93b48347902143ad8975a80, type: 3}
   _score: 0
   _currentLevel: 0
   _currentWorld: 0
@@ -1474,8 +1499,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.8849104
-        value: 0.0056818128
+        time: 1
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -2625,8 +2650,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.8849104
-        value: 0.0056818128
+        time: 1
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
