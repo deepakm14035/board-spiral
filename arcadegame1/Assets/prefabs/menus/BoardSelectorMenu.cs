@@ -21,6 +21,7 @@ namespace MenuManagement
 
         public int boardsPerRow = 2;
         int selectedBoard;
+        int selectedBG;
         public Text totalCoins;
         GameObject[] buttons;
         GameManager gameManager;
@@ -124,10 +125,10 @@ namespace MenuManagement
                 //button.transform.parent = board.transform;
                 // button.GetComponent<Image>().color = new Color32(255,255,255,255);
                 // button.GetComponentInChildren<Image>().color = new Color32(220,60,60,255);
-                if (playerInfo.selectedBoard == i)
+                if (playerInfo.selectedBackground == i)
                     button.SetActive(false);
                 if (playerInfo.purchasedBackgrounds[i] == 2 && playerInfo.selectedBackground == i)
-                    selectedBoard = i;
+                    selectedBG = i;
                 buttons[i] = button;
             }
         }
@@ -168,10 +169,18 @@ namespace MenuManagement
             button.onClick.AddListener(delegate {
                 GameManager gameManager = FindObjectOfType<GameManager>();
                 SaveData playerInfo = gameManager.getPlayerData(true);
-                buttons[playerInfo.selectedBoard].SetActive(true);
-                buttons[playerInfo.selectedBoard].GetComponentInChildren<Text>().text = "USE";
-                addEventListener(buttons[playerInfo.selectedBoard].GetComponent<Button>(), playerInfo.selectedBoard, 2);
-                playerInfo.selectedBoard = i;
+                int selectedObj = 0;
+                if (isBoardView)
+                    selectedObj = playerInfo.selectedBoard;
+                else
+                    selectedObj = playerInfo.selectedBackground;
+                buttons[selectedObj].SetActive(true);
+                buttons[selectedObj].GetComponentInChildren<Text>().text = "USE";
+                addEventListener(buttons[selectedObj].GetComponent<Button>(), selectedObj, 2);
+                if(isBoardView)
+                    playerInfo.selectedBoard = i;
+                else
+                    playerInfo.selectedBackground = i;
                 gameManager.savePlayerData();
                 if (isBoardView)
                     reloadBoard();

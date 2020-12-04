@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="210mm"
@@ -18,6 +19,46 @@
    sodipodi:docname="boards.svg">
   <defs
      id="defs1879">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient954-6">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0"
+         id="stop950" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0"
+         offset="1"
+         id="stop952" />
+    </linearGradient>
+    <inkscape:path-effect
+       fuse_tolerance="0"
+       vertical_pattern="false"
+       prop_units="false"
+       tang_offset="0"
+       normal_offset="0"
+       spacing="0"
+       scale_y_rel="false"
+       prop_scale="0.3"
+       copytype="single"
+       pattern="#path919"
+       is_visible="true"
+       id="path-effect941"
+       effect="skeletal" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect923"
+       is_visible="true"
+       pattern="#path919"
+       copytype="single"
+       prop_scale="0.3"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
     <inkscape:path-effect
        fuse_tolerance="0"
        vertical_pattern="false"
@@ -238,6 +279,24 @@
        prop_units="false"
        vertical_pattern="false"
        fuse_tolerance="0" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient954-6"
+       id="linearGradient958"
+       gradientUnits="userSpaceOnUse"
+       x1="169.52042"
+       y1="220.44223"
+       x2="158.368"
+       y2="235.4478" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient954-6"
+       id="linearGradient966"
+       x1="169.80188"
+       y1="221.15317"
+       x2="156.85048"
+       y2="233.22478"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -246,9 +305,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-277.38267"
-     inkscape:cy="-758.34456"
+     inkscape:zoom="0.175"
+     inkscape:cx="787.36884"
+     inkscape:cy="-304.13743"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -259,7 +318,7 @@
      inkscape:window-maximized="1"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-intersection-paths="true"
-     inkscape:snap-others="false" />
+     inkscape:snap-others="true" />
   <metadata
      id="metadata1882">
     <rdf:RDF>
@@ -276,6 +335,30 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <path
+       sodipodi:nodetypes="sssss"
+       inkscape:connector-curvature="0"
+       id="path921"
+       d="m 170.93995,223.10822 v -4.35138 c -6.02552,0.68114 -10.03092,6.13739 -9.51268,11.16251 0.158,1.36497 0.63508,2.61413 1.3269,3.69729 -0.41594,-1.21753 -0.56447,-2.48541 -0.39741,-3.69729 0.56634,-4.46151 5.19619,-7.53301 8.58319,-6.81113 z"
+       style="opacity:1;fill:url(#linearGradient966);fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:path-effect="#path-effect923"
+       inkscape:original-d="m 170.93995,220.93253 c -4.96329,0 -8.98683,4.02353 -8.98683,8.98682 0,4.9633 4.02354,8.98683 8.98683,8.98683 4.96329,0 8.98683,-4.02353 8.98683,-8.98683 0,-4.96329 -4.02354,-8.98682 -8.98683,-8.98682 z"
+       transform="rotate(90,171.38814,229.06824)"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\store.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       transform="rotate(-90,171.57106,230.1968)"
+       inkscape:original-d="m 170.93995,220.93253 c -4.96329,0 -8.98683,4.02353 -8.98683,8.98682 0,4.9633 4.02354,8.98683 8.98683,8.98683 4.96329,0 8.98683,-4.02353 8.98683,-8.98683 0,-4.96329 -4.02354,-8.98682 -8.98683,-8.98682 z"
+       inkscape:path-effect="#path-effect941"
+       style="opacity:1;fill:url(#linearGradient958);fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 170.93995,223.10822 v -4.35138 c -6.02552,0.68114 -10.03092,6.13739 -9.51268,11.16251 0.158,1.36497 0.63508,2.61413 1.3269,3.69729 -0.41594,-1.21753 -0.56447,-2.48541 -0.39741,-3.69729 0.56634,-4.46151 5.19619,-7.53301 8.58319,-6.81113 z"
+       id="path939"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssss"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\store.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <path
        style="fill:none;stroke:#fcffff;stroke-width:1.46389151;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -259.46269,154.84063 c 70.92459,0 126.53047,0 181.487688,0"
@@ -915,5 +998,56 @@
        sodipodi:type="arc"
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:14.796236;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833"
        id="path997" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:15.38113308;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       id="rect910"
+       width="18.298687"
+       height="4.6561799"
+       x="161.8165"
+       y="227.59126"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\store.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:12.77917099;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       id="path922"
+       cx="161.76472"
+       cy="229.91702"
+       r="2.3246925"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\store.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       r="2.3246925"
+       cy="229.91702"
+       cx="180.11519"
+       id="circle924"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:12.77917099;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\store.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#36ffff;fill-opacity:1;stroke:none;stroke-width:0.43873519;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 197.77604,213.01853 v 14.50461 l 17.95387,-6.9933 z"
+       id="path919"
+       inkscape:connector-curvature="0" />
+    <circle
+       r="1.9158072"
+       cy="229.91702"
+       cx="161.8165"
+       id="circle946"
+       style="opacity:1;fill:#ffffff;fill-opacity:0.72509962;stroke:none;stroke-width:10.53146935;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\store.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:0.72509962;stroke:none;stroke-width:10.05207157;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       id="circle948"
+       cx="180.11519"
+       cy="229.91702"
+       r="1.8285987"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\store.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7413145044238063400}
   - component: {fileID: 1817609781459015863}
   m_Layer: 0
-  m_Name: boards_6
+  m_Name: boards_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 408.46002, y: 65.499985}
-  m_SizeDelta: {x: 600, y: 131}
+  m_AnchoredPosition: {x: 408.46002, y: 15.4}
+  m_SizeDelta: {x: 600, y: 98.29648}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &8874574311157517891
 MonoBehaviour:
@@ -75,16 +75,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.99215543, b: 0.4198113, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3040927993572024318, guid: e58b36d22b3a3b44d877abbcdcd685e3,
+  m_Sprite: {fileID: 5667371545591199942, guid: e58b36d22b3a3b44d877abbcdcd685e3,
     type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

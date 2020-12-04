@@ -19,6 +19,90 @@
   <defs
      id="defs973">
     <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect5821"
+       is_visible="true"
+       pattern="#path981"
+       copytype="single_stretched"
+       prop_scale="0.6"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect5817"
+       is_visible="true"
+       pattern="#path981"
+       copytype="single_stretched"
+       prop_scale="0.6"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       fuse_tolerance="0"
+       vertical_pattern="false"
+       prop_units="false"
+       tang_offset="0"
+       normal_offset="0"
+       spacing="0"
+       scale_y_rel="false"
+       prop_scale="0.6"
+       copytype="single_stretched"
+       pattern="#path981"
+       is_visible="true"
+       id="path-effect5813"
+       effect="skeletal" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect907"
+       is_visible="true"
+       pattern="#path981"
+       copytype="single_stretched"
+       prop_scale="0.4"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect891"
+       is_visible="true"
+       pattern="#path981"
+       copytype="single_stretched"
+       prop_scale="0.3"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       fuse_tolerance="0"
+       vertical_pattern="false"
+       prop_units="false"
+       tang_offset="0"
+       normal_offset="0"
+       spacing="0"
+       scale_y_rel="false"
+       prop_scale="0.4"
+       copytype="single_stretched"
+       pattern="#path981"
+       is_visible="true"
+       id="path-effect887"
+       effect="skeletal" />
+    <inkscape:path-effect
        fuse_tolerance="0"
        vertical_pattern="false"
        prop_units="false"
@@ -30,6 +114,34 @@
        copytype="single_stretched"
        pattern="#path981"
        is_visible="true"
+       id="path-effect883"
+       effect="skeletal" />
+    <inkscape:path-effect
+       fuse_tolerance="0"
+       vertical_pattern="false"
+       prop_units="false"
+       tang_offset="0"
+       normal_offset="0"
+       spacing="0"
+       scale_y_rel="false"
+       prop_scale="0.6"
+       copytype="single_stretched"
+       pattern="#path981"
+       is_visible="true"
+       id="path-effect877"
+       effect="skeletal" />
+    <inkscape:path-effect
+       fuse_tolerance="0"
+       vertical_pattern="false"
+       prop_units="false"
+       tang_offset="0"
+       normal_offset="0"
+       spacing="0"
+       scale_y_rel="false"
+       prop_scale="0.6"
+       copytype="single_stretched"
+       pattern="#path981"
+       is_visible="true"
        id="path-effect874"
        effect="skeletal" />
     <inkscape:path-effect
@@ -38,7 +150,7 @@
        is_visible="true"
        pattern="#path981"
        copytype="single_stretched"
-       prop_scale="0.4"
+       prop_scale="0.6"
        scale_y_rel="false"
        spacing="0"
        normal_offset="0"
@@ -208,9 +320,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.0875"
-     inkscape:cx="-180.74278"
-     inkscape:cy="-483.24288"
+     inkscape:zoom="0.7"
+     inkscape:cx="4440.9397"
+     inkscape:cy="-1920.2977"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -218,7 +330,8 @@
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:snap-object-midpoints="true" />
   <metadata
      id="metadata976">
     <rdf:RDF>
@@ -235,6 +348,57 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <path
+       transform="matrix(0,0.39011929,-0.39011929,0,1273.2105,-174.82958)"
+       d="m 632.53241,-117.17855 c -9.26875,-0.1166 -18.40218,0.56426 -27.27812,1.96335 l -0.0184,-0.15148 c -72.10335,10.76941 -135.12697,59.727612 -162.06466,125.884959 1e-5,1.4e-5 1e-5,2.9e-5 1e-5,4.3e-5 -29.59821,74.803686 -9.99457,162.760478 45.63262,216.864548 56.00677,53.73249 142.4798,68.31457 210.91785,38.19206 10e-6,-2e-5 3e-5,-2e-5 4e-5,-2e-5 68.33773,-30.36844 113.15257,-102.91576 110.9809,-174.83215 -2.1717,71.91639 -51.06431,138.80428 -115.90291,162.76744 -1e-5,0 -1e-5,0 -2e-5,-1e-5 -64.73827,24.20907 -142.76699,4.69688 -187.37266,-44.3567 -44.98525,-48.68202 -55.95254,-125.917982 -28.38553,-183.099032 2e-5,-1.1e-5 2e-5,-2.2e-5 2e-5,-3.4e-5 23.83492,-51.067904 78.03722,-86.772299 132.26833,-91.318517 l -0.0174,-0.143807 c 6.77983,-0.497871 13.59553,-0.670859 20.45131,-0.462346 0.29045,-17.103553 0.55331,-34.206334 0.78862,-51.308304 z"
+       sodipodi:open="true"
+       sodipodi:end="4.733761"
+       sodipodi:start="0"
+       sodipodi:ry="182.30659"
+       sodipodi:rx="182.30659"
+       sodipodi:cy="90.74276"
+       sodipodi:cx="628.39594"
+       sodipodi:type="arc"
+       style="opacity:1;fill:#ffff00;fill-opacity:0.59760958;stroke:none;stroke-width:9.38853359;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       id="path868"
+       inkscape:path-effect="#path-effect870"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       inkscape:path-effect="#path-effect874"
+       id="path872"
+       style="opacity:1;fill:#ffff00;fill-opacity:0.59760958;stroke:none;stroke-width:9.38853359;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       sodipodi:type="arc"
+       sodipodi:cx="628.39594"
+       sodipodi:cy="90.74276"
+       sodipodi:rx="182.30659"
+       sodipodi:ry="182.30659"
+       sodipodi:start="0"
+       sodipodi:end="4.733761"
+       sodipodi:open="true"
+       d="m 632.53241,-117.17855 c -9.26875,-0.1166 -18.40218,0.56426 -27.27812,1.96335 l -0.0184,-0.15148 c -72.10335,10.76941 -135.12697,59.727612 -162.06466,125.884959 1e-5,1.4e-5 1e-5,2.9e-5 1e-5,4.3e-5 -29.59821,74.803686 -9.99457,162.760478 45.63262,216.864548 56.00677,53.73249 142.4798,68.31457 210.91785,38.19206 10e-6,-2e-5 3e-5,-2e-5 4e-5,-2e-5 68.33773,-30.36844 113.15257,-102.91576 110.9809,-174.83215 -2.1717,71.91639 -51.06431,138.80428 -115.90291,162.76744 -1e-5,0 -1e-5,0 -2e-5,-1e-5 -64.73827,24.20907 -142.76699,4.69688 -187.37266,-44.3567 -44.98525,-48.68202 -55.95254,-125.917982 -28.38553,-183.099032 2e-5,-1.1e-5 2e-5,-2.2e-5 2e-5,-3.4e-5 23.83492,-51.067904 78.03722,-86.772299 132.26833,-91.318517 l -0.0174,-0.143807 c 6.77983,-0.497871 13.59553,-0.670859 20.45131,-0.462346 0.29045,-17.103553 0.55331,-34.206334 0.78862,-51.308304 z"
+       transform="matrix(0,0.572075,-0.572075,0,1288.9028,-288.46606)"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       inkscape:path-effect="#path-effect877"
+       id="path875"
+       style="opacity:1;fill:#ffff00;fill-opacity:0.59760958;stroke:none;stroke-width:9.38853359;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       sodipodi:type="arc"
+       sodipodi:cx="628.39594"
+       sodipodi:cy="90.74276"
+       sodipodi:rx="182.30659"
+       sodipodi:ry="182.30659"
+       sodipodi:start="0"
+       sodipodi:end="4.733761"
+       sodipodi:open="true"
+       d="m 632.53241,-117.17855 c -9.26875,-0.1166 -18.40218,0.56426 -27.27812,1.96335 l -0.0184,-0.15148 c -72.10335,10.76941 -135.12697,59.727612 -162.06466,125.884959 1e-5,1.4e-5 1e-5,2.9e-5 1e-5,4.3e-5 -29.59821,74.803686 -9.99457,162.760478 45.63262,216.864548 56.00677,53.73249 142.4798,68.31457 210.91785,38.19206 10e-6,-2e-5 3e-5,-2e-5 4e-5,-2e-5 68.33773,-30.36844 113.15257,-102.91576 110.9809,-174.83215 -2.1717,71.91639 -51.06431,138.80428 -115.90291,162.76744 -1e-5,0 -1e-5,0 -2e-5,-1e-5 -64.73827,24.20907 -142.76699,4.69688 -187.37266,-44.3567 -44.98525,-48.68202 -55.95254,-125.917982 -28.38553,-183.099032 2e-5,-1.1e-5 2e-5,-2.2e-5 2e-5,-3.4e-5 23.83492,-51.067904 78.03722,-86.772299 132.26833,-91.318517 l -0.0174,-0.143807 c 6.77983,-0.497871 13.59553,-0.670859 20.45131,-0.462346 0.29045,-17.103553 0.55331,-34.206334 0.78862,-51.308304 z"
+       transform="matrix(0,0.2260094,-0.2260094,0,1259.3049,-72.590723)"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <path
        inkscape:path-effect="#path-effect961-7"
        id="path959-6"
@@ -270,95 +434,57 @@
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <path
-       inkscape:path-effect="#path-effect961"
-       id="path959"
-       style="opacity:1;fill:#ffff00;fill-opacity:0.35686275;stroke:none;stroke-width:9.38853359;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
-       sodipodi:type="arc"
-       sodipodi:cx="628.39594"
-       sodipodi:cy="90.74276"
-       sodipodi:rx="182.30659"
-       sodipodi:ry="182.30659"
-       sodipodi:start="0"
-       sodipodi:end="4.733761"
-       sodipodi:open="true"
-       d="m 632.40566,-110.76584 c -8.95774,-0.1271 -17.79227,0.49018 -26.39671,1.7756 l -0.0138,-0.11362 c -69.86932,9.991519 -131.79027,57.292997 -158.34011,121.564161 0,1.4e-5 10e-6,2.8e-5 10e-6,4.2e-5 -29.34431,72.600854 -10.82021,159.217537 43.47673,212.643837 54.58164,53.14762 139.99911,68.34595 207.97468,38.96263 10e-6,-2e-5 2e-5,-2e-5 4e-5,-2e-5 67.90032,-29.56778 113.22487,-101.40766 111.59612,-173.32403 -1.62878,71.91637 -50.01166,139.51168 -115.28763,164.2755 -10e-6,0 -10e-6,0 -2e-5,0 -65.20073,24.94824 -144.28498,6.05232 -190.31579,-43.58612 -46.31549,-49.35976 -58.36232,-127.935818 -30.54142,-187.319695 2e-5,-1.1e-5 2e-5,-2.3e-5 2e-5,-3.5e-5 24.22276,-52.954082 79.52772,-90.315205 135.99286,-95.639325 l -0.0131,-0.107855 c 7.05435,-0.612179 14.1731,-0.848206 21.34328,-0.648463 0.19562,-12.82814 0.37054,-25.655686 0.52479,-38.482607 z"
-       transform="matrix(0,0.24897939,-0.24897939,0,352.35237,-86.714667)" />
-    <path
-       transform="matrix(0,0.53256455,-0.53256455,0,374.95955,-261.93059)"
-       d="m 632.27892,-104.35312 c -8.64676,-0.1376 -17.18236,0.41609 -25.51531,1.58783 l -0.009,-0.0757 c -67.63529,9.213617 -128.45357,54.858372 -154.61556,117.243353 0,1.4e-5 10e-6,2.8e-5 10e-6,4.2e-5 -29.09041,70.398021 -11.64585,155.674595 41.32085,208.423125 53.15649,52.56275 137.51842,68.37734 205.03149,39.7332 2e-5,-2e-5 3e-5,-2e-5 4e-5,-1e-5 67.46293,-28.76712 113.29718,-99.89957 112.21135,-171.81592 -1.08585,71.91635 -48.959,140.21908 -114.67235,165.78356 -10e-6,0 -10e-6,0 -2e-5,0 C 630.36705,282.21375 550.22727,263.9341 502.77133,213.7108 455.1256,163.67329 441.99921,83.757135 470.07401,22.170432 c 2e-5,-1.2e-5 2e-5,-2.4e-5 2e-5,-3.6e-5 24.6106,-54.84026 81.01822,-93.858111 139.71739,-99.960133 l -0.009,-0.0719 c 7.32895,-0.726483 14.75059,-1.025555 22.23526,-0.83458 0.10077,-8.552727 0.18775,-17.105033 0.26096,-25.656899 z"
-       sodipodi:open="true"
-       sodipodi:end="4.733761"
-       sodipodi:start="0"
-       sodipodi:ry="182.30659"
-       sodipodi:rx="182.30659"
-       sodipodi:cy="90.74276"
-       sodipodi:cx="628.39594"
-       sodipodi:type="arc"
-       style="opacity:1;fill:#ffff00;fill-opacity:0.35686275;stroke:none;stroke-width:9.38853359;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
-       id="path913"
-       inkscape:path-effect="#path-effect943" />
-    <path
-       transform="matrix(0,0.3780399,-0.3780399,0,363.47064,-167.30424)"
-       d="m 632.36341,-108.62826 c -8.85408,-0.1306 -17.58897,0.46548 -26.10291,1.713 l -0.0122,-0.10099 c -69.12464,9.732218 -130.67803,56.481455 -157.09859,120.123892 0,1.4e-5 10e-6,2.8e-5 10e-6,4.2e-5 -29.25968,71.866576 -11.09542,158.036556 42.7581,211.236936 54.10659,52.95266 139.17222,68.35641 206.99362,39.21949 1e-5,-3e-5 3e-5,-2e-5 4e-5,-2e-5 67.75453,-29.3009 113.24897,-100.90496 111.8012,-172.82133 -1.4478,71.91637 -49.66077,139.74748 -115.08254,164.77819 -10e-6,0 -10e-6,-1e-5 -2e-5,-1e-5 C 630.26519,280.71559 550.8291,262.02509 504.32325,212.1917 457.56435,162.60602 445.15766,83.58326 473.0632,23.465107 c 2e-5,-1.1e-5 2e-5,-2.3e-5 1e-5,-3.5e-5 24.35205,-53.582808 80.02456,-91.496174 137.23437,-97.079595 l -0.0116,-0.09587 c 7.14588,-0.65028 14.3656,-0.907322 21.64061,-0.710502 0.164,-11.403002 0.30961,-22.805468 0.43684,-34.207364 z"
-       sodipodi:open="true"
-       sodipodi:end="4.733761"
-       sodipodi:start="0"
-       sodipodi:ry="182.30659"
-       sodipodi:rx="182.30659"
-       sodipodi:cy="90.74276"
-       sodipodi:cx="628.39594"
-       sodipodi:type="arc"
-       style="opacity:1;fill:#ffff00;fill-opacity:0.35686275;stroke:none;stroke-width:9.38853359;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
-       id="path868"
-       inkscape:path-effect="#path-effect870" />
-    <path
-       inkscape:path-effect="#path-effect874"
-       id="path872"
-       style="opacity:1;fill:#ffff00;fill-opacity:0.35686275;stroke:none;stroke-width:9.38853359;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
-       sodipodi:type="arc"
-       sodipodi:cx="628.39594"
-       sodipodi:cy="90.74276"
-       sodipodi:rx="182.30659"
-       sodipodi:ry="182.30659"
-       sodipodi:start="0"
-       sodipodi:end="4.733761"
-       sodipodi:open="true"
-       d="m 632.27892,-104.35312 c -8.64676,-0.1376 -17.18236,0.41609 -25.51531,1.58783 l -0.009,-0.0757 c -67.63529,9.213617 -128.45357,54.858372 -154.61556,117.243353 0,1.4e-5 10e-6,2.8e-5 10e-6,4.2e-5 -29.09041,70.398021 -11.64585,155.674595 41.32085,208.423125 53.15649,52.56275 137.51842,68.37734 205.03149,39.7332 2e-5,-2e-5 3e-5,-2e-5 4e-5,-1e-5 67.46293,-28.76712 113.29718,-99.89957 112.21135,-171.81592 -1.08585,71.91635 -48.959,140.21908 -114.67235,165.78356 -10e-6,0 -10e-6,0 -2e-5,0 C 630.36705,282.21375 550.22727,263.9341 502.77133,213.7108 455.1256,163.67329 441.99921,83.757135 470.07401,22.170432 c 2e-5,-1.2e-5 2e-5,-2.4e-5 2e-5,-3.6e-5 24.6106,-54.84026 81.01822,-93.858111 139.71739,-99.960133 l -0.009,-0.0719 c 7.32895,-0.726483 14.75059,-1.025555 22.23526,-0.83458 0.10077,-8.552727 0.18775,-17.105033 0.26096,-25.656899 z"
-       transform="matrix(0,0.65063357,-0.65063357,0,386.95396,-337.52058)" />
-    <path
        style="opacity:1;fill:#fee814;fill-opacity:1;stroke:#cf9608;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833"
-       d="m 326.70977,56.147018 c 62.0612,24.26186 122.27137,19.83306 181.48771,0 v 33.19897 c -60.16567,18.493312 -120.6101,21.375442 -181.48771,0 z"
+       d="m 1235.4262,56.147018 c 62.0612,24.26186 122.2713,19.83306 181.4877,0 v 33.19897 c -60.1657,18.493312 -120.6101,21.375442 -181.4877,0 z"
        id="rect2430-73"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
        style="opacity:1;fill:#d50000;fill-opacity:1;stroke:none;stroke-width:17.28293991;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path2432-99"
-       cx="326.63019"
+       cx="1235.3466"
        cy="72.746445"
-       r="19.434307" />
+       r="19.434307"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
        r="16.599485"
        cy="72.746445"
-       cx="508.11786"
+       cx="1416.8342"
        id="circle2434-1"
-       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193237;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193237;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <circle
        style="opacity:1;fill:#ffb407;fill-opacity:0.45490196;stroke:none;stroke-width:35.38677216;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle911"
-       cx="509.07755"
+       cx="1417.7939"
        cy="70.06485"
-       r="39.791698" />
+       r="39.791698"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <path
        inkscape:connector-curvature="0"
        id="path941"
-       d="m 334.43646,-130.76861 c -55.1261,0.2464 -109.13293,22.29088 -146.81378,61.485116 -54.3404,57.488035 -68.2818,145.058392 -37.39101,213.977134 31.20064,68.79236 104.48318,113.07752 176.39959,110.34157 -71.91641,-2.736 -138.069,-52.15874 -161.19999,-116.54274 -23.44078,-64.257602 -3.28825,-141.1893892 45.15745,-184.313829 47.9776,-43.602641 123.8211,-53.447787 178.7126,-26.144639 49.1077,23.431897 83.08981,76.4884788 86.82726,128.397846 l 0.1814,-0.0217 c 0.0339,0.58187 0.0629,1.16367 0.0925,1.74564 a 34.352092,34.352092 0 0 0 -1.91666,11.19931 34.352092,34.352092 0 0 0 34.35241,34.351922 34.352092,34.352092 0 0 0 34.35191,-34.351922 34.352092,34.352092 0 0 0 -3.24683,-14.48644 c -0.25776,-2.03433 -0.55097,-4.05701 -0.88368,-6.06528 l 0.19071,-0.0233 C 527.67267,-25.645629 476.99236,-89.81561 408.8743,-117.15654 c -24.09164,-9.33191 -49.38052,-13.7241 -74.43784,-13.61207 z"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffb608;stroke-width:35;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833" />
+       d="m 1243.1529,-130.76861 c -55.1261,0.2464 -109.133,22.29088 -146.8138,61.485116 -54.3404,57.488035 -68.2818,145.058392 -37.391,213.977134 31.2006,68.79236 104.4831,113.07752 176.3996,110.34157 -71.9165,-2.736 -138.069,-52.15874 -161.2,-116.54274 -23.4408,-64.257602 -3.2883,-141.1893892 45.1574,-184.313829 47.9776,-43.602641 123.8211,-53.447787 178.7126,-26.144639 49.1077,23.431897 83.0898,76.4884788 86.8273,128.397846 l 0.1814,-0.0217 c 0.034,0.58187 0.063,1.16367 0.092,1.74564 a 34.352092,34.352092 0 0 0 -1.9167,11.19931 34.352092,34.352092 0 0 0 34.3524,34.351922 34.352092,34.352092 0 0 0 34.3519,-34.351922 34.352092,34.352092 0 0 0 -3.2468,-14.48644 c -0.2578,-2.03433 -0.551,-4.05701 -0.8837,-6.06528 l 0.1907,-0.0233 c -11.5776,-74.425707 -62.2579,-138.595688 -130.376,-165.936618 -24.0916,-9.33191 -49.3805,-13.7241 -74.4378,-13.61207 z"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffb608;stroke-width:35;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <path
        inkscape:connector-curvature="0"
        style="opacity:1;fill:#d5110e;fill-opacity:1;stroke:#ffb608;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833"
-       d="m 334.43646,-130.76861 c -55.1261,0.2464 -109.13293,22.29088 -146.81378,61.485116 -54.3404,57.488035 -68.2818,145.058392 -37.39101,213.977134 31.20064,68.79236 104.48318,113.07752 176.39959,110.34157 -71.91641,-2.736 -138.069,-52.15874 -161.19999,-116.54274 -23.44078,-64.257602 -3.28825,-141.1893892 45.15745,-184.313829 47.9776,-43.602641 123.8211,-53.447787 178.7126,-26.144639 49.1077,23.431897 83.08981,76.4884788 86.82726,128.397846 l 0.1814,-0.0217 c 0.0339,0.58187 0.0629,1.16367 0.0925,1.74564 a 34.352092,34.352092 0 0 0 -1.91666,11.19931 34.352092,34.352092 0 0 0 34.35241,34.351922 34.352092,34.352092 0 0 0 34.35191,-34.351922 34.352092,34.352092 0 0 0 -3.24683,-14.48644 c -0.25776,-2.03433 -0.55097,-4.05701 -0.88368,-6.06528 l 0.19071,-0.0233 C 527.67267,-25.645629 476.99236,-89.81561 408.8743,-117.15654 c -24.09164,-9.33191 -49.38052,-13.7241 -74.43784,-13.61207 z"
-       id="circle954" />
+       d="m 1243.1529,-130.76861 c -55.1261,0.2464 -109.133,22.29088 -146.8138,61.485116 -54.3404,57.488035 -68.2818,145.058392 -37.391,213.977134 31.2006,68.79236 104.4831,113.07752 176.3996,110.34157 -71.9165,-2.736 -138.069,-52.15874 -161.2,-116.54274 -23.4408,-64.257602 -3.2883,-141.1893892 45.1574,-184.313829 47.9776,-43.602641 123.8211,-53.447787 178.7126,-26.144639 49.1077,23.431897 83.0898,76.4884788 86.8273,128.397846 l 0.1814,-0.0217 c 0.034,0.58187 0.063,1.16367 0.092,1.74564 a 34.352092,34.352092 0 0 0 -1.9167,11.19931 34.352092,34.352092 0 0 0 34.3524,34.351922 34.352092,34.352092 0 0 0 34.3519,-34.351922 34.352092,34.352092 0 0 0 -3.2468,-14.48644 c -0.2578,-2.03433 -0.551,-4.05701 -0.8837,-6.06528 l 0.1907,-0.0233 c -11.5776,-74.425707 -62.2579,-138.595688 -130.376,-165.936618 -24.0916,-9.33191 -49.3805,-13.7241 -74.4378,-13.61207 z"
+       id="circle954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <path
        inkscape:path-effect="#path-effect961-6"
        id="path959-3"
@@ -677,5 +803,221 @@
        inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1.9343307;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       id="rect879"
+       width="508.58493"
+       height="510.35394"
+       x="983.59015"
+       y="-184.92247"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path881"
+       style="opacity:1;fill:none;fill-opacity:0.35686275;stroke:#ffff00;stroke-width:9.71209526;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       sodipodi:type="arc"
+       sodipodi:cx="72.731171"
+       sodipodi:cy="-1866.1058"
+       sodipodi:rx="78.578972"
+       sodipodi:ry="78.578972"
+       sodipodi:start="0"
+       sodipodi:end="4.733761"
+       sodipodi:open="true"
+       d="m 151.31014,-1866.1058 a 78.578972,78.578972 0 0 1 -48.89641,72.7571 78.578972,78.578972 0 0 1 -85.836854,-17.7903 78.578972,78.578972 0 0 1 -15.95189733,-86.1975 78.578972,78.578972 0 0 1 73.78545533,-47.3304"
+       transform="rotate(90)" />
+    <path
+       id="path885"
+       style="opacity:1;fill:none;fill-opacity:0.35686275;stroke:#ffff00;stroke-width:8.36743546;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       sodipodi:type="arc"
+       sodipodi:cx="70.255188"
+       sodipodi:cy="-1868.6393"
+       sodipodi:rx="48.056393"
+       sodipodi:ry="48.056393"
+       sodipodi:start="0"
+       sodipodi:end="4.733761"
+       sodipodi:open="true"
+       d="m 118.31158,-1868.6393 a 48.056393,48.056393 0 0 1 -29.903489,44.496 48.056393,48.056393 0 0 1 -52.495078,-10.88 48.056393,48.056393 0 0 1 -9.755672,-52.7156 48.056393,48.056393 0 0 1 45.124831,-28.9458"
+       transform="rotate(90)" />
+    <path
+       transform="rotate(90)"
+       d="m 181.31509,-1867.3862 a 109.98006,109.98006 0 0 1 -68.43601,101.8317 109.98006,109.98006 0 0 1 -120.1382642,-24.8995 109.98006,109.98006 0 0 1 -22.3264638,-120.643 109.98006,109.98006 0 0 1 103.270995,-66.2442"
+       sodipodi:open="true"
+       sodipodi:end="4.733761"
+       sodipodi:start="0"
+       sodipodi:ry="109.98006"
+       sodipodi:rx="109.98006"
+       sodipodi:cy="-1867.3862"
+       sodipodi:cx="71.33503"
+       sodipodi:type="arc"
+       style="opacity:1;fill:none;fill-opacity:0.35686275;stroke:#ffff00;stroke-width:11.12644386;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       id="path889" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path893"
+       d="m 1866.1823,56.147018 c 62.0612,24.26186 122.2713,19.83306 181.4877,0 v 33.19897 c -60.1657,18.493312 -120.6101,21.375442 -181.4877,0 z"
+       style="opacity:1;fill:#fee814;fill-opacity:1;stroke:#cf9608;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833" />
+    <circle
+       r="19.434307"
+       cy="72.746445"
+       cx="1866.1027"
+       id="circle895"
+       style="opacity:1;fill:#d50000;fill-opacity:1;stroke:none;stroke-width:17.28293991;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:14.76193237;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle897"
+       cx="2047.5903"
+       cy="72.746445"
+       r="16.599485" />
+    <circle
+       r="39.791698"
+       cy="70.06485"
+       cx="2048.55"
+       id="circle899"
+       style="opacity:1;fill:#ffb407;fill-opacity:0.45490196;stroke:none;stroke-width:35.38677216;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffb608;stroke-width:35;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833"
+       d="m 1873.909,-130.76861 c -55.1261,0.2464 -109.133,22.29088 -146.8138,61.485116 -54.3404,57.488035 -68.2818,145.058392 -37.391,213.977134 31.2006,68.79236 104.4831,113.07752 176.3996,110.34157 -71.9165,-2.736 -138.069,-52.15874 -161.2,-116.54274 -23.4408,-64.257602 -3.2883,-141.1893892 45.1574,-184.313829 47.9776,-43.602641 123.8211,-53.447787 178.7126,-26.144639 49.1077,23.431897 83.0898,76.4884788 86.8273,128.397846 l 0.1814,-0.0217 c 0.034,0.58187 0.063,1.16367 0.092,1.74564 a 34.352092,34.352092 0 0 0 -1.9167,11.19931 34.352092,34.352092 0 0 0 34.3524,34.351922 34.352092,34.352092 0 0 0 34.3519,-34.351922 34.352092,34.352092 0 0 0 -3.2468,-14.48644 c -0.2578,-2.03433 -0.551,-4.05701 -0.8837,-6.06528 l 0.1907,-0.0233 c -11.5776,-74.425707 -62.2579,-138.595688 -130.376,-165.936618 -24.0916,-9.33191 -49.3805,-13.7241 -74.4378,-13.61207 z"
+       id="path901"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path903"
+       d="m 1873.909,-130.76861 c -55.1261,0.2464 -109.133,22.29088 -146.8138,61.485116 -54.3404,57.488035 -68.2818,145.058392 -37.391,213.977134 31.2006,68.79236 104.4831,113.07752 176.3996,110.34157 -71.9165,-2.736 -138.069,-52.15874 -161.2,-116.54274 -23.4408,-64.257602 -3.2883,-141.1893892 45.1574,-184.313829 47.9776,-43.602641 123.8211,-53.447787 178.7126,-26.144639 49.1077,23.431897 83.0898,76.4884788 86.8273,128.397846 l 0.1814,-0.0217 c 0.034,0.58187 0.063,1.16367 0.092,1.74564 a 34.352092,34.352092 0 0 0 -1.9167,11.19931 34.352092,34.352092 0 0 0 34.3524,34.351922 34.352092,34.352092 0 0 0 34.3519,-34.351922 34.352092,34.352092 0 0 0 -3.2468,-14.48644 c -0.2578,-2.03433 -0.551,-4.05701 -0.8837,-6.06528 l 0.1907,-0.0233 c -11.5776,-74.425707 -62.2579,-138.595688 -130.376,-165.936618 -24.0916,-9.33191 -49.3805,-13.7241 -74.4378,-13.61207 z"
+       style="opacity:1;fill:#d5110e;fill-opacity:1;stroke:#ffb608;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833"
+       inkscape:connector-curvature="0" />
+    <rect
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       y="-184.92247"
+       x="1614.3462"
+       height="510.35394"
+       width="508.58493"
+       id="rect909"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffff00;stroke-width:1.9343307;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275" />
+    <rect
+       style="opacity:1;fill:#ffff00;fill-opacity:0;stroke:none;stroke-width:1.9343307;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       id="rect911"
+       width="508.58493"
+       height="510.35394"
+       x="1614.3462"
+       y="440.48822"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\blank.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       inkscape:export-ydpi="98.278954"
+       inkscape:export-xdpi="98.278954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       inkscape:path-effect="#path-effect5813"
+       id="path5811"
+       style="opacity:1;fill:#ffff00;fill-opacity:0.59760958;stroke:none;stroke-width:9.38853359;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       sodipodi:type="arc"
+       sodipodi:cx="628.39594"
+       sodipodi:cy="90.74276"
+       sodipodi:rx="182.30659"
+       sodipodi:ry="182.30659"
+       sodipodi:start="0"
+       sodipodi:end="4.733761"
+       sodipodi:open="true"
+       d="m 632.53241,-117.17855 c -9.26875,-0.1166 -18.40218,0.56426 -27.27812,1.96335 l -0.0184,-0.15148 c -72.10335,10.76941 -135.12697,59.727612 -162.06466,125.884959 1e-5,1.4e-5 1e-5,2.9e-5 1e-5,4.3e-5 -29.59821,74.803686 -9.99457,162.760478 45.63262,216.864548 56.00677,53.73249 142.4798,68.31457 210.91785,38.19206 10e-6,-2e-5 3e-5,-2e-5 4e-5,-2e-5 68.33773,-30.36844 113.15257,-102.91576 110.9809,-174.83215 -2.1717,71.91639 -51.06431,138.80428 -115.90291,162.76744 -1e-5,0 -1e-5,0 -2e-5,-1e-5 -64.73827,24.20907 -142.76699,4.69688 -187.37266,-44.3567 -44.98525,-48.68202 -55.95254,-125.917982 -28.38553,-183.099032 2e-5,-1.1e-5 2e-5,-2.2e-5 2e-5,-3.4e-5 23.83492,-51.067904 78.03722,-86.772299 132.26833,-91.318517 l -0.0174,-0.143807 c 6.77983,-0.497871 13.59553,-0.670859 20.45131,-0.462346 0.29045,-17.103553 0.55331,-34.206334 0.78862,-51.308304 z"
+       transform="matrix(0,0.10115897,-0.10115897,0,1251.3862,759.63213)" />
+    <path
+       inkscape:export-ydpi="98.278954"
+       inkscape:export-xdpi="98.278954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       transform="matrix(0,0.14834057,-0.14834057,0,1255.4552,730.1659)"
+       d="m 632.53241,-117.17855 c -9.26875,-0.1166 -18.40218,0.56426 -27.27812,1.96335 l -0.0184,-0.15148 c -72.10335,10.76941 -135.12697,59.727612 -162.06466,125.884959 1e-5,1.4e-5 1e-5,2.9e-5 1e-5,4.3e-5 -29.59821,74.803686 -9.99457,162.760478 45.63262,216.864548 56.00677,53.73249 142.4798,68.31457 210.91785,38.19206 10e-6,-2e-5 3e-5,-2e-5 4e-5,-2e-5 68.33773,-30.36844 113.15257,-102.91576 110.9809,-174.83215 -2.1717,71.91639 -51.06431,138.80428 -115.90291,162.76744 -1e-5,0 -1e-5,0 -2e-5,-1e-5 -64.73827,24.20907 -142.76699,4.69688 -187.37266,-44.3567 -44.98525,-48.68202 -55.95254,-125.917982 -28.38553,-183.099032 2e-5,-1.1e-5 2e-5,-2.2e-5 2e-5,-3.4e-5 23.83492,-51.067904 78.03722,-86.772299 132.26833,-91.318517 l -0.0174,-0.143807 c 6.77983,-0.497871 13.59553,-0.670859 20.45131,-0.462346 0.29045,-17.103553 0.55331,-34.206334 0.78862,-51.308304 z"
+       sodipodi:open="true"
+       sodipodi:end="4.733761"
+       sodipodi:start="0"
+       sodipodi:ry="182.30659"
+       sodipodi:rx="182.30659"
+       sodipodi:cy="90.74276"
+       sodipodi:cx="628.39594"
+       sodipodi:type="arc"
+       style="opacity:1;fill:#ffff00;fill-opacity:0.59760958;stroke:none;stroke-width:9.38853359;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       id="path5815"
+       inkscape:path-effect="#path-effect5817" />
+    <path
+       inkscape:export-ydpi="98.278954"
+       inkscape:export-xdpi="98.278954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       transform="matrix(0,0.05860484,-0.05860484,0,1247.7804,786.14294)"
+       d="m 632.53241,-117.17855 c -9.26875,-0.1166 -18.40218,0.56426 -27.27812,1.96335 l -0.0184,-0.15148 c -72.10335,10.76941 -135.12697,59.727612 -162.06466,125.884959 1e-5,1.4e-5 1e-5,2.9e-5 1e-5,4.3e-5 -29.59821,74.803686 -9.99457,162.760478 45.63262,216.864548 56.00677,53.73249 142.4798,68.31457 210.91785,38.19206 10e-6,-2e-5 3e-5,-2e-5 4e-5,-2e-5 68.33773,-30.36844 113.15257,-102.91576 110.9809,-174.83215 -2.1717,71.91639 -51.06431,138.80428 -115.90291,162.76744 -1e-5,0 -1e-5,0 -2e-5,-1e-5 -64.73827,24.20907 -142.76699,4.69688 -187.37266,-44.3567 -44.98525,-48.68202 -55.95254,-125.917982 -28.38553,-183.099032 2e-5,-1.1e-5 2e-5,-2.2e-5 2e-5,-3.4e-5 23.83492,-51.067904 78.03722,-86.772299 132.26833,-91.318517 l -0.0174,-0.143807 c 6.77983,-0.497871 13.59553,-0.670859 20.45131,-0.462346 0.29045,-17.103553 0.55331,-34.206334 0.78862,-51.308304 z"
+       sodipodi:open="true"
+       sodipodi:end="4.733761"
+       sodipodi:start="0"
+       sodipodi:ry="182.30659"
+       sodipodi:rx="182.30659"
+       sodipodi:cy="90.74276"
+       sodipodi:cx="628.39594"
+       sodipodi:type="arc"
+       style="opacity:1;fill:#ffff00;fill-opacity:0.59760958;stroke:none;stroke-width:9.38853359;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275"
+       id="path5819"
+       inkscape:path-effect="#path-effect5821" />
+    <path
+       inkscape:export-ydpi="98.278954"
+       inkscape:export-xdpi="98.278954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path5823"
+       d="m 1241.5886,819.52499 c 16.0927,6.29116 31.7052,5.14276 47.0603,0 v 8.60857 c -15.6011,4.79537 -31.2746,5.54272 -47.0603,0 z"
+       style="opacity:1;fill:#fee814;fill-opacity:1;stroke:#cf9608;stroke-width:1.29651332;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833" />
+    <circle
+       inkscape:export-ydpi="98.278954"
+       inkscape:export-xdpi="98.278954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       r="5.0393672"
+       cy="823.82922"
+       cx="1241.568"
+       id="circle5825"
+       style="opacity:1;fill:#d50000;fill-opacity:1;stroke:none;stroke-width:4.48151207;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="98.278954"
+       inkscape:export-xdpi="98.278954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       style="opacity:1;fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:3.82780838;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle5827"
+       cx="1288.6282"
+       cy="823.82922"
+       r="4.3042903" />
+    <circle
+       inkscape:export-ydpi="98.278954"
+       inkscape:export-xdpi="98.278954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       r="10.318093"
+       cy="823.13391"
+       cx="1288.877"
+       id="circle5829"
+       style="opacity:1;fill:#ffb407;fill-opacity:0.45490196;stroke:none;stroke-width:9.17588425;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="98.278954"
+       inkscape:export-xdpi="98.278954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffb608;stroke-width:9.07559299;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833"
+       d="m 1243.5922,771.05727 c -14.2944,0.0639 -28.2985,5.78008 -38.0692,15.94325 -14.0906,14.9068 -17.7057,37.61403 -9.6957,55.48484 8.0904,17.83804 27.0928,29.32129 45.741,28.61187 -18.6482,-0.70945 -35.8017,-13.52491 -41.7997,-30.21986 -6.0782,-16.66216 -0.8526,-36.61077 11.7095,-47.79305 12.4408,-11.30629 32.1071,-13.85915 46.3407,-6.77938 12.7337,6.07596 21.5454,19.83366 22.5145,33.2939 l 0.047,-0.006 c 0.01,0.15089 0.016,0.30174 0.024,0.45265 a 8.9075888,8.9075888 0 0 0 -0.4971,2.90401 8.9075888,8.9075888 0 0 0 8.9077,8.90755 8.9075888,8.9075888 0 0 0 8.9076,-8.90755 8.9075888,8.9075888 0 0 0 -0.842,-3.75637 c -0.067,-0.52751 -0.1428,-1.05199 -0.2291,-1.57274 l 0.049,-0.006 c -3.0021,-19.29879 -16.1437,-35.93823 -33.8069,-43.02781 -6.247,-2.41979 -12.8044,-3.55869 -19.3019,-3.52965 z"
+       id="path5831"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="98.278954"
+       inkscape:export-xdpi="98.278954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       id="path5833"
+       d="m 1243.5922,771.05727 c -14.2944,0.0639 -28.2985,5.78008 -38.0692,15.94325 -14.0906,14.9068 -17.7057,37.61403 -9.6957,55.48484 8.0904,17.83804 27.0928,29.32129 45.741,28.61187 -18.6482,-0.70945 -35.8017,-13.52491 -41.7997,-30.21986 -6.0782,-16.66216 -0.8526,-36.61077 11.7095,-47.79305 12.4408,-11.30629 32.1071,-13.85915 46.3407,-6.77938 12.7337,6.07596 21.5454,19.83366 22.5145,33.2939 l 0.047,-0.006 c 0.01,0.15089 0.016,0.30174 0.024,0.45265 a 8.9075888,8.9075888 0 0 0 -0.4971,2.90401 8.9075888,8.9075888 0 0 0 8.9077,8.90755 8.9075888,8.9075888 0 0 0 8.9076,-8.90755 8.9075888,8.9075888 0 0 0 -0.842,-3.75637 c -0.067,-0.52751 -0.1428,-1.05199 -0.2291,-1.57274 l 0.049,-0.006 c -3.0021,-19.29879 -16.1437,-35.93823 -33.8069,-43.02781 -6.247,-2.41979 -12.8044,-3.55869 -19.3019,-3.52965 z"
+       style="opacity:1;fill:#d5110e;fill-opacity:1;stroke:#ffb608;stroke-width:3.88953996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.4541833"
+       inkscape:connector-curvature="0" />
+    <rect
+       inkscape:export-ydpi="98.278954"
+       inkscape:export-xdpi="98.278954"
+       inkscape:export-filename="D:\Documents\Unity\arcadegame1\arcadegame1\Assets\sprites\logo.png"
+       y="757.01508"
+       x="1178.6842"
+       height="132.33615"
+       width="132.32544"
+       id="rect5835"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:0.50157708;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.35686275" />
   </g>
 </svg>

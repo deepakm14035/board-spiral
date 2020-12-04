@@ -35,9 +35,10 @@ public class GameManager : MonoBehaviour
     bool gameStarted = false;
     int _coinCount;
 
-    float _incrementAfterDistance = 200f;
+    float _incrementAfterDistance = 150f;
     float _lastIncrementHeight=0f;
     int _noOfIncrements = 1;
+    int increment = 2;
 
     void Start()
     {
@@ -52,12 +53,25 @@ public class GameManager : MonoBehaviour
 
     public void updatePlayerBoard()
     {
+        Color newColor = _BoardList[loadedData.selectedBoard].GetComponent<Image>().color;
         _playerController.boardImage.sprite = _BoardList[loadedData.selectedBoard].GetComponent<Image>().sprite;
-        TrailRenderer[] trails = _playerController.gameObject.GetComponentsInChildren<TrailRenderer>();
+        _playerController.boardImage.color = newColor;
+        TrailRenderer[] trails = _playerController.gameObject.GetComponentsInChildren<TrailRenderer>(true);
         for(int i = 0; i < trails.Length; i++)
         {
             trails[i].material = _BoardTrailList[loadedData.selectedBoard];
+            Debug.Log("trail name - "+ trails[i].gameObject.name+", "+ _BoardList[loadedData.selectedBoard].GetComponent<Image>().color);
+            Gradient gradient = new Gradient();
+            gradient.SetKeys(
+                new GradientColorKey[] { new GradientColorKey(newColor, 0.0f), new GradientColorKey(newColor, 1.0f) },
+                new GradientAlphaKey[] { new GradientAlphaKey(1f, 0.0f), new GradientAlphaKey(0f, 1.0f) }
+            );
+            trails[i].colorGradient = gradient;
         }
+
+        ParticleSystem[] ps = _playerController.gameObject.GetComponentsInChildren<ParticleSystem>(true);
+        for (int i = 0; i < ps.Length; i++)
+            ps[i].startColor = newColor;
     }
     public void updatePlayerBG()
     {
@@ -86,7 +100,8 @@ public class GameManager : MonoBehaviour
         _score = 0;
         _noOfIncrements = 1;
         _coinCount = 0;
-        
+        Time.timeScale=1f;
+        GameMenu.Instance.setCoins(_coinCount + "");
     }
 
     void generateInfinityObstacles()
@@ -260,8 +275,9 @@ public class GameManager : MonoBehaviour
         if (saveData.maxScore < _score)
         {
             saveData.maxScore = Mathf.RoundToInt(_score);
-            Instantiate(_newBestScorePS, _playerController.gameObject.transform.position+new Vector3(0f,0f,10f),Quaternion.identity);
+            Instantiate(_newBestScorePS, Camera.main.transform.position,Quaternion.identity);
             isHighScore = true;
+
         }
         maxScore = saveData.maxScore;
         saveData.totalCoins += _coinCount;
@@ -320,7 +336,7 @@ public class GameManager : MonoBehaviour
                 _lastIncrementHeight = _playerController.gameObject.transform.position.y;
                 //_playerController.RotSpeed *= _rotationIncrement;
                 //_playerController1.MoveSpeed *= _speedIncrement;
-                _noOfIncrements++;
+                _noOfIncrements*= increment;
                 Time.timeScale *= 1.1f;
 
             }

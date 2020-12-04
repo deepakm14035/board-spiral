@@ -12,16 +12,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject pivotEffectPrefab;
     [SerializeField] private GameObject trailRenderer1;
     [SerializeField] private GameObject trailRenderer2;
+    [SerializeField] private GameObject particlesRenderer1;
+    [SerializeField] private GameObject particlesRenderer2;
     [SerializeField] private GameObject gameWinParticles;
     [SerializeField] private GameObject UIButtonLeft, UIButtonRight;
+    [SerializeField] private GameObject partitionObj;
 
     GameManager _gameManager;
     MenuManager _menuManager;
 
     float direction = -1f;
     UIEffects uiEffects;
-    bool allowMoving;
-    bool gameStarted = false;
+    public bool allowMoving;
+    public bool gameStarted = false;
     PlayerController1 pc;
     GameObject mainCamera;
     bool gameComplete = false;
@@ -44,6 +47,8 @@ public class PlayerController : MonoBehaviour
         mainCamera = Camera.main.gameObject.transform.parent.gameObject;
         trailRenderer1.SetActive(false);
         trailRenderer2.SetActive(false);
+        particlesRenderer1.SetActive(false);
+        particlesRenderer2.SetActive(false);
         if (SystemInfo.deviceType.Equals(DeviceType.Desktop))
         {
             UIButtonLeft.SetActive(false);
@@ -53,13 +58,20 @@ public class PlayerController : MonoBehaviour
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         _menuManager = GameObject.FindObjectOfType<MenuManager>();
         startPosition = transform.position;
-
+        partitionObj.SetActive(false);
     }
 
     public void setMoving(bool moving) {
+        if (gameComplete)
+            return;
         allowMoving = moving;
-        //if (pc != null)
+        if (pc != null)
             pc.allowMoving = moving;
+    }
+
+    IEnumerator disablePartition() {
+        yield return new WaitForSeconds(5f);
+        partitionObj.SetActive(false);
     }
 
     // Update is called once per frame
@@ -67,11 +79,11 @@ public class PlayerController : MonoBehaviour
     {
         if(allowMoving&& gameStarted)
             transform.RotateAround(curpos.position,Vector3.forward, direction * 5f*Time.deltaTime*RotSpeed);
-        if (Input.GetButtonDown("Fire1")&& allowMoving) {
+        if (Input.GetButtonDown("Fire1")&& allowMoving && !gameComplete) {
             if(!SystemInfo.deviceType.Equals(DeviceType.Handheld))
             changePivot();
         }
-        if (Input.GetButtonDown("Fire2")&& allowMoving)
+        if (Input.GetButtonDown("Fire2")&& allowMoving && !gameComplete)
         {
             if (!SystemInfo.deviceType.Equals(DeviceType.Handheld))
                 changeDirection();
@@ -86,6 +98,7 @@ public class PlayerController : MonoBehaviour
             mainCamera.GetComponent<CameraFollow>().resetCamera();
         curpos = pos1;
         trailRenderer2.SetActive(true);
+        particlesRenderer2.SetActive(true);
         gameStarted = startGame;
         gameComplete = false;
 
@@ -116,12 +129,16 @@ public class PlayerController : MonoBehaviour
             curpos = pos2;
             trailRenderer1.SetActive(true);
             trailRenderer2.SetActive(false);
+            particlesRenderer1.SetActive(true);
+            particlesRenderer2.SetActive(false);
         }
         else
         {
             curpos = pos1;
             trailRenderer2.SetActive(true);
             trailRenderer1.SetActive(false);
+            particlesRenderer1.SetActive(false);
+            particlesRenderer2.SetActive(true);
         }
         /*if (!gameStarted)
         {
@@ -136,6 +153,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator pivotChangeDelay()
     {
+        if (gameComplete || !gameStarted)
+            yield return null;
         setMoving(false);
         yield return new WaitForSeconds(0.2f);
         setMoving(true);
@@ -148,6 +167,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("obstacle") && !gameComplete)
         {
             gameComplete = true;
+            setMoving(false);
             mainCamera.GetComponent<Animator>().SetTrigger("shake");
             _gameManager.stopAllObstacles();
             bool isHighScore = false;
@@ -160,11 +180,12 @@ public class PlayerController : MonoBehaviour
             Debug.Log("ishighscore-"+isHighScore);
             if(!isHighScore)
                 uiEffects.playLoseAnimation();
-            setMoving(false);
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             uiEffects.disableObjects();
             trailRenderer1.SetActive(false);
             trailRenderer2.SetActive(false);
+            particlesRenderer1.SetActive(false);
+            particlesRenderer2.SetActive(false);
             menuManager.loadMenu(LoseMenu.Instance, 2f, false);
             LoseMenu.Instance.GetComponent<Animator>().SetTrigger("open");
         }
@@ -179,6 +200,8 @@ public class PlayerController : MonoBehaviour
             uiEffects.disableObjects();
             trailRenderer1.SetActive(false);
             trailRenderer2.SetActive(false);
+            particlesRenderer1.SetActive(false);
+            particlesRenderer2.SetActive(false);
             Instantiate(gameWinParticles, curpos.transform.position+Vector3.up*10f,Quaternion.identity);
             _gameManager.updateProgressForWin();
             if(!_gameManager.isLastLevel())
