@@ -62,8 +62,6 @@ public class PlayerController : MonoBehaviour
     }
 
     public void setMoving(bool moving) {
-        if (gameComplete)
-            return;
         allowMoving = moving;
         if (pc != null)
             pc.allowMoving = moving;
@@ -77,7 +75,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(allowMoving&& gameStarted)
+        if(allowMoving&& gameStarted && !gameComplete)
             transform.RotateAround(curpos.position,Vector3.forward, direction * 5f*Time.deltaTime*RotSpeed);
         if (Input.GetButtonDown("Fire1")&& allowMoving && !gameComplete) {
             if(!SystemInfo.deviceType.Equals(DeviceType.Handheld))
@@ -155,10 +153,13 @@ public class PlayerController : MonoBehaviour
     {
         if (gameComplete || !gameStarted)
             yield return null;
-        setMoving(false);
-        yield return new WaitForSeconds(0.2f);
-        setMoving(true);
-        yield return null;
+        else
+        {
+            setMoving(false);
+            yield return new WaitForSeconds(0.2f);
+            setMoving(true);
+            yield return null;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -194,8 +195,8 @@ public class PlayerController : MonoBehaviour
             gameComplete = true;
             uiEffects.playWinAnimation();
             setMoving(false);
-            if (pc != null)
-                pc.allowMoving = false;
+            //if (pc != null)
+            //    pc.allowMoving = false;
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             uiEffects.disableObjects();
             trailRenderer1.SetActive(false);

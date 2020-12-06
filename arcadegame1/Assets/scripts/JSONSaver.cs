@@ -58,7 +58,7 @@ namespace MenuManagement.Data
                     if (!checkHash(data))
                     {
                         Debug.Log("hacked..resetting");
-                        //data = new SaveData(levelGenerator);
+                        data = new SaveData(levelGenerator);
                     }
                     else
                         Debug.Log("okay!");

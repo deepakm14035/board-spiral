@@ -270,15 +270,15 @@ MonoBehaviour:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
       - {x: -20, y: 20, z: 0}
-      - {x: 0, y: 20, z: 0}
+      - {x: -2, y: 20, z: 0}
       rotateSpeed: 0
       speed: 4
     - obstacleID: 1
-      position: {x: 0, y: 20, z: 0}
+      position: {x: 2, y: 20, z: 0}
       scale: {x: 3, y: 12, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 0, y: 20, z: 0}
+      - {x: 2, y: 20, z: 0}
       - {x: 20, y: 20, z: 0}
       rotateSpeed: 0
       speed: 4
@@ -288,15 +288,15 @@ MonoBehaviour:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
       - {x: 20, y: 40, z: 0}
-      - {x: 0, y: 40, z: 0}
+      - {x: 2, y: 40, z: 0}
       rotateSpeed: 0
       speed: 4
     - obstacleID: 1
-      position: {x: 0, y: 40, z: 0}
+      position: {x: -2, y: 40, z: 0}
       scale: {x: 3, y: 12, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path:
-      - {x: 0, y: 40, z: 0}
+      - {x: -2, y: 40, z: 0}
       - {x: -20, y: 40, z: 0}
       rotateSpeed: 0
       speed: 4
@@ -449,176 +449,177 @@ MonoBehaviour:
     - {x: -5.5, y: 20, z: 0}
     - {x: 0.5, y: 20, z: 0}
   - _obstacles:
+    - _obstacles:
     - obstacleID: 1
-      position: {x: -15, y: 15, z: 0}
+      position: {x: -21, y: 15, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -15, y: 25, z: 0}
+      position: {x: -21, y: 35, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -15, y: 35, z: 0}
+      position: {x: -21, y: 55, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -15, y: 45, z: 0}
+      position: {x: -21, y: 75, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -10, y: 30, z: 0}
+      position: {x: -14, y: 45, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -10, y: 40, z: 0}
+      position: {x: -14, y: 65, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -10, y: 20, z: 0}
+      position: {x: -14, y: 25, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -5, y: 15, z: 0}
+      position: {x: -7, y: 15, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -5, y: 25, z: 0}
+      position: {x: -7, y: 35, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -5, y: 35, z: 0}
+      position: {x: -7, y: 55, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -5, y: 45, z: 0}
+      position: {x: -7, y: 75, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 0, y: 20, z: 0}
+      position: {x: 0, y: 25, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 0, y: 30, z: 0}
+      position: {x: 0, y: 45, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 0, y: 40, z: 0}
+      position: {x: 0, y: 65, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 5, y: 15, z: 0}
+      position: {x: 7, y: 15, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 5, y: 25, z: 0}
+      position: {x: 7, y: 35, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 5, y: 35, z: 0}
+      position: {x: 7, y: 55, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 5, y: 45, z: 0}
+      position: {x: 7, y: 75, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 10, y: 20, z: 0}
+      position: {x: 14, y: 25, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 10, y: 30, z: 0}
+      position: {x: 14, y: 45, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 10, y: 40, z: 0}
+      position: {x: 14, y: 65, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 15, y: 15, z: 0}
+      position: {x: 21, y: 15, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 15, y: 25, z: 0}
+      position: {x: 21, y: 35, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 15, y: 35, z: 0}
+      position: {x: 21, y: 55, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 15, y: 45, z: 0}
+      position: {x: 21, y: 75, z: 0}
       scale: {x: 1, y: 1, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
