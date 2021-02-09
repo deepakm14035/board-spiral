@@ -33,9 +33,10 @@ public class GameManager : MonoBehaviour
     float _lookAheadConst = 50f;
     public bool _isInfinityMode = false;
     bool gameStarted = false;
+    bool isFirstGame = false;
     int _coinCount;
 
-    float _incrementAfterDistance = 150f;
+    float _incrementAfterDistance = 75f;
     float _lastIncrementHeight=0f;
     int _noOfIncrements = 1;
     int increment = 2;
@@ -49,6 +50,9 @@ public class GameManager : MonoBehaviour
         updatePlayerBoard();
         updatePlayerBG();
         MovingIndicator.SetActive(false);
+        AdManager.instance.loadBanner();
+        AdManager.instance.loadFullScreenAd();
+        AdManager.instance.showBanner();
     }
 
     public void updatePlayerBoard()
@@ -92,6 +96,7 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(playTutorial());
             _nextHeight = 100f;
+            isFirstGame = true;
         }
         generateInfinityObstacles();
         _playerController1.MoveSpeed = 6f;
@@ -102,6 +107,8 @@ public class GameManager : MonoBehaviour
         _coinCount = 0;
         Time.timeScale=1f;
         GameMenu.Instance.setCoins(_coinCount + "");
+        AdManager.instance.hideBanner();
+        AdManager.instance.loadFullScreenAd();
     }
 
     void generateInfinityObstacles()
@@ -136,12 +143,15 @@ public class GameManager : MonoBehaviour
 
     public void loadCurrentLevel() {
         Time.timeScale = 1f;
+        AdManager.instance.hideBanner();
+        AdManager.instance.loadFullScreenAd();
         StartCoroutine(loadLevel(_currentWorld, _currentLevel));
     }
 
     public void loadNextLevel()
     {
         _currentLevel++;
+        AdManager.instance.loadFullScreenAd();
         startLevel( _currentWorld, _currentLevel);
     }
 
@@ -149,6 +159,8 @@ public class GameManager : MonoBehaviour
         _currentLevel = index;
         _currentWorld = worldNo;
         _isInfinityMode = false;
+        AdManager.instance.hideBanner();
+        AdManager.instance.loadFullScreenAd();
         StartCoroutine(loadLevel(worldNo,index));
     }
 
@@ -239,6 +251,12 @@ public class GameManager : MonoBehaviour
     {
         JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
         SaveData saveData = getPlayerData(false);
+        
+        if(value==2 && saveData.worlds[worldNo].levelList.scores[level] != 2)
+        {
+            saveData.completedLevels++;
+            Leaderboard.unlockAchievement(3, saveData.completedLevels);
+        }
         saveData.worlds[worldNo].levelList.scores[level] = value;
         if(saveData.worlds[worldNo].levelList.scores.Length > level + 1)
             saveData.worlds[worldNo].levelList.scores[level+1] = 1;
@@ -277,7 +295,8 @@ public class GameManager : MonoBehaviour
             saveData.maxScore = Mathf.RoundToInt(_score);
             Instantiate(_newBestScorePS, Camera.main.transform.position,Quaternion.identity);
             isHighScore = true;
-
+            Leaderboard.addScoreToLeaderboard(Mathf.RoundToInt(_score));
+            Leaderboard.unlockAchievement(1,_score);
         }
         maxScore = saveData.maxScore;
         saveData.totalCoins += _coinCount;
@@ -293,6 +312,11 @@ public class GameManager : MonoBehaviour
 
         jsonSaver.saveData(saveData);
         getPlayerData(true);
+
+        if(saveData.gamesPlayed%8==0 && saveData.gamesPlayed > 0)
+        {
+            AdManager.instance.showFullScreenAd();
+        }
         return isHighScore;
     }
 
@@ -340,7 +364,8 @@ public class GameManager : MonoBehaviour
                 Time.timeScale *= 1.1f;
 
             }
-            _score += Time.deltaTime * _noOfIncrements;
+            if(isFirstGame && _playerController.gameObject.transform.position.y<75f)
+                _score += Time.deltaTime * _noOfIncrements;
             GameMenu.Instance.setScore(Mathf.Round(_score)+"");
         }
     }
@@ -354,6 +379,12 @@ public class GameManager : MonoBehaviour
             return false;
         loadedData.totalCoins -= _BoardList[i].GetComponent<Board>().cost;
         loadedData.purchasedBoards[i] = 2;
+        int count = -1;
+        for (int b = 0; b < loadedData.purchasedBoards.Length; b++)
+            if (loadedData.purchasedBoards[b] == 2 || b == loadedData.selectedBoard)
+                count++;
+        Leaderboard.unlockAchievement(1, count);
+
         JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
         jsonSaver.saveData(loadedData);
         Debug.Log("cutted");

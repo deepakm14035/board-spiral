@@ -12,5 +12,12 @@ public class CoinCollector : MonoBehaviour
             gameManager.addCoin();
             GameObject.Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag.Equals("coin2"))
+        {
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            gameManager.addCoin();
+            gameManager.addCoin();
+            GameObject.Destroy(collision.gameObject);
+        }
     }
 }

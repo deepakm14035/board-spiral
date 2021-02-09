@@ -55,6 +55,13 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+
 # Crashlytics generated file
 crashlytics-build.properties
 
+/[Aa]ssets/GoogleMobileAds*
+/[Aa]ssets/GooglePlayGames*
+/[Aa]ssets/Plugins*
+/[Aa]ssets/ExternalDependencyManager*
+
+/ios

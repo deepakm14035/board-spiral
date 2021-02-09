@@ -449,7 +449,13 @@ MonoBehaviour:
     - {x: -5.5, y: 20, z: 0}
     - {x: 0.5, y: 20, z: 0}
   - _obstacles:
-    - _obstacles:
+    - obstacleID: 0
+      position: {x: 0, y: 0, z: 0}
+      scale: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
+      path: []
+      rotateSpeed: 0
+      speed: 0
     - obstacleID: 1
       position: {x: -21, y: 15, z: 0}
       scale: {x: 1, y: 1, z: 1}
@@ -752,8 +758,8 @@ MonoBehaviour:
       path: []
       rotateSpeed: 0
       speed: 0
-    _finishPosition: {x: 0, y: 200, z: 0}
-    _borders: {x: -15, y: -10, z: 30, w: 210}
+    _finishPosition: {x: 0, y: 175, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 185}
     _playerRotationSpeed: 40
     _playerMovementSpeed: 10
     _AllowedInInfinity: 1
@@ -1697,7 +1703,6 @@ MonoBehaviour:
     - {x: -10, y: 40, z: 0}
   levelsName: world 0
   levelLists:
-  - {fileID: 11400000}
   - {fileID: 11400000, guid: 6c1c31dc8de37a3409280174c79c1abf, type: 2}
   - {fileID: 11400000, guid: 76a921c544f52e647b3b70942640bf06, type: 2}
   - {fileID: 11400000, guid: 3cf5feaf4aba3a14d9b09a81164ca43c, type: 2}

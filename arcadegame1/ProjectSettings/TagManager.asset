@@ -9,6 +9,7 @@ TagManager:
   - borders
   - levelButton
   - coin
+  - coin2
   layers:
   - Default
   - TransparentFX

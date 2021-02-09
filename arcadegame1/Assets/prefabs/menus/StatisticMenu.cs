@@ -29,11 +29,12 @@ namespace MenuManagement
             infinityAverage.text = Mathf.RoundToInt(saveData.infinityAverage) + "";
             int[] pastScore = saveData.pastScores;
             float currentheight = pastScores[0].GetComponent<RectTransform>().sizeDelta.y;
+            int highestScore = maxScore(pastScore);
             for (int i = 0; i < pastScore.Length; i++)
             {
                 pastScores[i].SetActive(true);
                 pastScores[i].GetComponentInChildren<Text>().text = pastScore[i] + "";
-                pastScores[i].GetComponent<RectTransform>().sizeDelta = new Vector2(pastScore[i], currentheight);
+                pastScores[i].GetComponent<RectTransform>().sizeDelta = new Vector2(pastScore[i]*560f/highestScore, currentheight);
                 if (pastScore[i] == 0)
                 {
                     pastScores[i].SetActive(false);
@@ -51,6 +52,16 @@ namespace MenuManagement
                 if(pastScore[i] >= 500)
                     pastScores[i].GetComponent<RawImage>().color = new Color32(230, 230, 0, 255);
             }
+        }
+
+        int maxScore(int[] scores)
+        {
+            int max = 0;
+            for(int i = 0; i < scores.Length; i++)
+            {
+                if (scores[i] > max) max = scores[i];
+            }
+            return max;
         }
 
         // Update is called once per frame

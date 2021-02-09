@@ -16,6 +16,8 @@ public class GenerateLevel : MonoBehaviour
     public GameObject backgroundImage;
     [SerializeField]
     private GameObject coinPrefab;
+    [SerializeField]
+    private GameObject doubleCoinPrefab;
 
 
     public int NoOfLevels() {
@@ -82,9 +84,11 @@ public class GenerateLevel : MonoBehaviour
         for (int i = 0; i < level.coinPositions.Length; i++)
         {
             Vector3 position = level.coinPositions[i] + Vector3.up * offset;
+            if(position.y<125f)
+                Instantiate(coinPrefab, position, Quaternion.identity);
+            else
+                Instantiate(doubleCoinPrefab, position, Quaternion.identity);
 
-            GameObject obstacle = Instantiate(coinPrefab, position, Quaternion.identity);
-            
         }
         Debug.Log("backgr - "+(level.borders + new Vector4(0, offset, 0f, 0f)));
         generateBackground(level.borders+new Vector4(0,offset+5f,0f,0f));
@@ -163,6 +167,8 @@ public class GenerateLevel : MonoBehaviour
         BackgroundImage[] images = GameObject.FindObjectsOfType<BackgroundImage>();
         for (int i = 0; i < images.Length; i++) GameObject.Destroy(images[i].gameObject);
         obstacles = GameObject.FindGameObjectsWithTag("coin");
+        for (int i = 0; i < obstacles.Length; i++) GameObject.Destroy(obstacles[i]);
+        obstacles = GameObject.FindGameObjectsWithTag("coin2");
         for (int i = 0; i < obstacles.Length; i++) GameObject.Destroy(obstacles[i]);
     }
 

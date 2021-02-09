@@ -23,6 +23,7 @@ namespace MenuManagement.Data
         public int selectedBoard;
         public int[] purchasedBackgrounds;
         public int selectedBackground;
+        public int completedLevels;
         public SaveData(GenerateLevel generateLevel) {
             playerName = defaultPlayerName;
             currentLevel = 0;
@@ -30,6 +31,7 @@ namespace MenuManagement.Data
             worlds = new World[generateLevel.getNoOfWorlds()];
             Debug.Log("worlds - "+ generateLevel.getNoOfWorlds());
             maxScore = 0;
+            completedLevels = 0;
             pastScores = new int[10];
             for (int i = 0; i < worlds.Length; i++)
             {

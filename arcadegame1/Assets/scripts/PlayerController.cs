@@ -77,11 +77,11 @@ public class PlayerController : MonoBehaviour
     {
         if(allowMoving&& gameStarted && !gameComplete)
             transform.RotateAround(curpos.position,Vector3.forward, direction * 5f*Time.deltaTime*RotSpeed);
-        if (Input.GetButtonDown("Fire1")&& allowMoving && !gameComplete) {
+        if ((Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Z))&& allowMoving && !gameComplete) {
             if(!SystemInfo.deviceType.Equals(DeviceType.Handheld))
             changePivot();
         }
-        if (Input.GetButtonDown("Fire2")&& allowMoving && !gameComplete)
+        if ((Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.X)) && allowMoving && !gameComplete)
         {
             if (!SystemInfo.deviceType.Equals(DeviceType.Handheld))
                 changeDirection();
@@ -189,6 +189,7 @@ public class PlayerController : MonoBehaviour
             particlesRenderer2.SetActive(false);
             menuManager.loadMenu(LoseMenu.Instance, 2f, false);
             LoseMenu.Instance.GetComponent<Animator>().SetTrigger("open");
+            
         }
         if (collision.gameObject.tag.Equals("finish") && !gameComplete)
         {
