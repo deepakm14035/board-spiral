@@ -388,28 +388,28 @@ MonoBehaviour:
     - {x: 0, y: 70, z: 0}
   - _obstacles:
     - obstacleID: 1
-      position: {x: -15, y: 35, z: 0}
+      position: {x: -15, y: 15, z: 0}
       scale: {x: 9, y: 20, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: 10, y: 35, z: 0}
+      position: {x: 10, y: 15, z: 0}
       scale: {x: 8, y: 20, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
     - obstacleID: 1
-      position: {x: -2.5, y: 35, z: 0}
+      position: {x: -2.5, y: 15, z: 0}
       scale: {x: 0.75, y: 20, z: 1}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       path: []
       rotateSpeed: 0
       speed: 0
-    _finishPosition: {x: 0, y: 80, z: 0}
-    _borders: {x: -15, y: -10, z: 30, w: 90}
+    _finishPosition: {x: 0, y: 45, z: 0}
+    _borders: {x: -15, y: -10, z: 30, w: 55}
     _playerRotationSpeed: 35
     _playerMovementSpeed: 6
     _AllowedInInfinity: 0
