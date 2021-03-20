@@ -55,7 +55,7 @@ public class GenerateLevel : MonoBehaviour
         playerController1.MoveSpeed = level.playerMovementSpeed;
     }
 
-    public GameObject generateLevel(int index, float offset)
+    public GameObject generateLevel(int index, float offset, float startHeight)
     {
         GameObject parentObj = new GameObject();
         parentObj.name = "index " + index;
@@ -84,7 +84,7 @@ public class GenerateLevel : MonoBehaviour
         for (int i = 0; i < level.coinPositions.Length; i++)
         {
             Vector3 position = level.coinPositions[i] + Vector3.up * offset;
-            if(position.y<125f)
+            if(position.y- startHeight < 120f)
                 Instantiate(coinPrefab, position, Quaternion.identity);
             else
                 Instantiate(doubleCoinPrefab, position, Quaternion.identity);

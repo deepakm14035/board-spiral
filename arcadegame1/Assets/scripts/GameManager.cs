@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public int _currentLevel;
     public int _currentWorld;
     public int maxScore;
+    float _startHeight = 0f;
     public GameObject MovingIndicator;
     SaveData loadedData;
 
@@ -34,12 +35,13 @@ public class GameManager : MonoBehaviour
     public bool _isInfinityMode = false;
     bool gameStarted = false;
     bool isFirstGame = false;
+    bool isPlayingTutorial = false;
     int _coinCount;
 
-    float _incrementAfterDistance = 75f;
+    float _incrementAfterDistance = 100f;
     float _lastIncrementHeight=0f;
-    int _noOfIncrements = 1;
-    int increment = 2;
+    float _noOfIncrements = 1f;
+    float increment = 1.3f;
 
     void Start()
     {
@@ -87,6 +89,7 @@ public class GameManager : MonoBehaviour
     {
         _isInfinityMode = true;
         gameStarted = true;
+        isPlayingTutorial = false;
         _nextHeight = 15f;
         _lastIncrementHeight = 0f;
         _levelGenerator.clearLevel();
@@ -95,10 +98,10 @@ public class GameManager : MonoBehaviour
         if (getPlayerData(false).gamesPlayed == 0)
         {
             StartCoroutine(playTutorial());
-            _nextHeight = 100f;
             isFirstGame = true;
-        }
-        generateInfinityObstacles();
+            isPlayingTutorial = true;
+        }else
+            generateInfinityObstacles();
         _playerController1.MoveSpeed = 6f;
         _playerController.RotSpeed = 35f;
         GameMenu.Instance.setScoreVisibility(true);
@@ -121,7 +124,7 @@ public class GameManager : MonoBehaviour
             //if (_levelGenerator.isNonMovingLevel(randomLevel))
                 //_nextHeight += 10f;
             Debug.Log("[generateInfinityObstacles] - " + randomLevel+", "+_nextHeight);
-            GameObject level =  _levelGenerator.generateLevel(randomLevel, _nextHeight);
+            GameObject level =  _levelGenerator.generateLevel(randomLevel, _nextHeight, _startHeight);
             //level.transform.localScale = new Vector3(1f,1.5f,1f);
             _nextHeight += _levelGenerator.getLevelHeight(randomLevel) ;
             if (!_levelGenerator.isNonMovingLevel(randomLevel))
@@ -165,6 +168,7 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator loadLevel(int worldNo, int index) {
+        isPlayingTutorial = false;
         yield return new WaitForSeconds(1f);//wait for menu transitions
         _levelGenerator.clearLevel();
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
@@ -192,6 +196,7 @@ public class GameManager : MonoBehaviour
         _HowToPlayPanel2.SetActive(true);
         yield return new WaitForSeconds(6f);
         _HowToPlayPanel2.SetActive(false);
+        isPlayingTutorial = false;
         yield return null;
         //gameStarted = true;
         //_playerController.resetPosition(true, true);
@@ -349,27 +354,6 @@ public class GameManager : MonoBehaviour
         gameStarted = started;
     }
 
-    private void Update()
-    {
-        if (_isInfinityMode && gameStarted)
-        {
-            if (_nextHeight - _playerController.gameObject.transform.position.y < _lookAheadConst)
-                generateInfinityObstacles();
-            if (_playerController.gameObject.transform.position.y - _lastIncrementHeight > _incrementAfterDistance)
-            {
-                _lastIncrementHeight = _playerController.gameObject.transform.position.y;
-                //_playerController.RotSpeed *= _rotationIncrement;
-                //_playerController1.MoveSpeed *= _speedIncrement;
-                _noOfIncrements*= increment;
-                Time.timeScale *= 1.1f;
-
-            }
-            if(isFirstGame && _playerController.gameObject.transform.position.y<75f)
-                _score += Time.deltaTime * _noOfIncrements;
-            GameMenu.Instance.setScore(Mathf.Round(_score)+"");
-        }
-    }
-
     public bool buyBoard(int i)
     {
         getPlayerData(true);
@@ -390,5 +374,36 @@ public class GameManager : MonoBehaviour
         Debug.Log("cutted");
         return true;
     }
+
+    private void Update()
+    {
+        if (_isInfinityMode && gameStarted && !isPlayingTutorial)
+        {
+            if (_nextHeight - _playerController.gameObject.transform.position.y < _lookAheadConst)
+                generateInfinityObstacles();
+            if (_playerController.gameObject.transform.position.y - _lastIncrementHeight > _incrementAfterDistance)
+            {
+                _lastIncrementHeight = _playerController.gameObject.transform.position.y;
+                //_playerController.RotSpeed *= _rotationIncrement;
+                //_playerController1.MoveSpeed *= _speedIncrement;
+                _noOfIncrements *= increment;
+                Time.timeScale *= 1.1f;
+
+            }
+            //if (_playerController.gameObject.transform.position.y < 75f)
+                _score += Time.deltaTime * _noOfIncrements;
+        }
+        else if (_isInfinityMode && gameStarted && isPlayingTutorial)
+        {
+            _score = 0f;
+            _startHeight= _playerController.gameObject.transform.position.y+20f;
+            _lastIncrementHeight = _playerController.gameObject.transform.position.y;
+            _nextHeight = _playerController.gameObject.transform.position.y+30f;
+        }
+
+        GameMenu.Instance.setScore(Mathf.Round(_score) + "");
+    }
+
+    
 
 }
