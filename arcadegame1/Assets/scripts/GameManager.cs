@@ -387,7 +387,7 @@ public class GameManager : MonoBehaviour
                 //_playerController.RotSpeed *= _rotationIncrement;
                 //_playerController1.MoveSpeed *= _speedIncrement;
                 _noOfIncrements *= increment;
-                Time.timeScale *= 1.1f;
+                Time.timeScale *= 1.08f;
 
             }
             //if (_playerController.gameObject.transform.position.y < 75f)
