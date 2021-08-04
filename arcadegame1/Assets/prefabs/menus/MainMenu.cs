@@ -66,6 +66,12 @@ namespace MenuManagement
             GetComponent<Animator>().SetTrigger("exit");
         }
 
+        public void playTutorial()
+        {
+            GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
+            gameManager.playTutorial();
+        }
+
         public void loadStatistics()
         {
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();

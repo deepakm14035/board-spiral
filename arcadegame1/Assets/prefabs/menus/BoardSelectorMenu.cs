@@ -18,7 +18,10 @@ namespace MenuManagement
         private GameObject constraintPanel;
         [SerializeField]
         private Text minScoreText;
-
+        [SerializeField]
+        private Text title;
+        [SerializeField]
+        ScrollRect scrollRect;
         public int boardsPerRow = 2;
         int selectedBoard;
         int selectedBG;
@@ -42,14 +45,16 @@ namespace MenuManagement
         {
             clearRows();
             isBoardView = setupBoards;
+            scrollRect.normalizedPosition = new Vector2(0, 1);
             if (gameManager == null)
                 gameManager = FindObjectOfType<GameManager>();
             if (!setupBoards)
             {
                 setupBackgrounds();
+                title.text = "BUY PATTERN";
                 return;
             }
-            
+            title.text = "BUY BOARD";
             SaveData playerInfo = gameManager.getPlayerData(true);
             GameObject[] boardList = gameManager._BoardList;
             buttons = new GameObject[boardList.Length];

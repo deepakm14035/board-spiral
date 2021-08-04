@@ -1,6 +1,7 @@
 ﻿using MenuManagement;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 //fix pixel length
 
@@ -20,12 +21,14 @@ public class PlayerController : MonoBehaviour
 
     GameManager _gameManager;
     MenuManager _menuManager;
+    Tutorial _tutorial;
 
     float direction = -1f;
     UIEffects uiEffects;
     public bool allowMoving;
     public bool gameStarted = false;
     PlayerController1 pc;
+    Collider2D collisionObj;
     GameObject mainCamera;
     bool gameComplete = false;
     Vector3 startPosition;
@@ -45,10 +48,8 @@ public class PlayerController : MonoBehaviour
         setMoving(false);
         //allowMoving = true;
         mainCamera = Camera.main.gameObject.transform.parent.gameObject;
-        trailRenderer1.SetActive(false);
-        trailRenderer2.SetActive(false);
-        particlesRenderer1.SetActive(false);
-        particlesRenderer2.SetActive(false);
+        updatePivot1(false);
+        updatePivot2(false);
         if (SystemInfo.deviceType.Equals(DeviceType.Desktop))
         {
             UIButtonLeft.SetActive(false);
@@ -57,8 +58,19 @@ public class PlayerController : MonoBehaviour
 
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         _menuManager = GameObject.FindObjectOfType<MenuManager>();
+        _tutorial = GameObject.FindObjectOfType<Tutorial>();
         startPosition = transform.position;
         partitionObj.SetActive(false);
+    }
+
+    public void setPivots(bool pivot1, bool pivot2)
+    {
+        if(pivot1 && !pivot2)
+            curpos = pos2;
+        else if(!pivot1 && pivot2)
+            curpos = pos1;
+        updatePivot1(pivot1);
+        updatePivot2(pivot2);
     }
 
     public void setMoving(bool moving) {
@@ -111,11 +123,15 @@ public class PlayerController : MonoBehaviour
     }
 
     public void changeDirection() {
-        Debug.Log("chn");
         if (!allowMoving)
             return;
         direction *= -1f;
         _gameManager.reverseRotation();
+    }
+
+    public float getDirection()
+    {
+        return direction;
     }
 
     public void changePivot()
@@ -124,19 +140,17 @@ public class PlayerController : MonoBehaviour
             return;
         if (pos1 == curpos)
         {
-            curpos = pos2;
-            trailRenderer1.SetActive(true);
-            trailRenderer2.SetActive(false);
-            particlesRenderer1.SetActive(true);
-            particlesRenderer2.SetActive(false);
+            //curpos = pos2;
+            setPivots(true, false);
         }
         else
         {
-            curpos = pos1;
-            trailRenderer2.SetActive(true);
-            trailRenderer1.SetActive(false);
-            particlesRenderer1.SetActive(false);
-            particlesRenderer2.SetActive(true);
+            //curpos = pos1;
+            setPivots(false, true);
+        }
+        if (_tutorial.isPlaying() && collisionObj!=null && collisionObj.gameObject.tag.Equals("tutorial"))
+        {
+            GameObject.FindObjectOfType<Tutorial>().updateProgress(trailRenderer1.activeSelf?1:2, direction, transform.position);
         }
         /*if (!gameStarted)
         {
@@ -147,6 +161,18 @@ public class PlayerController : MonoBehaviour
         Instantiate(pivotEffectPrefab,curpos.transform.position,Quaternion.identity);
         StartCoroutine(pivotChangeDelay());
 
+    }
+
+    void updatePivot1(bool val)
+    {
+        trailRenderer1.SetActive(val);
+        particlesRenderer1.SetActive(val);
+    }
+
+    void updatePivot2(bool val)
+    {
+        trailRenderer2.SetActive(val);
+        particlesRenderer2.SetActive(val);
     }
 
     IEnumerator pivotChangeDelay()
@@ -165,6 +191,17 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("coll name - "+collision.gameObject.name);
+        if(_tutorial.isPlaying() && collision.gameObject.tag.Equals("obstacle"))
+        {
+            setMoving(false);
+            StartCoroutine( _tutorial.Replay());
+            return;
+        }
+        if (collision.gameObject.tag.Equals("tutorial"))
+        {
+            collisionObj = collision;
+            return;
+        }
         if (collision.gameObject.tag.Equals("obstacle") && !gameComplete)
         {
             gameComplete = true;
@@ -183,10 +220,7 @@ public class PlayerController : MonoBehaviour
                 uiEffects.playLoseAnimation();
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             uiEffects.disableObjects();
-            trailRenderer1.SetActive(false);
-            trailRenderer2.SetActive(false);
-            particlesRenderer1.SetActive(false);
-            particlesRenderer2.SetActive(false);
+            setPivots(false, false);
             menuManager.loadMenu(LoseMenu.Instance, 2f, false);
             LoseMenu.Instance.GetComponent<Animator>().SetTrigger("open");
             
@@ -200,10 +234,7 @@ public class PlayerController : MonoBehaviour
             //    pc.allowMoving = false;
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             uiEffects.disableObjects();
-            trailRenderer1.SetActive(false);
-            trailRenderer2.SetActive(false);
-            particlesRenderer1.SetActive(false);
-            particlesRenderer2.SetActive(false);
+            setPivots(false, false);
             Instantiate(gameWinParticles, curpos.transform.position+Vector3.up*10f,Quaternion.identity);
             _gameManager.updateProgressForWin();
             if(!_gameManager.isLastLevel())
@@ -213,8 +244,16 @@ public class PlayerController : MonoBehaviour
 
 
         }
+        
+
+
     }
 
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log("exit-"+collision.gameObject.name);
+        if (collisionObj!=null && collisionObj.gameObject.tag.Equals("tutorial"))
+            collisionObj = null;
+    }
 
 }

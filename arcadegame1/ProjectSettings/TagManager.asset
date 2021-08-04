@@ -10,6 +10,7 @@ TagManager:
   - levelButton
   - coin
   - coin2
+  - tutorial
   layers:
   - Default
   - TransparentFX

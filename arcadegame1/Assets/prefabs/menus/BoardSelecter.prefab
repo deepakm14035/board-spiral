@@ -1321,6 +1321,8 @@ MonoBehaviour:
     type: 3}
   constraintPanel: {fileID: 5906627955058674154}
   minScoreText: {fileID: 1911576719729371624}
+  title: {fileID: 2788869505783838855}
+  scrollRect: {fileID: 2087122627337809054}
   boardsPerRow: 2
   totalCoins: {fileID: 0}
 --- !u!1 &3670339881982467567
@@ -1760,7 +1762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 391.5, y: -513.6925}
+  m_AnchoredPosition: {x: 391.5, y: -263.7102}
   m_SizeDelta: {x: 759.84436, y: 1072.5791}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5614345349663318792
@@ -2373,7 +2375,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2907582908877341324}
   m_HandleRect: {fileID: 4715163422185055977}
   m_Direction: 2
-  m_Value: 0.9170991
+  m_Value: -0.0000008956689
   m_Size: 0.74586576
   m_NumberOfSteps: 0
   m_OnValueChanged:

@@ -449,7 +449,7 @@ MonoBehaviour:
     _AllowedInInfinity: 1
     _coinPositions:
     - {x: -5.5, y: 15, z: 0}
-    - {x: 0.5, y: 5, z: 0}
+    - {x: 0.5, y: 15, z: 0}
   - _obstacles:
     - obstacleID: 0
       position: {x: 0, y: 0, z: 0}

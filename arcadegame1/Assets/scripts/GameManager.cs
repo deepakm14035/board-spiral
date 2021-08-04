@@ -12,10 +12,6 @@ public class GameManager : MonoBehaviour
     PlayerController _playerController;
     PlayerController1 _playerController1;
     [SerializeField]
-    private GameObject _HowToPlayPanel1;
-    [SerializeField]
-    private GameObject _HowToPlayPanel2;
-    [SerializeField]
     private GameObject _newBestScorePS;
     public GameObject[] _BoardList;
     public Material[] _BoardTrailList;
@@ -90,20 +86,27 @@ public class GameManager : MonoBehaviour
         _isInfinityMode = true;
         gameStarted = true;
         isPlayingTutorial = false;
+        isFirstGame = false;
         _nextHeight = 15f;
         _lastIncrementHeight = 0f;
         _levelGenerator.clearLevel();
         _levelGenerator.createBoundaries(new Vector4(-15f,-15f,30f,10000f), true);
-        _playerController.resetPosition(resetRequired, true,true);
-        if (getPlayerData(false).gamesPlayed == 0)
-        {
-            StartCoroutine(playTutorial());
-            isFirstGame = true;
-            isPlayingTutorial = true;
-        }else
-            generateInfinityObstacles();
         _playerController1.MoveSpeed = 6f;
         _playerController.RotSpeed = 35f;
+        _playerController.resetPosition(resetRequired, true, true);
+        if (getPlayerData(false).gamesPlayed == 0)
+        {
+            _currentLevel = 0;
+            StartCoroutine(GameObject.FindObjectOfType<Tutorial>().playTutorial(Tutorial.GameMode.InfinityMode));
+            isFirstGame = true;
+            isPlayingTutorial = true;
+            _playerController1.MoveSpeed = 0f;
+            return;
+        }
+        else
+        {
+            generateInfinityObstacles();
+        }
         GameMenu.Instance.setScoreVisibility(true);
         _score = 0;
         _noOfIncrements = 1;
@@ -169,39 +172,31 @@ public class GameManager : MonoBehaviour
 
     IEnumerator loadLevel(int worldNo, int index) {
         isPlayingTutorial = false;
-        yield return new WaitForSeconds(1f);//wait for menu transitions
+        yield return new WaitForSeconds(0.5f);//wait for menu transitions
         _levelGenerator.clearLevel();
+        yield return new WaitForSeconds(0.5f);//wait for menu transitions
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         playerController.resetPosition(true, true,true);
-        _levelGenerator.generateLevel(worldNo, index);
-        _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
-        if (index == 0)
+        if (worldNo == 0 && index == 0)
         {
-            StartCoroutine(playTutorial());
+            _currentLevel = 0;
+            _playerController1.MoveSpeed = 0f;
+            StartCoroutine(GameObject.FindObjectOfType<Tutorial>().playTutorial(Tutorial.GameMode.LevelMode));
+            yield return null;
         }
-        if (_levelGenerator.isMoving(worldNo, index))
-            StartCoroutine(playMovingIndicator());
-        Debug.Log("boundaries-"+ _boundaries);
+        else
+        {
+            _levelGenerator.generateLevel(worldNo, index);
+            _boundaries = GameObject.FindGameObjectWithTag("borders").GetComponent<LineRenderer>();
+            if (_levelGenerator.isMoving(worldNo, index))
+                StartCoroutine(playMovingIndicator());
+            Debug.Log("boundaries-" + _boundaries);
+        }
     }
 
-    IEnumerator playTutorial()
+    public void playTutorial()
     {
-        //_playerController1.allowMoving = false;
-        //gameStarted = false;
-        yield return new WaitForSeconds(2f);
-        _HowToPlayPanel1.SetActive(true);
-        yield return new WaitForSeconds(6f);
-        _HowToPlayPanel1.SetActive(false);
-        yield return new WaitForSeconds(2f);
-        _HowToPlayPanel2.SetActive(true);
-        yield return new WaitForSeconds(6f);
-        _HowToPlayPanel2.SetActive(false);
-        isPlayingTutorial = false;
-        yield return null;
-        //gameStarted = true;
-        //_playerController.resetPosition(true, true);
-        //_playerController1.allowMoving = true;
-
+        StartCoroutine(GameObject.FindObjectOfType<Tutorial>().playTutorial(Tutorial.GameMode.None));
     }
 
     IEnumerator playMovingIndicator()
@@ -288,6 +283,15 @@ public class GameManager : MonoBehaviour
     {
         _coinCount++;
         GameMenu.Instance.setCoins(_coinCount + "");
+    }
+
+    public void tutorialComplete()
+    {
+        JSONSaver jsonSaver = GameObject.FindObjectOfType<JSONSaver>();
+        SaveData saveData = getPlayerData(false);
+        saveData.gamesPlayed++;
+        jsonSaver.saveData(saveData);
+        getPlayerData(true);
     }
 
     public bool updateStats()
