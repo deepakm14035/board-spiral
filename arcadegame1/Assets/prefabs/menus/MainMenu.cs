@@ -69,7 +69,12 @@ namespace MenuManagement
         public void playTutorial()
         {
             GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
-            gameManager.playTutorial();
+            gameManager.playTutorial(Tutorial.GameMode.None);
+            CameraFollow cf = FindObjectOfType<CameraFollow>();
+            cf.startFollowing = true;
+            MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
+            menuManager.loadMenu(GameMenu.Instance, 1f, false);
+            GetComponent<Animator>().SetTrigger("exit");
         }
 
         public void loadStatistics()

@@ -41,6 +41,17 @@ public class Tutorial : MonoBehaviour
         return tutorialProgress != -1;
     }
 
+    public void resetTutorial()
+    {
+        tutorialProgress = -1;
+        _HowToPlayPanel1.SetActive(false);
+        _HowToPlayPanel1Target.SetActive(false);
+        _GoodJobPanel2.SetActive(false);
+        _HowToPlayPanel2.SetActive(false);
+        _HowToPlayPanel2Target.SetActive(false);
+        _TutorialCompleteText.SetActive(false);
+    }
+
     public IEnumerator Replay()
     {
         Debug.Log("replaying");

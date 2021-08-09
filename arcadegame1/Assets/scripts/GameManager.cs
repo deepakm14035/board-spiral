@@ -96,8 +96,7 @@ public class GameManager : MonoBehaviour
         _playerController.resetPosition(resetRequired, true, true);
         if (getPlayerData(false).gamesPlayed == 0)
         {
-            _currentLevel = 0;
-            StartCoroutine(GameObject.FindObjectOfType<Tutorial>().playTutorial(Tutorial.GameMode.InfinityMode));
+            playTutorial(Tutorial.GameMode.InfinityMode); 
             isFirstGame = true;
             isPlayingTutorial = true;
             _playerController1.MoveSpeed = 0f;
@@ -179,9 +178,7 @@ public class GameManager : MonoBehaviour
         playerController.resetPosition(true, true,true);
         if (worldNo == 0 && index == 0)
         {
-            _currentLevel = 0;
-            _playerController1.MoveSpeed = 0f;
-            StartCoroutine(GameObject.FindObjectOfType<Tutorial>().playTutorial(Tutorial.GameMode.LevelMode));
+            playTutorial(Tutorial.GameMode.LevelMode);
             yield return null;
         }
         else
@@ -194,9 +191,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void playTutorial()
+    public void playTutorial(Tutorial.GameMode mode)
     {
-        StartCoroutine(GameObject.FindObjectOfType<Tutorial>().playTutorial(Tutorial.GameMode.None));
+        _nextHeight = 15f;
+        _lastIncrementHeight = 0f;
+        _currentLevel = 0;
+        GameMenu.Instance.setScoreVisibility(false);
+
+        _levelGenerator.clearLevel();
+        _playerController.RotSpeed = 35f;
+        _playerController1.MoveSpeed = 0f;
+        _playerController.resetPosition(true, true, true);
+        StartCoroutine(GameObject.FindObjectOfType<Tutorial>().playTutorial(mode));
+    }
+
+    public void resetTutorial()
+    {
+        _playerController.resetPosition(true, true, true);
+        GameObject.FindObjectOfType<Tutorial>().resetTutorial();
     }
 
     IEnumerator playMovingIndicator()
