@@ -9,10 +9,10 @@ public class AdManager : MonoBehaviour
     private string appID;
 
     private BannerView bannerView;
-    private string bannerId= "ca-app-pub-3940256099942544/6300978111";
+    private string bannerId= "ca-app-pub-1228319715524391/6288099220";
 
     private InterstitialAd interstitialAdView;
-    private string fullScreenAdId = "ca-app-pub-3940256099942544/1033173712";
+    private string fullScreenAdId = "ca-app-pub-1228319715524391/1007852389";
 
     bool enableAds = false;
 
