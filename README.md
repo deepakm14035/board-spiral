@@ -1,4 +1,4 @@
-# arcadegame1
+# Board Spiral
 
 This is a fast-paced arcade game with unique movement system, where you have to dodge obstacles. The game can be found here - 
 
